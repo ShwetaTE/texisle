@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pipe Intel</title>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <!-- <meta name="viewport" content="user-scalable=no, initial-scale=1, width=device-width, viewport-fit=cover"> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="cordova.js"></script>
+    <script src="js/index.js"></script>
+    <script src="js/total_clock.js"></script>
+    <script src="js/changeIPAddress.js"></script>
+    <script src="js/offline.js"></script>
+    
+    <script src="js/page_count.js"></script>
+    
+    <!-- <link href="css/style.bundle.css" rel="stylesheet" type="text/css" /> -->
+    <link href="css/watchlist_setting.css" rel="stylesheet" type="text/css" />
+    <!-- <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.1/dist/chart.min.js"></script> -->
+    <script src="js/watchlist.js"></script>
+    <script src="js/aboutpopup.js"></script>
+    <link href="css/aboutpopup.css" rel="stylesheet" type="text/css" />
+    <link href="plugins/global/plugins.bundle.css" rel="stylesheet" type="text/css" />
+    <link href="plugins/custom/prismjs/prismjs.bundle.css" rel="stylesheet" type="text/css" />
+    <link href="css/style.bundle.css" rel="stylesheet" type="text/css" />
+    <!-- <link href="css/style.bundle.css" rel="stylesheet" type="text/css" /> -->
+    <script src="js/app_end.js"></script>
+    <script src="js/header.js"></script>
+    
+    <script src="js/clock.js"></script>
+    <script src="js/timer.js"></script>
+</head>
+
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+<script src="js/navbar.js"></script>
+<link rel="stylesheet" href="css/navbar.css">
+<div id="nav-id"></div>
+
+<body id="kt_body"
+    class="header-fixed header-mobile-fixed subheader-enabled subheader-fixed aside-enabled aside-fixed aside-minimize-hoverable page-loading"
+    style="background-color: #1C1C1E; padding-right: 0%; padding-left: 0%; height: 120%;">
+    <!--begin::Main-->
+    <div>
+        <!--begin::Wrapper-->
+        
+        <!-- <div id="header-id"></div> -->
+        <div id="kt_header">
+            <div>
+               <div class="row" style="width: 100%;">
+                    <div class="float-left" style="width: 50%; padding-left: 3%;">
+                        <a onclick="app_end(window.location.pathname)" class="text-light mt-2 mb-1 mr-5 ml-4" style="color: white; font-weight: bold; font-size: 25px;">Pipe Intel</a>
+                    </div>
+                    <div class="float-left" style="width: 50%; padding-right: 0%;">
+                        <p onclick="window.open()" class="font-weight-bold power" style="text-align: right; color: #9bb556;">Powered by Tex-Isle Inc.</p>
+                    </div>
+                </div>
+            </div>
+            <hr style="border-top: 2px solid #7a7772; margin-top: 0px; margin-bottom: 0rem;">
+        </div>
+
+        <div style="margin: 0px 12px; color: white; --darkreader-inline-color:#e8e6e3;">
+            <strong><span data-darkreader-inline-color=""
+                    style="color: white; font-weight: bold; font-size: 25px; --darkreader-inline-color:#ff1a1a;">Watchlist
+                    settings</span></strong><img onclick="window.location='./watchlist.html'" src="./img/return.png"
+                class="return-btn">
+        </div>
+        <hr style="border-top: 2px solid #7a7772; margin-top: 0px; margin-bottom: 0rem;"><br>
+        <!-- footer -->
+        <div class="container">
+            <!-- cards start -->
+            <div id="cards-section" class="card-section container-fluid">
+                <div class="column" id="card1" onclick="dropdown('tab1')">
+                    <div class="card-wl">
+                        <span>Raw Material Index</span>
+                    </div>
+                </div>
+                <div class="column" id="card2" onclick="dropdown('tab2')">
+                    <div class="card-wl">
+                        <span>Mining Companies</span>
+                    </div>
+                </div>
+                <div class="column" id="card4" onclick="dropdown('tab3')">
+                    <div class="card-wl">
+                        <span>Transportation</span>
+                    </div>
+                </div>
+                <div class="column" id="card3" onclick="dropdown('tab4')">
+                    <div class="card-wl">
+                        <span>Pipe Manufacturing</span>
+                    </div>
+                </div>
+                <div class="column" id="card5" onclick="dropdown('tab5')">
+                    <div class="card-wl">
+                        <span>Steel Manufacturing</span>
+                    </div>
+                </div>
+                <div class="column" id="card6" onclick="dropdown('tab6')">
+                    <div class="card-wl">
+                        <span>Rig Count</span>
+                    </div>
+                </div>
+                <div class="column" id="card7" onclick="dropdown('tab7')">
+                    <div class="card-wl">
+                        <span>Well Count</span>
+                    </div>
+                </div>
+            </div><br>
+            <!-- cards end -->
+            <form class="info-cards container" name="tickers" style="display: block;">
+                <div id="tab1" class="form-list row" style="display: none;">
+                    <!-- col-2 col-md-2 col-sm-3 col-xs-6 -->
+                    <div class="col-xs-6">
+                        <input class="checkmark" type="checkbox" id="rmi_index" name="ticker" value="RMI_index">
+                        <label for="rmi_index">RMI Index</label>
+                    </div>
+                    <div class="col-xs-6">
+                        <input class="checkmark" type="checkbox" id="scrap" name="ticker" value="SCRAP">
+                        <label for="scrap">Scrap</label>
+                    </div>
+                    <div class="col-xs-6">
+                        <input class="checkmark" type="checkbox" id="hrc" name="ticker" value="HRC">
+                        <label for="hrc">HRC</label>
+                    </div>
+                    <div class="col-xs-6">
+                        <input class="checkmark" type="checkbox" id="coal" name="ticker" value="COAL">
+                        <label for="coal">Coal</label>
+                    </div>
+                    <div class="col-xs-6">
+                        <input class="checkmark" type="checkbox" id="ironore" name="ticker" value="IRONORE">
+                        <label for="ironore">IronOre</label>
+                    </div>
+                </div>
+                <div id="tab2" class="form-list row" style="display: none;">
+                    <div class="col-xs-6">
+                        <input type="checkbox" id="iom_index" name="ticker" value="IOM_index">
+                        <label for="iom_index">IOM Index</label>
+                    </div>
+                    <div class="col-xs-6">
+                        <input type="checkbox" id="rio" name="ticker" value="RIO">
+                        <label for="rio">RIO</label>
+                    </div>
+                    <div class="col-xs-6">
+                        <input type="checkbox" id="vale" name="ticker" value="VALE">
+                        <label for="vale">VALE</label>
+                    </div>
+                    <div class="col-xs-6">
+                        <input type="checkbox" id="sxc" name="ticker" value="SXC">
+                        <label for="sxc">SXC</label>
+                    </div>
+                    <div class="col-xs-6">
+                        <input type="checkbox" id="bhp" name="ticker" value="BHP">
+                        <label for="bhp">BHP</label>
+                    </div>
+                </div>
+                <div id="tab3" class="form-list row" style="display: none;">
+                    <div class="col-xs-6">
+                        <input type="checkbox" id="t_index" name="ticker" value="T_index">
+                        <label for="t_index">T Index</label>
+                    </div>
+                    <div class="col-xs-6">
+                        <input type="checkbox" id="badi" name="ticker" value="Baltic">
+                        <label for="badi">BADI</label>
+                    </div>
+                    <div class="col-xs-6">
+                        <input type="checkbox" id="ulsd" name="ticker" value="ULSD">
+                        <label for="ULSD">ULSD</label>
+                    </div>
+                    <div class="col-xs-6">
+                        <input type="checkbox" id="truck" name="ticker" value="Truck">
+                        <label for="truck">Truck</label>
+                    </div>
+                    <div class="col-xs-6">
+                        <input type="checkbox" id="CassFreight" name="ticker" value="CassFreight">
+                        <label for="CassFreight">CassFreight</label>
+                    </div>
+                    <div class="col-xs-6">
+                        <input type="checkbox" id="AllGrade" name="ticker" value="AllGrade">
+                        <label for="AllGrade">AllGrade</label>
+                    </div>
+                </div>
+                <div id="tab4" class="form-list row" style="display: none;">
+                    <div class="col-xs-6">
+                        <input type="checkbox" id="pmf_index" name="ticker" value="PMF_index">
+                        <label for="pmf_index">PMF Index</label>
+                    </div>
+                    <div class="col-xs-6">
+                        <input type="checkbox" id="ts" name="ticker" value="TS">
+                        <label for="ts">TS</label>
+                    </div>
+                    <div class="col-xs-6">
+                        <input type="checkbox" id="vkpa" name="ticker" value="VKPA">
+                        <label for="vkpa">VK.PA</label>
+                    </div>
+                    <div class="col-xs-6">
+                        <input type="checkbox" id="x" name="ticker" value="X">
+                        <label for="x">X</label>
+                    </div>
+                    <div class="col-xs-6">
+                        <input type="checkbox" id="tmst" name="ticker" value="TMST">
+                        <label for="tmst">TMST</label>
+                    </div>
+                    <div class="col-xs-6">
+                        <input type="checkbox" id="nwpx" name="ticker" value="NWPX">
+                        <label for="nwpx">NWPX</label>
+                    </div>
+                </div>
+                <div id="tab5" class="form-list row" style="display: none;">
+                    <div class="col-xs-6">
+                        <input type="checkbox" id="smf_index" name="ticker" value="SMF_index">
+                        <label for="smf_index">SMF Index</label>
+                    </div>
+                    <div class="col-xs-6">
+                        <input type="checkbox" id="mt" name="ticker" value="MT">
+                        <label for="mt">MT</label>
+                    </div>
+                    <div class="col-xs-6">
+                        <input type="checkbox" id="pkx" name="ticker" value="PKX">
+                        <label for="pkx">PKX</label>
+                    </div>
+                    <div class="col-xs-6">
+                        <input type="checkbox" id="nue" name="ticker" value="NUE">
+                        <label for="nue">NUE</label>
+                    </div>
+                    <div class="col-xs-6">
+                        <input type="checkbox" id="stld" name="ticker" value="STLD">
+                        <label for="stld">STLD</label>
+                    </div>
+                    <div class="col-xs-6">
+                        <input type="checkbox" id="rs" name="ticker" value="RS">
+                        <label for="rs">RS</label>
+                    </div>
+                    <div class="col-xs-6">
+                        <input type="checkbox" id="clf" name="ticker" value="CLF">
+                        <label for="CLF">CLF</label>
+                    </div>
+                    <div class="col-xs-6">
+                        <input type="checkbox" id="tx" name="ticker" value="TX">
+                        <label for="tx">TX</label>
+                    </div>
+                    <div class="col-xs-6">
+                        <input type="checkbox" id="ggb" name="ticker" value="GGB">
+                        <label for="ggb">GGB</label>
+                    </div>
+                    <div class="col-xs-6">
+                        <input type="checkbox" id="cmc" name="ticker" value="CMC">
+                        <label for="CMC">CMC</label>
+                    </div>
+                    <div class="col-xs-6">
+                        <input type="checkbox" id="tkade" name="ticker" value="TKADE">
+                        <label for="tkade">TKA.DE</label>
+                    </div>
+                    <div class="col-xs-6">
+                        <input type="checkbox" id="szgde" name="ticker" value="SZGDE">
+                        <label for="szgde">SZG.DE</label>
+                    </div>
+                    <div class="col-xs-6">
+                        <input type="checkbox" id="nippon" name="ticker" value="NIPPON">
+                        <label for="nippon">Nippon</label>
+                    </div>
+                    <div class="col-xs-6">
+                        <input type="checkbox" id="jfe" name="ticker" value="JFE">
+                        <label for="jfe">JFE</label>
+                    </div>
+                </div>
+                <div id="tab6" class="form-list row" style="display: none;">
+                    <div class="col-xs-6">
+                        <input type="checkbox" id="rc_index" name="ticker" value="RC_index">
+                        <label for="rc_index">US&nbspTotal</label>
+                    </div>
+                    <div class="col-xs-6">
+                        <input type="checkbox" id="ardmore" name="ticker" value="Ardmore">
+                        <label for="ardmore">Ardmore&nbspWoodford</label>
+                    </div>
+                    <div class="col-xs-6">
+                        <input type="checkbox" id="arkoma" name="ticker" value="Arkoma">
+                        <label for="arkoma">Arkoma&nbspWoodford</label>
+                    </div>
+                    <div class="col-xs-6">
+                        <input type="checkbox" id="barnett" name="ticker" value="Barnett">
+                        <label for="barnett">Barnett</label>
+                    </div>
+                    <div class="col-xs-6">
+                        <input type="checkbox" id="cana" name="ticker" value="Cana">
+                        <label for="cana">Cana&nbspWoodford</label>
+                    </div>
+                    <div class="col-xs-6">
+                        <input type="checkbox" id="niobrara" name="ticker" value="Niobrara">
+                        <label for="niobrara">DJ&nbspNiobrara</label>
+                    </div>
+                    <div class="col-xs-6">
+                        <input type="checkbox" id="ford" name="ticker" value="Ford">
+                        <label for="ford">Eagle&nbspFord</label>
+                    </div>
+                    <div class="col-xs-6">
+                        <input type="checkbox" id="granite" name="ticker" value="Granite">
+                        <label for="granite">Granite&nbspWash</label>
+                    </div>
+                    <div class="col-xs-6">
+                        <input type="checkbox" id="haynesville" name="ticker" value="Haynesville">
+                        <label for="haynesville">Haynesville</label>
+                    </div>
+                    <div class="col-xs-6">
+                        <input type="checkbox" id="marcellus" name="ticker" value="Marcellus">
+                        <label for="marcellus">Marcellus</label>
+                    </div>
+                    <div class="col-xs-6">
+                        <input type="checkbox" id="mississippian" name="ticker" value="Mississippian">
+                        <label for="mississippian">Mississippian</label>
+                    </div>
+                    <div class="col-xs-6">
+                        <input type="checkbox" id="permian" name="ticker" value="Permian">
+                        <label for="permian">Permian</label>
+                    </div>
+                    <div class="col-xs-6">
+                        <input type="checkbox" id="utica" name="ticker" value="Utica">
+                        <label for="utica">Utica</label>
+                    </div>
+                    <div class="col-xs-6">
+                        <input type="checkbox" id="williston" name="ticker" value="Williston">
+                        <label for="williston">Williston</label>
+                    </div>
+                </div>
+                <div id="tab7" class="form-list row" style="display: none;">
+                    <div class="col-xs-6">
+                        <input type="checkbox" id="DPR_DUC" name="ticker" value="DPR_DUC">
+                        <label for="DPR_DUC">DPR&nbspRegions</label>
+                    </div>
+                    <div class="col-xs-6">
+                        <input type="checkbox" id="Anadarko_DUC" name="ticker" value="Anadarko_DUC">
+                        <label for="Anadarko_DUC">Anadarko</label>
+                    </div>
+                    <div class="col-xs-6">
+                        <input type="checkbox" id="Appalachia_DUC" name="ticker" value="Appalachia_DUC">
+                        <label for="Appalachia_DUC">Appalachia</label>
+                    </div>
+                    <div class="col-xs-6">
+                        <input type="checkbox" id="Bakken_DUC" name="ticker" value="Bakken_DUC">
+                        <label for="Bakken_DUC">Bakken</label>
+                    </div>
+                    <div class="col-xs-6">
+                        <input type="checkbox" id="Eagle_DUC" name="ticker" value="Eagle_DUC">
+                        <label for="Eagle_DUC">Eagle&nbspFord</label>
+                    </div>
+                    <div class="col-xs-6">
+                        <input type="checkbox" id="Haynesville_DUC" name="ticker" value="Haynesville_DUC">
+                        <label for="Haynesville_DUC">Haynesville</label>
+                    </div>
+                    <div class="col-xs-6">
+                        <input type="checkbox" id="Niobrara_DUC" name="ticker" value="Niobrara_DUC">
+                        <label for="Niobrara_DUC">Niobrara</label>
+                    </div>
+                    <div class="col-xs-6">
+                        <input type="checkbox" id="Permian_DUC" name="ticker" value="Permian_DUC">
+                        <label for="Permian_DUC">Permian</label>
+                    </div>
+                </div>
+            </form><br>
+            
+            <hr style="border-top: 2px solid #7a7772; margin-top: 0px; margin-bottom: 0rem;">
+            <br>
+            <!-- info cards starts -->
+            <div onclick="save_watchlist_setting()" class="save-btn">
+                Save
+            </div>
+            <div id="up_msg" style="color: white; text-align: center; display: none;">List updated!</div>
+
+        </div>
+    </div>
+    <!--end::Page-->
+    <!--end::Main-->
+    <div class="footer py-4 d-flex flex-lg-column" id="kt_footer" style="background-color: #1C1C1E;">
+        <!--begin::Container-->
+        <div class="container-fluid d-flex flex-column flex-md-row align-items-center justify-content-between"
+            style="background-color: #1C1C1E;">
+            <!--begin::Copyright-->
+            <!-- <div class="text-dark order-2 order-md-1">
+                <span class="text-muted font-weight-bold mr-2">2021©</span>
+                <a href="https://www.texisle.com/" target="_blank" class="text-dark-75 text-hover-primary">Tex-Isle, Inc.</a>
+            </div> -->
+            <!--end::Copyright-->
+            <!--begin::Nav-->
+            <div class="nav_foot nav-dark">
+                <a href="terms.html" class="nav-link pl-0 pr-5">Terms & Conditions</a>
+                <a href="about_v2.html" class="nav-link pl-0 pr-5">About</a>
+                <!-- <a href="https://www.texisle.com/" target="_blank" class="nav-link pl-0 pr-5">Team</a>
+                <a href="https://www.texisle.com/contact-us" target="_blank" class="nav-link pl-0 pr-0">Contact</a> -->
+            </div>
+            <!--end::Nav-->
+        </div>
+        <!--end::Container-->
+    </div>
+    <!--begin::Scrolltop-->
+    <div id="kt_scrolltop" class="scrolltop" style="bottom: 152px; opacity: 0.6;">
+        <span class="svg-icon">
+            <!--begin::Svg Icon | path:assets/media/svg/icons/Navigation/Up-2.svg-->
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px"
+                height="24px" viewBox="0 0 24 24" version="1.1">
+                <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                    <polygon points="0 0 24 0 24 24 0 24" />
+                    <rect fill="#000000" opacity="0.3" x="11" y="10" width="2" height="10" rx="1" />
+                    <path
+                        d="M6.70710678,12.7071068 C6.31658249,13.0976311 5.68341751,13.0976311 5.29289322,12.7071068 C4.90236893,12.3165825 4.90236893,11.6834175 5.29289322,11.2928932 L11.2928932,5.29289322 C11.6714722,4.91431428 12.2810586,4.90106866 12.6757246,5.26284586 L18.6757246,10.7628459 C19.0828436,11.1360383 19.1103465,11.7686056 18.7371541,12.1757246 C18.3639617,12.5828436 17.7313944,12.6103465 17.3242754,12.2371541 L12.0300757,7.38413782 L6.70710678,12.7071068 Z"
+                        fill="#000000" fill-rule="nonzero" />
+                </g>
+            </svg>
+            <!--end::Svg Icon-->
+        </span>
+    </div>
+    <!--end::Scrolltop-->
+    <!--begin::Global Config(global config for global JS scripts)-->
+    <script>var KTAppSettings = { "breakpoints": { "sm": 576, "md": 768, "lg": 992, "xl": 1200, "xxl": 1400 }, "colors": { "theme": { "base": { "white": "#ffffff", "primary": "#2c2c2c", "secondary": "#E5EAEE", "success": "#1BC5BD", "info": "#8950FC", "warning": "#FFA800", "danger": "#F64E60", "light": "#E4E6EF", "dark": "#181C32" }, "light": { "white": "#ffffff", "primary": "#E1F0FF", "secondary": "#EBEDF3", "success": "#C9F7F5", "info": "#EEE5FF", "warning": "#FFF4DE", "danger": "#FFE2E5", "light": "#F3F6F9", "dark": "#D6D6E0" }, "inverse": { "white": "#ffffff", "primary": "#ffffff", "secondary": "#3F4254", "success": "#ffffff", "info": "#ffffff", "warning": "#ffffff", "danger": "#ffffff", "light": "#464E5F", "dark": "#ffffff" } }, "gray": { "gray-100": "#F3F6F9", "gray-200": "#EBEDF3", "gray-300": "#E4E6EF", "gray-400": "#D1D3E0", "gray-500": "#B5B5C3", "gray-600": "#7E8299", "gray-700": "#5E6278", "gray-800": "#3F4254", "gray-900": "#181C32" } }, "font-family": "Poppins" };</script>
+    <!--end::Global Config-->
+    <!--begin::Global Theme Bundle(used by all pages)-->
+    <script src="plugins/global/plugins.bundle.js"></script>
+    <script src="plugins/custom/prismjs/prismjs.bundle.js"></script>
+    <script src="js/scripts.bundle.js"></script>
+    <script src="js/scripts.bundle.min.js"></script>
+    <!--end::Global Theme Bundle-->
+    <!--begin::Page Vendors(used by this page)-->
+    <script src="plugins/custom/fullcalendar/fullcalendar.bundle.js"></script>
+    <!--end::Page Vendors-->
+    <!--begin::Page Scripts(used by this page)-->
+    <script src="js/pages/widgets.js"></script>
+    <!--end::Page Scripts-->
+</body>
+<script>
+    load_config();
+
+    function dropdown(param1) {
+        var x = document.getElementById(param1);
+        // x.classList.toggle("show");
+        if (x.style.display == "none") {
+            x.style.display = "block";
+            close_dd(param1);
+        } else {
+            x.style.display = "none";
+        }
+    }
+
+    function close_dd(param) {
+        var list_id = ["tab1", "tab2", "tab3", "tab4", "tab5", "tab6", "tab7"];
+        // console.log(list_id);
+        list_id = list_id.filter(e => e !== param);
+        // console.log(list_id);
+        for (var i = 0; i < list_id.length; i++) {
+            // console.log(list_id[i]);
+            var x = document.getElementById(list_id[i]);
+            x.style.display = "none";
+        }
+    }
+
+    function load_config(){
+        var deviceID = sessionStorage.getItem("deviceID");
+            if (deviceID==null){
+            deviceID = device.uuid;
+            sessionStorage.setItem("deviceID", deviceID);
+            }
+        var form = new FormData();
+        form.append("app_type", app_type);
+        form.append("deviceID", deviceID);
+
+        var settings = {   
+        "url": urlresource + "/watchlist_config/",
+        "method": "POST",
+        "timeout": 0,
+        "processData": false,
+        "mimeType": "multipart/form-data",
+        "dataType": 'JSON',
+        "contentType": false,
+        "data": form
+        };
+
+        $.ajax(settings).done(function (response) {
+        console.log(response);
+        if(response.exist == 1){
+            var config_list = response.chart_list;
+            var cbs = document.forms['tickers'].elements['ticker'];
+            console.log(config_list);
+            for (var i = 0, cbLen = cbs.length; i < cbLen; i++) {
+                for(var j = 0; j<config_list.length; j++){
+                    if(cbs[i].value == config_list[j]){
+                        cbs[i].checked = true
+                    }
+                }
+            }
+        }
+        else{
+            console.log("new device watchlist registered")
+        }
+        
+        });
+
+    }
+</script>
+
+<script src="js/initial_data.js"></script>
+</html>

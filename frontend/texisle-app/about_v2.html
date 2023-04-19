@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;"> -->
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, width=device-width, viewport-fit=cover">
+    <meta name="color-scheme" content="light dark">
+    <link rel="stylesheet" href="css/index.css">
+    <title>Texisle Dashboard</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" /> -->
+    <link rel="canonical" href="https://keenthemes.com/metronic" />
+    <!--begin::Fonts-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" />
+    <!--end::Fonts-->
+    <!--begin::Page Vendors Styles(used by this page)-->
+    <link href="plugins/custom/fullcalendar/fullcalendar.bundle.css" rel="stylesheet" type="text/css" />
+    <!--end::Page Vendors Styles-->
+    <!--begin::Global Theme Styles(used by all pages)-->
+    <!-- <script src="js/jquery.min.js" type="text/javascript"></script> -->
+    <script src="js/jquery-1.7.1.min.js"></script>
+    <script src="js/total_clock.js"></script>
+    <script src="js/changeIPAddress.js"></script>
+    <script src="js/header.js"></script>
+
+    <script src="js/page_count.js"></script>
+
+    <script src="js/open_page_chart.js"></script>
+    <script src="js/check_s_id.js"></script>
+    <script src="js/clock.js"></script>
+    <script src="js/timer.js"></script>
+    <link href="plugins/global/plugins.bundle.css" rel="stylesheet" type="text/css" />
+    <link href="plugins/custom/prismjs/prismjs.bundle.css" rel="stylesheet" type="text/css" />
+    <link href="css/style.bundle.css" rel="stylesheet" type="text/css" />
+    <script src="js/aboutpopup.js"></script>
+    <link href="css/aboutpopup.css" rel="stylesheet" type="text/css" />
+    <!--end::Global Theme Styles-->
+    <!--begin::Layout Themes(used by all pages)-->
+    <link href="css/themes/layout/header/base/dark.css" rel="stylesheet" type="text/css" />
+    <link href="css/themes/layout/header/menu/dark.css" rel="stylesheet" type="text/css" />
+    <link href="css/themes/layout/brand/dark.css" rel="stylesheet" type="text/css" />
+    <link href="css/themes/layout/aside/dark.css" rel="stylesheet" type="text/css" />
+
+    <script src="js/index.js"></script>
+
+    <script src="js/open_chart.js"></script>
+
+    <script src="js/app_end.js"></script>
+
+    <!--end::Layout Themes-->
+    <link href="http://fonts.cdnfonts.com/css/myriad-pro" rel="stylesheet">
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</head>
+
+<script src="js/navbar.js"></script>
+<link rel="stylesheet" href="css/navbar.css">
+<div id="nav-id"></div>
+
+<body id="kt_body"
+    class="header-fixed header-mobile-fixed subheader-enabled subheader-fixed aside-enabled aside-fixed aside-minimize-hoverable page-loading"
+    style="background-color: #1C1C1E; padding-right: 0%; padding-left: 0%; height: 120%;">
+    <!--begin::Main-->
+    <div>
+        <!--begin::Wrapper-->
+        <div id="kt_header" class="">
+
+            <!-- <div id="header-id"></div> -->
+            <div id="kt_header">
+                <div>
+                    <div class="row" style="width: 100%;">
+                        <div class="float-left" style="width: 50%; padding-left: 3%;">
+                            <a onclick="app_end(window.location.pathname)" class="text-light mt-2 mb-1 mr-5 ml-4"
+                                style="color: white; font-weight: bold; font-size: 25px;">Pipe Intel</a>
+                        </div>
+                        <div class="float-left" style="width: 50%; padding-right: 0%;">
+                            <p onclick="window.open()" class="font-weight-bold power"
+                                style="text-align: right; color: #9bb556;">Powered by Tex-Isle Inc.</p>
+                        </div>
+                    </div>
+                </div>
+                <hr style="border-top: 2px solid #7a7772; margin-top: 0px; margin-bottom: 0rem;">
+            </div>
+
+            <!--end::Container-->
+        </div>
+        <div style="margin: 0px 12px; color: white; --darkreader-inline-color:#e8e6e3;">
+            <strong><span data-darkreader-inline-color=""
+                    style="color: white; font-weight: bold; font-size: 25px; --darkreader-inline-color:#ff1a1a;">About
+                    Pipe Intel</span></strong><img onclick="app_end(window.location.pathname)" src="./img/return.png"
+                class="return-btn">
+        </div>
+
+        <div class="tab scroll-touch" style="background-color: #1C1C1E;">
+            <button class="tablinks" onclick="openTab_about(event, 'Tab0')" id="about"
+                style="font-weight: bold; color: white;">About</button>
+            <button class="tablinks" onclick="openTab_about(event, 'Tab1')" id="FAQ"
+                style="font-weight: bold; color: white;">FAQ</button>
+            <button class="tablinks" onclick="openTab_about(event, 'Tab2')" id="Credit"
+                style="font-weight: bold; color: white;">References</button>
+        </div>
+
+        <div class="tabcontent" id="Tab0"
+            style="color: white; --darkreader-inline-color:#e8e6e3; text-align: justify; font-size: 14px;">
+            <br>
+            <!-- Pipe Intel is powered by Tex-Isle, Inc.  -->
+            <!-- <p style="font-size:14px;">The purpose of this app is to become a
+                one-stop shop of
+                information and provide valuable insights for steel, pipe, mining, and transportation markets. We strive
+                to bring most updated data that reflects the actual markets. The insights are generated with skillful
+                data analytics and AI-driven machine learning algorithms. This application is one of the many
+                tech-driven components of the company to accelerate digital transformation and to become a growing
+                leader in the industry with latest technological solutions.&nbsp;</p> -->
+                <p style="font-size:14px;" class="about_Dynamic"></p>
+        </div>
+        <div class="tabcontent" id="Tab1" style="color: white; --darkreader-inline-color:#e8e6e3;">
+            <p><strong><span style="font-weight:bold;font-size:20px;">How frequently data is being
+                        updated?</span></strong></p>
+            <!-- <p style="text-align:justify;"><span style="font-size:14px;">All individual tickers under Steel
+                    Manufacturing, Pipe Manufacturing, and Mining Companies are
+                    updated every hour. All spot prices as well as the Index under Raw Materials gets updated daily by
+                    9:30 am CT. For Transportation, BADI gets updated daily by 9:30 am CT, USLD gets updated every
+                    week by Friday 9:30 am CT, Truck Transportation and Cass Freight gets updated by the second week
+                    of each month. All futures data for spot prices and USLD in Transportation are updated once every
+                    day by 9:30 am CT. Index charts for Pipe Manufacturing, Steel Manufacturing and Mining Companies
+                    are updated every hour. Currently, the Transportation Index shows a general combined view of all
+                    transportation trends. All data associated with Rig count is updated every week on Monday by 9:00
+                    am CT. Well Count is updated by 7:00 am CT of next business day after the new data is available on
+                    original source. All curated articles with calculated relevance are updated twice every day, 6:30 am
+                    CT &amp;
+                    11:30 am CT. All curated tweets with calculated relevance &amp; filtered with relevancy AI are
+                    updated
+                    every 4 hours.</span></p> -->
+                    <p style="text-align:justify;"><span style="font-size:14px;" class="faq_Dynamic_1"></span>
+            <p><strong><span style="font-weight:bold;font-size:20px;">How are Indexes
+                        calculated?</span></strong></p>
+            <!-- <p style="text-align:justify;"><span style="font-size:14px;">The index calculations
+                    apply to Raw Materials, Steel Manufacturing, Pipe Manufacturing, and Mining Companies. Currently,
+                    the described index calculations are not applicable to the Transportation Market.&nbsp;</span><span
+                    style="font-size:14px;">Before index calculations, to avoid bias and high
+                    variability between tickers with higher values and tickers with lower values, all tickers are
+                    normalized using common start value approach. The base value was established using pricing data from
+                    January 2, 2020. The start value was calculated by using the pricing data from January 2, 2020 which
+                    was divided by itself and then multiplied by 100. Therefore, all tickers have common start price of
+                    $100 on January 2, 2020. After the initial value, all other subsequent values are normalized
+                    according to the starting price (divided by base value and multiplied by 100). This ensures every
+                    percentage change in indexed values remains same as percentage change in non indexed values. See
+                    Table below for example.</span></p> -->
+                    <p style="text-align:justify;"><span style="font-size:14px;" class="faq_Dynamic_2"></span><br>
+                    <img src="https://res.cloudinary.com/dgx9ppnqo/image/upload/v1680263503/image1_cr3qdf.png" style="width: 100%;"><br><br>
+            <!-- <p style="text-align:justify;"><span style="font-size:14px;">After all individual
+                    tickers or spot prices in the categories are normalized using the method above, the indexed values
+                    are used for index calculations. The index for each category is calculated using price-weighted
+                    approach, similar to the Dow Jones Industrial Average Index (DJIA). When DJIA was first introduced
+                    in 1890s, it was calculated using simply average of all stocks in index</span><sup><span
+                        style="font-size:14px;vertical-align:super;">*</span></sup><span style="font-size:14px;">.
+                    Similarly, here all index calculations are calculated
+                    daily using simple average of all indexed stock or spot prices. The approach will remain same until
+                    there is any quantifiable change affecting the divisor. The quantifiable changes may include but not
+                    limited to addition of a ticker, removal of a ticker, stock splits, or company merger.</span></p> -->
+                    <p style="text-align:justify;"><span style="font-size:14px;" class="faq_Dynamic_3"></span></p>
+            <p style="text-align:justify;"><img src="https://res.cloudinary.com/dgx9ppnqo/image/upload/v1680263503/image2_qnpkty.png" style="width: 100%;"></p>
+            <p><span
+                    style='color: rgba(255, 255, 255, 0.9); font-family: "Segoe UI VSS (Regular)", "Segoe UI", -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", Helvetica, Ubuntu, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; font-size: 14.6667px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;'>*Seth,
+                    S. (2022, February 1).&nbsp;</span><a
+                    href="https://www.investopedia.com/articles/investing/082714/what-dow-means-and-why-we-calculate-it-way-we-do.asp"
+                    rel="noopener noreferrer" target="_blank"><i
+                        style='box-sizing: border-box; color: #7380fae6; font-family: "Segoe UI VSS (Regular)", "Segoe UI", -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", Helvetica, Ubuntu, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; font-size: 14.6667px; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;'>What
+                        the Dow Means and How It Is Calculated.</i></a><span
+                    style='color: #ffffffe6; font-family: "Segoe UI VSS (Regular)", "Segoe UI", -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", Helvetica, Ubuntu, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; font-size: 14.6667px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;'><a
+                        href="https://www.investopedia.com/articles/investing/082714/what-dow-means-and-why-we-calculate-it-way-we-do.asp"
+                        rel="noopener noreferrer" target="_blank"></a></span><span
+                    style='color: #ffffffe6; font-family: "Segoe UI VSS (Regular)", "Segoe UI", -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", Helvetica, Ubuntu, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; font-size: 14.6667px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;'>
+                    Investopedia.</span>&nbsp;
+            </p>
+        </div>
+        <div class="tabcontent" id="Tab2"
+            style="color: white; --darkreader-inline-color:#e8e6e3; text-align: justify; font-size: 14px;"><br>
+            <!-- <p>The historical pricing data for tickers under Steel Manufacturing, Pipe Manufacturing, and Mining
+                Companies are collected from Yahoo Finance. The historical pricing data for spot prices (Scrap, HRC, and
+                Iron Ore) under the Raw Material Index is collected from CME Group. The historical pricing data for spot
+                price Coal under the Raw Material Index is collected from a combination of <em>Yahoo Finance</em> and
+                <em>CME Group</em>. For transportation, the data for BADI is sourced from CNBC, the data for ULSD is
+                sourced from the combination of <em>U.S. Energy Information Administration</em> (<u>eia.gov</u>) and
+                <em>CME Group</em>, the data for All Grades is sourced from the <em>U.S. Energy Information
+                    Administration</em> (<u>eia.gov</u>) and the data for Truck Transportation and Cass Freight
+                Shipments is sourced from <em>Federal Reserve Economic Data</em> (<u>fred.stlouisfed.org</u>). The
+                foreign tickers (JFE, Nippon, VK.PA, SZG.DE, TKA.DE) are converted to US Dollars using a py currency
+                converter package in python which uses European Central Bank to convert the prices. All futures data in
+                the application is collected from CME Group. All curated articles are originally collected from the
+                <em>Yahoo Finance</em> and Yahoo Finance-based Finviz. Rig count data is sourced from Rig Count platform
+                provided by <em>Baker Hughes</em>. Well count data is sourced from U.S. Energy Information
+                Administration (<u>eia.gov</u>). The redirection to the actual source of the articles is done for some
+                accessible sites. All curated tweets are collected directly from <em>Twitter</em>.
+            </p> -->
+            <p class="ref_Dynamic"></p>
+        </div>
+
+    </div>
+    <!--end::Wrapper-->
+    <br>
+    <!--begin::Footer-->
+    <div style="text-align: center; color: rgb(191, 191, 191); --darkreader-inline-color:#c0bab2;">
+        <p dir="ltr" id="current_version" style="line-height:1.295;margin-top:0pt;margin-bottom:8pt;"><br></p>
+        <!-- <p dir="ltr" style="line-height:1.295;margin-top:0pt;margin-bottom:8pt;">Check for latest update: <a
+                data-darkreader-inline-color="" href="https://appho.st/d/ErEjQeY6" rel="noopener noreferrer"
+                style="--darkreader-inline-color:#e2dfdb; color: whitesmoke !important;" target="_blank">Click
+                here</a></p> -->
+    </div>
+    <div class="footer py-4 d-flex flex-lg-column" id="kt_footer" style="background-color: #1C1C1E;">
+        <!--begin::Container-->
+        <div class="container-fluid d-flex flex-column flex-md-row align-items-center justify-content-between"
+            style="background-color: #1C1C1E;">
+            <!--begin::Copyright-->
+            <!-- <div class="text-dark order-2 order-md-1">
+                <span class="text-muted font-weight-bold mr-2">2021©</span>
+                <a href="https://www.texisle.com/" target="_blank" class="text-dark-75 text-hover-primary">Tex-Isle, Inc.</a>
+            </div> -->
+            <!--end::Copyright-->
+            <!--begin::Nav-->
+            <div class="nav_foot nav-dark">
+                <a href="terms.html" class="nav-link pl-0 pr-5">Terms & Conditions</a>
+                <!-- <a href="about_v2.html" class="nav-link pl-0 pr-5">About</a>
+                <a href="https://www.texisle.com/" target="_blank" class="nav-link pl-0 pr-5">Team</a>
+                <a href="https://www.texisle.com/contact-us" target="_blank"
+                    class="nav-link pl-0 pr-0">Contact</a> -->
+            </div>
+            <!--end::Nav-->
+        </div>
+        <!--end::Container-->
+    </div>
+    <!--end::Footer-->
+    </div>
+    <!--end::Page-->
+    <!--end::Main-->
+
+    <!--begin::Scrolltop-->
+    <div id="kt_scrolltop" class="scrolltop">
+        <span class="svg-icon">
+            <!--begin::Svg Icon | path:assets/media/svg/icons/Navigation/Up-2.svg-->
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px"
+                height="24px" viewBox="0 0 24 24" version="1.1">
+                <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                    <polygon points="0 0 24 0 24 24 0 24" />
+                    <rect fill="#000000" opacity="0.3" x="11" y="10" width="2" height="10" rx="1" />
+                    <path
+                        d="M6.70710678,12.7071068 C6.31658249,13.0976311 5.68341751,13.0976311 5.29289322,12.7071068 C4.90236893,12.3165825 4.90236893,11.6834175 5.29289322,11.2928932 L11.2928932,5.29289322 C11.6714722,4.91431428 12.2810586,4.90106866 12.6757246,5.26284586 L18.6757246,10.7628459 C19.0828436,11.1360383 19.1103465,11.7686056 18.7371541,12.1757246 C18.3639617,12.5828436 17.7313944,12.6103465 17.3242754,12.2371541 L12.0300757,7.38413782 L6.70710678,12.7071068 Z"
+                        fill="#000000" fill-rule="nonzero" />
+                </g>
+            </svg>
+            <!--end::Svg Icon-->
+        </span>
+    </div>
+    <!--end::Scrolltop-->
+    <!--begin::Global Config(global config for global JS scripts)-->
+    <script>var KTAppSettings = { "breakpoints": { "sm": 576, "md": 768, "lg": 992, "xl": 1200, "xxl": 1400 }, "colors": { "theme": { "base": { "white": "#ffffff", "primary": "#2c2c2c", "secondary": "#E5EAEE", "success": "#1BC5BD", "info": "#8950FC", "warning": "#FFA800", "danger": "#F64E60", "light": "#E4E6EF", "dark": "#181C32" }, "light": { "white": "#ffffff", "primary": "#E1F0FF", "secondary": "#EBEDF3", "success": "#C9F7F5", "info": "#EEE5FF", "warning": "#FFF4DE", "danger": "#FFE2E5", "light": "#F3F6F9", "dark": "#D6D6E0" }, "inverse": { "white": "#ffffff", "primary": "#ffffff", "secondary": "#3F4254", "success": "#ffffff", "info": "#ffffff", "warning": "#ffffff", "danger": "#ffffff", "light": "#464E5F", "dark": "#ffffff" } }, "gray": { "gray-100": "#F3F6F9", "gray-200": "#EBEDF3", "gray-300": "#E4E6EF", "gray-400": "#D1D3E0", "gray-500": "#B5B5C3", "gray-600": "#7E8299", "gray-700": "#5E6278", "gray-800": "#3F4254", "gray-900": "#181C32" } }, "font-family": "Poppins" };</script>
+    <!--end::Global Config-->
+    <!--begin::Global Theme Bundle(used by all pages)-->
+    <script src="plugins/global/plugins.bundle.js"></script>
+    <script src="plugins/custom/prismjs/prismjs.bundle.js"></script>
+    <script src="js/scripts.bundle.js"></script>
+    <script src="js/scripts.bundle.min.js"></script>
+    <!--end::Global Theme Bundle-->
+    <!--begin::Page Vendors(used by this page)-->
+    <script src="plugins/custom/fullcalendar/fullcalendar.bundle.js"></script>
+    <!--end::Page Vendors-->
+    <!--begin::Page Scripts(used by this page)-->
+    <script src="js/pages/widgets.js"></script>
+    <!--end::Page Scripts-->
+
+    <script>
+        function getCookie(cname) {
+            let name = cname + "=";
+            let decodedCookie = decodeURIComponent(document.cookie);
+            let ca = decodedCookie.split(';');
+            for (let i = 0; i < ca.length; i++) {
+                let c = ca[i];
+                while (c.charAt(0) == ' ') {
+                    c = c.substring(1);
+                }
+                if (c.indexOf(name) == 0) {
+                    return c.substring(name.length, c.length);
+                }
+            }
+            return "";
+        }
+    </script>
+    <script>
+        // try{
+        let tab_click = getCookie("about_tab");
+        // }
+        // catch{
+        //     let tab_click = "about";
+        // }   
+        console.log(tab_click)
+        document.getElementById(tab_click).click();
+        console.log(app_version)
+        var text = "Current Version: " + app_version;
+        console.log(text);
+        document.getElementById("current_version").append(text);
+    </script>
+    <script src="js/initial_data.js"></script>
+    <script src="js/about_v2.js"></script>
+</body>
+
+</html>

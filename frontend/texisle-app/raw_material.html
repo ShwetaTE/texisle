@@ -1,0 +1,1807 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;"> -->
+	<meta name="format-detection" content="telephone=no">
+	<meta name="msapplication-tap-highlight" content="no">
+	<meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+	<meta name="color-scheme" content="light dark">
+	<meta http-equiv="refresh" content="1800">
+	<link rel="stylesheet" href="css/index.css">
+	<title>Texisle Dashboard</title>
+	<meta name="description" content="" />
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+	<!-- <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" /> -->
+	<link rel="canonical" href="https://keenthemes.com/metronic" />
+	<!--begin::Fonts-->
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<!--end::Fonts-->
+	<!--begin::Page Vendors Styles(used by this page)-->
+	<link href="plugins/custom/fullcalendar/fullcalendar.bundle.css" rel="stylesheet" type="text/css" />
+	<!--end::Page Vendors Styles-->
+	<!--begin::Global Theme Styles(used by all pages)-->
+	<!-- <script src="js/jquery.min.js" type="text/javascript"></script> -->
+	<script src="js/jquery-1.7.1.min.js"></script>
+	<script src="js/total_clock.js"></script>
+	<script src="js/changeIPAddress.js"></script>
+	<script src="js/offline.js"></script>
+	<script src="cordova.js"></script>
+
+	<script src="js/page_count.js"></script>
+
+	<script src="js/clock.js"></script>
+	<!-- <script src="js/timer.js"></script> -->
+	<script src="js/timer_reload.js"></script>
+	<script src="js/highcharts/highcharts.js"></script>
+	<script src="https://code.highcharts.com/modules/broken-axis.js"></script>
+	<script src="js/highcharts/data.js"></script>
+	<script src="js/highcharts/export-data.js"></script>
+	<script src="js/highcharts/accessibility.js"></script>
+	<script src="https://code.highcharts.com/modules/boost.js"></script>
+	<script src="js/check_s_id.js"></script>
+	<link href="css/tweet.css" rel="stylesheet" type="text/css" />
+	<script src="js/tweet.js"></script>
+	<script src="js/news.js"></script>
+	<script src="js/aboutpopup.js"></script>
+	<link href="css/aboutpopup.css" rel="stylesheet" type="text/css" />
+	<link href="plugins/global/plugins.bundle.css" rel="stylesheet" type="text/css" />
+	<link href="plugins/custom/prismjs/prismjs.bundle.css" rel="stylesheet" type="text/css" />
+	<link href="css/style.bundle.css" rel="stylesheet" type="text/css" />
+	<script src="js/watchlist.js"></script>
+	<!-- <script src="js/header.js"></script> -->
+
+	<!--end::Global Theme Styles-->
+	<!--begin::Layout Themes(used by all pages)-->
+	<link href="css/themes/layout/header/base/dark.css" rel="stylesheet" type="text/css" />
+	<link href="css/themes/layout/header/menu/dark.css" rel="stylesheet" type="text/css" />
+	<link href="css/themes/layout/brand/dark.css" rel="stylesheet" type="text/css" />
+	<link href="css/themes/layout/aside/dark.css" rel="stylesheet" type="text/css" />
+	<link rel="stylesheet" href="css/chart.css">
+	<script src="js/y_stock_data_rmi.js"></script>
+	<script src="js/update_time.js"></script>
+	<script src="js/open_chart.js"></script>
+	<script src="js/index.js"></script>
+	<script src="js/scroll_function.js"></script>
+	<!--end::Layout Themes-->
+	<link href="http://fonts.cdnfonts.com/css/myriad-pro" rel="stylesheet">
+
+	<script src="js/app_end.js"></script>
+</head>
+<style>
+	body {
+		font-family: Arial;
+	}
+
+	/* Style the tab */
+	.tab {
+		overflow-x: auto;
+		overflow-y: hidden;
+		display: flex;
+		float: none;
+		border: 1px solid #3F3D3A;
+		background-color: #1C1C1E;
+	}
+
+	/* Style the buttons inside the tab */
+	.tab button {
+		background-color: inherit;
+		float: left;
+		border: none;
+		outline: none;
+		cursor: pointer;
+		padding: 9px 16px;
+		transition: 0.3s;
+		font-size: 17px;
+	}
+
+	/* Change background color of buttons on hover */
+	.tab button:hover {
+		background-color: #2c2c2c;
+	}
+
+	/* Create an active/current tablink class */
+	.tab button.active {
+		background-color: #2c2c2c;
+	}
+
+	/* Style the tab content */
+	.tabcontent {
+		display: none;
+		padding: 0px 12px;
+		border: 0px solid #3F3D3A;
+		border-top: none;
+	}
+</style>
+
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+<script src="js/navbar.js"></script>
+<link rel="stylesheet" href="css/navbar.css">
+<div id="nav-id"></div>
+
+<body id="kt_body"
+	class="header-fixed header-mobile-fixed subheader-enabled subheader-fixed aside-enabled aside-fixed aside-minimize-hoverable page-loading"
+	style="background-color: #1C1C1E; padding-right: 0%; padding-left: 0%; height: 120%;">
+	<!--begin::Main-->
+	<!--begin::Page-->
+	<!--begin::Wrapper-->
+	<div class="d-flex flex-column flex-row-fluid" id="kt_wrapper">
+		<!--begin::Header-->
+
+		<!-- <div id="header-id"></div> -->
+		<div id="kt_header">
+			<div>
+				<div class="row" style="width: 100%;">
+					<div class="float-left" style="width: 50%; padding-left: 3%;">
+						<a onclick="app_end(window.location.pathname)" class="text-light mt-2 mb-1 mr-5 ml-4"
+							style="color: white; font-weight: bold; font-size: 25px;">Pipe Intel</a>
+					</div>
+					<div class="float-left" style="width: 50%; padding-right: 0%;">
+						<p onclick="window.open()" class="font-weight-bold power"
+							style="text-align: right; color: #9bb556;">Powered by Tex-Isle Inc.</p>
+					</div>
+				</div>
+			</div>
+			<hr style="border-top: 2px solid #7a7772; margin-top: 0px; margin-bottom: 0rem;">
+		</div>
+
+		<!--end::Container-->
+		<!-- </div> -->
+		<!--end::Header-->
+		<!--begin::Content-->
+		<div class="content d-flex flex-column flex-column-fluid" id="kt_content" style="background-color: #1C1C1E;">
+			<!--begin::Entry-->
+			<div class="d-flex flex-column-fluid" style="padding-right: 0%; padding-left: 0%;">
+				<!--begin::Container-->
+				<div class="container " style="background-color: #1C1C1E; padding-right: 0%; padding-left: 0%;">
+					<div class="tab scroll-touch" style="background-color: #1C1C1E;">
+						<button class="tablinks" onclick="openTab(event, 'Tab0', 'index_rmi','defaultOpen0')"
+							id="index_tab" style="font-weight: bold; color: white;">Index</button>
+						<button class="tablinks" onclick="openTab(event, 'Tab1', 'scrap','defaultOpen1')" id="scrap_tab"
+							style="font-weight: bold; color: white;">Scrap</button>
+						<button class="tablinks" onclick="openTab(event, 'Tab2','hrc','defaultOpen2')" id="hrc_tab"
+							style="font-weight: bold; color: white;">HRC</button>
+						<button class="tablinks" onclick="openTab(event, 'Tab3','coal','defaultOpen3')" id="coal_tab"
+							style="font-weight: bold; color: white;">Coal</button>
+						<button class="tablinks" onclick="openTab(event, 'Tab4','iron','defaultOpen4')" id="iron_tab"
+							style="font-weight: bold; color: white;">IronOre</button>
+					</div>
+
+					<!--begin::Dashboard-->
+					<!--begin::Row-->
+					<div class="tabcontent" id="Tab0"
+						style="background-color: #1C1C1E; padding-right: 0%; padding-left: 0%;">
+						<!-- <div w3-include-html="./html/raw_material_index.html"></div> -->
+						<div>
+							<div style="background-color: #1C1C1E; padding-right: 0%; padding-left: 0%; display:flex;flex-direction: column;">
+								<!-- chart div -->
+								<div class="col-xxl-8 order-xxl-1" style="padding-right: 0%; padding-left: 0%;">
+									<!--begin::Advance Table Widget 2-->
+									<div class="card card-custom card-stretch gutter-b">
+										<!--begin::Header-->
+										<div class="card-header border-0 pt-3" style="background-color: #1C1C1E;">
+											<h3 class="card-label font-weight-bolder"
+												style="font-size: medium; color: #868688;">Raw Material Index</h3>
+											<!-- <i class="far fa-times-circle" onclick="app_end(window.location.pathname)"></i> -->
+											<img onclick="app_end(window.location.pathname)" src="./img/return.png"
+												width="20" height="20">
+										</div>
+										<div class="card-header border-0 pt-0" style="background-color: #1C1C1E;">
+											<!-- <h3 class="card-title align-items-start flex-column"> -->
+											<div>
+												<span id="rmi_val_current" class="card-label font-weight-bolder"
+													style="font-size: 25px; color: white;"></span>
+												<span id="rmi_val_data_neg"
+													style="font-size: medium;font-weight: bold; margin-top: 8px; color: red"></span>
+												<span id="rmi_val_data"
+													style="font-size: medium;font-weight: bold; margin-top: 8px; color: #9bb556"></span>
+											</div>
+											<div style="width: 70px; padding-top: 4%;">
+												<i class="fa fa-solid fa-eye" style=" font-size: 17px;"
+													id="WL_RMI_index" onclick="add_to_watchlist(this, 'RMI_index')"></i>
+												<i class="fa fa-solid fa-download"
+													style=" font-size: 17px; padding-left: 35%;"
+													onclick="app_func_change('download_page.html', window.location.pathname)"></i>
+											</div>
+											<!-- </h3> -->
+											<div class="card-toolbar">
+												<ul class="nav nav-pills nav-pills-sm nav-dark-75">
+													<li class="nav-item">
+														<b class="nav-link py-2 px-4 " data-toggle="tab"
+															href="#kt_tab_pane_1_2" style="font-weight: 900;">1W</b>
+													</li>
+													<li class="nav-item">
+														<b class="nav-link py-2 px-4" data-toggle="tab"
+															href="#kt_tab_pane_1_3" style="font-weight: 900;">1M</b>
+													</li>
+													<li class="nav-item">
+														<b class="nav-link py-2 px-4 active" data-toggle="tab"
+															href="#kt_tab_pane_1_4" style="font-weight: 900;">3M</b>
+													</li>
+													<li class="nav-item">
+														<b class="nav-link py-2 px-4" data-toggle="tab"
+															href="#kt_tab_pane_1_5" style="font-weight: 900;">6M</b>
+													</li>
+													<li class="nav-item">
+														<b class="nav-link py-2 px-4" data-toggle="tab"
+															href="#kt_tab_pane_1_6" style="font-weight: 900;">1Y</b>
+													</li>
+													<li class="nav-item">
+														<b class="nav-link py-2 px-4" data-toggle="tab"
+															href="#kt_tab_pane_1_7" style="font-weight: 900;">2Y</b>
+													</li>
+												</ul>
+											</div>
+										</div>
+										<!--end::Header-->
+										<!--begin::Body-->
+										<div class="card-body pt-2 pb-0 mt-n3"
+											style="background-color: #1C1C1E; padding-right: 0%; padding-left: 0%; ;">
+											<div class="tab-content mt-5" id="myTabTables11">
+												<!--begin::Tap pane-->
+												<div class="tab-pane fade" id="kt_tab_pane_1_2" role="tabpanel"
+													aria-labelledby="kt_tab_pane_1_2">
+													<!--begin::Table-->
+													<div class="table-responsive">
+														<!-- {% include "./chart1/chart1_2.html" %} -->
+														<figure class="highcharts-figure highchart-dist">
+															<div class="lock-div" id="container_rmi_1"></div>
+														</figure>
+													</div>
+													<div style="width: 100%; display: flex; flex-wrap: wrap;">
+														<span class="up_dt_1_index">Refer to <a
+																style="color: #6666c1 !important;"
+																href="about_v2.html">About </a> section for
+															calculations</span>
+														<span class="up_dt_2_index" id="rmi_upt_1"></span>
+													</div>
+													<!--end::Table-->
+												</div>
+												<div class="tab-pane fade" id="kt_tab_pane_1_3" role="tabpanel"
+													aria-labelledby="kt_tab_pane_1_3">
+													<!--begin::Table-->
+													<div class="table-responsive">
+														<!-- {% include "./chart1/chart1_3.html" %} -->
+														<figure class="highcharts-figure highchart-dist">
+															<div class="lock-div" id="container_rmi_2"></div>
+														</figure>
+													</div>
+													<div style="width: 100%; display: flex; flex-wrap: wrap;">
+														<span class="up_dt_1_index">Refer to <a
+																style="color: #6666c1 !important;"
+																href="about_v2.html">About </a> section for
+															calculations</span>
+														<span class="up_dt_2_index" id="rmi_upt_2"></span>
+													</div>
+													<!--end::Table-->
+												</div>
+												<div class="tab-pane fade show active" id="kt_tab_pane_1_4"
+													role="tabpanel" aria-labelledby="kt_tab_pane_1_4">
+													<!--begin::Table-->
+													<div class="table-responsive">
+														<!-- {% include "./chart1/chart1_4.html" %} -->
+														<figure class="highcharts-figure highchart-dist">
+															<div class="lock-div" id="container_rmi_3"></div>
+														</figure>
+													</div>
+													<div style="width: 100%; display: flex; flex-wrap: wrap;">
+														<span class="up_dt_1_index">Refer to <a
+																style="color: #6666c1 !important;"
+																href="about_v2.html">About </a> section for
+															calculations</span>
+														<span class="up_dt_2_index" id="rmi_upt_3"></span>
+													</div>
+													<!--end::Table-->
+												</div>
+												<div class="tab-pane fade" id="kt_tab_pane_1_5" role="tabpanel"
+													aria-labelledby="kt_tab_pane_1_5">
+													<!--begin::Table-->
+													<div class="table-responsive">
+														<!-- {% include "./chart1/chart1_5.html" %} -->
+														<figure class="highcharts-figure highchart-dist">
+															<div class="lock-div" id="container_rmi_4"></div>
+														</figure>
+													</div>
+													<div style="width: 100%; display: flex; flex-wrap: wrap;">
+														<span class="up_dt_1_index">Refer to <a
+																style="color: #6666c1 !important;"
+																href="about_v2.html">About </a> section for
+															calculations</span>
+														<span class="up_dt_2_index" id="rmi_upt_4"></span>
+													</div>
+													<!--end::Table-->
+												</div>
+												<div class="tab-pane fade" id="kt_tab_pane_1_6" role="tabpanel"
+													aria-labelledby="kt_tab_pane_1_6">
+													<!--begin::Table-->
+													<div class="table-responsive">
+														<!-- {% include "./chart1/chart1_6.html" %} -->
+														<figure class="highcharts-figure highchart-dist">
+															<div class="lock-div" id="container_rmi_5"></div>
+														</figure>
+													</div>
+													<div style="width: 100%; display: flex; flex-wrap: wrap;">
+														<span class="up_dt_1_index">Refer to <a
+																style="color: #6666c1 !important;"
+																href="about_v2.html">About </a> section for
+															calculations</span>
+														<span class="up_dt_2_index" id="rmi_upt_5"></span>
+													</div>
+													<!--end::Table-->
+												</div>
+												<div class="tab-pane fade" id="kt_tab_pane_1_7" role="tabpanel"
+													aria-labelledby="kt_tab_pane_1_7">
+													<!--begin::Table-->
+													<div class="table-responsive">
+														<!-- {% include "./chart1/chart1_7.html" %} -->
+														<figure class="highcharts-figure highchart-dist">
+															<div class="lock-div" id="container_rmi_6"></div>
+														</figure>
+													</div>
+													<div style="width: 100%; display: flex; flex-wrap: wrap;">
+														<span class="up_dt_1_index">Refer to <a
+																style="color: #6666c1 !important;"
+																href="about_v2.html">About </a> section for
+															calculations</span>
+														<span class="up_dt_2_index" id="rmi_upt_6"></span>
+													</div>
+													<!--end::Table-->
+												</div>
+												<!--end::Tap pane-->
+											</div>
+										</div>
+										<!--end::Body-->
+									</div>
+									<!--end::Advance Table Widget 2-->
+								</div>
+								<!-- news and tweet tabs -->
+								<div class="tab scroll-touch tab-dist wt-100" style="margin-top: 0.5rem;">
+									<button class="tablinks1 wt-50" onclick="openinnerTab(event, 'news_tab0')"
+										id="defaultOpen0" style="font-weight: bold; color: white;">News
+										Articles</button>
+									<button class="tablinks1 wt-50" onclick="openinnerTab(event, 'tweet_tab0')"
+										style="font-weight: bold; color: white;">Tweets</button>
+								</div>
+								<!-- news div -->
+								<div id="news_tab0" class="innertabcontent">
+									<div class="col-xxl-8 order-2 order-xxl-1"
+										style="background-color: #1C1C1E; padding-right: 0%; padding-left: 2%;">
+										<!--begin::Advance Table Widget 2-->
+										<div class="card card-custom card-stretch gutter-b"
+											style="background-color: #1C1C1E;">
+											<!--begin::Header-->
+											<div class="card-header border-0 pt-1" style="padding-left: 0%;">
+												<h3 class="card-title align-items-start flex-column">
+													<!-- <span class="card-label"
+														style="font-size: large; padding-left: 0%; color: #70843A; font-weight: 900; font-family: 'Myriad Pro 700', sans-serif;">News
+														Articles</span> -->
+													<span class="text-muted mt-2 font-weight-bold font-size-sm">News
+														stories
+														that are relevant to the dashboard</span>
+												</h3>
+											</div>
+											<!--end::Header-->
+											<!--begin::Body-->
+											<div class="card-body pt-2 pb-0 mt-n9"
+												style="padding-right: 0%; padding-left: 0%;">
+												<div class="tab-content mt-3" id="myTabTables11">
+													<!--begin::Tap pane-->
+													<div class="tab-pane fade show active" id="kt_tab_pane_11_3"
+														role="tabpanel" aria-labelledby="kt_tab_pane_11_3">
+														<table class="table table-borderless table-vertical-center"
+															id="rmi_rec_news_datatable">
+														</table>
+														<table class="table table-borderless table-vertical-center"
+															id="rmi_news_datatable">
+														</table>
+													</div>
+													<!--end::Tap pane-->
+												</div>
+											</div>
+											<!--end::Body-->
+										</div>
+										<!--end::Advance Table Widget 2-->
+									</div>
+								</div>
+
+								<div id="tweet_tab0" class="innertabcontent">
+									<div class="card-body pt-2 pb-0 mt-n9" style="padding-right: 0%; padding-left: 0%;">
+										<div class="tab-content mt-3" id="myTabTables11">
+											<!--begin::Tap pane-->
+											<div class="tab-pane fade show active" id="kt_tab_pane_25_3" role="tabpanel"
+												aria-labelledby="kt_tab_pane_25_3">
+												<table class="table table-borderless table-vertical-center"
+													id="rmi_tweet_datatable"></table>
+											</div>
+											<!--end::Tap pane-->
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="tabcontent" id="Tab1"
+						style="background-color: #1C1C1E; padding-right: 0%; padding-left: 0%;">
+						<!-- <div w3-include-html="./html/scrap_tab.html"></div> -->
+						<div>
+							<!--begin::Page-->
+							<div>
+								<!--begin::Wrapper-->
+								<div class="d-flex flex-column flex-row-fluid" id="kt_wrapper">
+									<!--begin::Content-->
+									<!--begin::Entry-->
+									<div class="d-flex flex-column-fluid" style="padding-right: 0%; padding-left: 0%;">
+										<!--begin::Container-->
+										<div class="container"
+											style="background-color: #1C1C1E; padding-right: 0%; padding-left: 0%;">
+											<!--begin::Dashboard-->
+											<!--begin::Row-->
+											<div id="Tab1"
+												style="background-color: #1C1C1E; padding-right: 0%; padding-left: 0%;">
+												<!-- chart div -->
+												<div class="col-xxl-8 order-2 order-xxl-1"
+													style="padding-right: 0%; padding-left: 0%;">
+													<!--begin::Advance Table Widget 2-->
+													<div class="card card-custom card-stretch gutter-b">
+														<!--begin::Header-->
+														<div class="card-header border-0 pt-3"
+															style="background-color: #1C1C1E;">
+															<h3 class="card-label font-weight-bolder"
+																style="font-size: medium; color: #868688;">Scrap: Spot &
+																Future</h3>
+															<!-- <i class="far fa-times-circle" onclick="app_end(window.location.pathname)"></i> -->
+															<img onclick="app_end(window.location.pathname)"
+																src="./img/return.png" width="20" height="20">
+														</div>
+														<div class="card-header border-0 pt-0"
+															style="background-color: #1C1C1E;">
+															<!-- <h3 class="card-title align-items-start flex-column"> -->
+															<div>
+																<span id="scrap_val_current"
+																	class="card-label font-weight-bolder"
+																	style="font-size: 25px; color: white;"></span>
+																<span id="scrap_val_data_neg"
+																	style="font-size: medium;font-weight: bold; margin-top: 8px; color: red"></span>
+																<span id="scrap_val_data"
+																	style="font-size: medium;font-weight: bold; margin-top: 8px; color: #9bb556"></span>
+															</div>
+															<div style="width: 70px; padding-top: 4%;">
+																<i class="fa fa-solid fa-eye" style=" font-size: 17px;"
+																	id="WL_SCRAP"
+																	onclick="add_to_watchlist(this, 'SCRAP')"></i>
+																<i class="fa fa-solid fa-download"
+																	style=" font-size: 17px; padding-left: 35%;"
+																	onclick="app_func_change('download_page.html', window.location.pathname)"></i>
+															</div>
+
+															<!-- </h3> -->
+															<div class="card-toolbar">
+																<ul class="nav nav-pills nav-pills-sm nav-dark-75">
+																	<li class="nav-item">
+																		<b class="nav-link py-2 px-4 " data-toggle="tab"
+																			href="#kt_tab_pane_10_2"
+																			style="font-weight: 900;">1W</b>
+																	</li>
+																	<li class="nav-item">
+																		<b class="nav-link py-2 px-4" data-toggle="tab"
+																			href="#kt_tab_pane_10_3"
+																			style="font-weight: 900;">1M</b>
+																	</li>
+																	<li class="nav-item">
+																		<b class="nav-link py-2 px-4 active"
+																			data-toggle="tab" href="#kt_tab_pane_10_4"
+																			style="font-weight: 900;">3M</b>
+																	</li>
+																	<li class="nav-item">
+																		<b class="nav-link py-2 px-4" data-toggle="tab"
+																			href="#kt_tab_pane_10_5"
+																			style="font-weight: 900;">6M</b>
+																	</li>
+																	<li class="nav-item">
+																		<b class="nav-link py-2 px-4" data-toggle="tab"
+																			href="#kt_tab_pane_10_6"
+																			style="font-weight: 900;">1Y</b>
+																	</li>
+																	<li class="nav-item">
+																		<b class="nav-link py-2 px-4" data-toggle="tab"
+																			href="#kt_tab_pane_10_7"
+																			style="font-weight: 900;">2Y</b>
+																	</li>
+																</ul>
+															</div>
+														</div>
+														<!--end::Header-->
+														<!--begin::Body-->
+														<div class="card-body pt-2 pb-0 mt-n3"
+															style="background-color: #1C1C1E; padding-right: 0%; padding-left: 0%; ;">
+															<div class="tab-content mt-5" id="myTabTables11">
+																<!--begin::Tap pane-->
+																<div class="tab-pane fade" id="kt_tab_pane_10_2"
+																	role="tabpanel" aria-labelledby="kt_tab_pane_10_2">
+																	<!--begin::Table-->
+																	<div class="table-responsive">
+																		<!-- {% include "./chart1/chart1_2.html" %} -->
+																		<figure
+																			class="highcharts-figure highchart-dist">
+																			<div class="lock-div" id="container1_2">
+																			</div>
+																		</figure>
+																	</div>
+																	<div
+																		style="width: 100%; display: flex; flex-wrap: wrap;">
+																		<span class="up_dt_1">Source: CME Group</span>
+																		<span class="up_dt_2" id="scrap_upt_1"></span>
+																	</div>
+																	<!--end::Table-->
+																</div>
+																<div class="tab-pane fade" id="kt_tab_pane_10_3"
+																	role="tabpanel" aria-labelledby="kt_tab_pane_10_3">
+																	<!--begin::Table-->
+																	<div class="table-responsive">
+																		<!-- {% include "./chart1/chart1_3.html" %} -->
+																		<figure
+																			class="highcharts-figure highchart-dist">
+																			<div class="lock-div" id="container1_3">
+																			</div>
+																		</figure>
+																	</div>
+																	<div
+																		style="width: 100%; display: flex; flex-wrap: wrap;">
+																		<span class="up_dt_1">Source: CME Group</span>
+																		<span class="up_dt_2" id="scrap_upt_2"></span>
+																	</div>
+																	<!--end::Table-->
+																</div>
+																<div class="tab-pane fade show active"
+																	id="kt_tab_pane_10_4" role="tabpanel"
+																	aria-labelledby="kt_tab_pane_10_4">
+																	<!--begin::Table-->
+																	<div class="table-responsive">
+																		<!-- {% include "./chart1/chart1_4.html" %} -->
+																		<figure
+																			class="highcharts-figure highchart-dist">
+																			<div class="lock-div" id="container1_4">
+																			</div>
+																		</figure>
+																	</div>
+																	<div
+																		style="width: 100%; display: flex; flex-wrap: wrap;">
+																		<span class="up_dt_1">Source: CME Group</span>
+																		<span class="up_dt_2" id="scrap_upt_3"></span>
+																	</div>
+																	<!--end::Table-->
+																</div>
+																<div class="tab-pane fade" id="kt_tab_pane_10_5"
+																	role="tabpanel" aria-labelledby="kt_tab_pane_10_5">
+																	<!--begin::Table-->
+																	<div class="table-responsive">
+																		<!-- {% include "./chart1/chart1_5.html" %} -->
+																		<figure
+																			class="highcharts-figure highchart-dist">
+																			<div class="lock-div" id="container1_5">
+																			</div>
+																		</figure>
+																	</div>
+																	<div
+																		style="width: 100%; display: flex; flex-wrap: wrap;">
+																		<span class="up_dt_1">Source: CME Group</span>
+																		<span class="up_dt_2" id="scrap_upt_4"></span>
+																	</div>
+																	<!--end::Table-->
+																</div>
+																<div class="tab-pane fade" id="kt_tab_pane_10_6"
+																	role="tabpanel" aria-labelledby="kt_tab_pane_10_6">
+																	<!--begin::Table-->
+																	<div class="table-responsive">
+																		<!-- {% include "./chart1/chart1_6.html" %} -->
+																		<figure
+																			class="highcharts-figure highchart-dist">
+																			<div class="lock-div" id="container1_6">
+																			</div>
+																		</figure>
+																	</div>
+																	<div
+																		style="width: 100%; display: flex; flex-wrap: wrap;">
+																		<span class="up_dt_1">Source: CME Group</span>
+																		<span class="up_dt_2" id="scrap_upt_5"></span>
+																	</div>
+																	<!--end::Table-->
+																</div>
+																<div class="tab-pane fade" id="kt_tab_pane_10_7"
+																	role="tabpanel" aria-labelledby="kt_tab_pane_10_7">
+																	<!--begin::Table-->
+																	<div class="table-responsive">
+																		<!-- {% include "./chart1/chart1_7.html" %} -->
+																		<figure
+																			class="highcharts-figure highchart-dist">
+																			<div class="lock-div" id="container1_7">
+																			</div>
+																		</figure>
+																	</div>
+																	<div
+																		style="width: 100%; display: flex; flex-wrap: wrap;">
+																		<span class="up_dt_1">Source: CME Group</span>
+																		<span class="up_dt_2" id="scrap_upt_6"></span>
+																	</div>
+																	<!--end::Table-->
+																</div>
+																<!--end::Tap pane-->
+															</div>
+														</div>
+														<!--end::Body-->
+													</div>
+													<!--end::Advance Table Widget 2-->
+												</div>
+												<!-- news and tweet tabs -->
+												<div class="tab scroll-touch tab-dist wt-100" style="margin-top: 0.5rem;">
+													<button class="tablinks1 wt-50"
+														onclick="openinnerTab(event, 'news_tab1')" id="defaultOpen1"
+														style="font-weight: bold; color: white;">News
+														Articles</button>
+													<button class="tablinks1 wt-50"
+														onclick="openinnerTab(event, 'tweet_tab1')"
+														style="font-weight: bold; color: white;">Tweets</button>
+												</div>
+												<!-- news div -->
+												<div id="news_tab1" class="innertabcontent">
+													<div class="col-xxl-8 order-2 order-xxl-1"
+														style="background-color: #1C1C1E; padding-right: 0%; padding-left: 2%;">
+														<!--begin::Advance Table Widget 2-->
+														<div class="card card-custom card-stretch gutter-b"
+															style="background-color: #1C1C1E;">
+															<!--begin::Header-->
+															<div class="card-header border-0 pt-1"
+																style="padding-left: 0%;">
+																<h3 class="card-title align-items-start flex-column">
+																	<!-- <span class="card-label"
+																style="font-size: large; padding-left: 0%; color: #70843A; font-weight: 900; font-family: 'Myriad Pro 700', sans-serif;">News
+																Articles</span> -->
+																	<span
+																		class="text-muted mt-2 font-weight-bold font-size-sm">News
+																		stories
+																		that are relevant to the dashboard</span>
+																</h3>
+															</div>
+															<!--end::Header-->
+															<!--begin::Body-->
+															<div class="card-body pt-2 pb-0 mt-n9"
+																style="padding-right: 0%; padding-left: 0%;">
+																<div class="tab-content mt-3" id="myTabTables11">
+																	<!--begin::Tap pane-->
+																	<div class="tab-pane fade show active"
+																		id="kt_tab_pane_10_3" role="tabpanel"
+																		aria-labelledby="kt_tab_pane_10_3">
+																		<table
+																			class="table table-borderless table-vertical-center"
+																			id="scrap_rec_news_datatable"></table>
+																		<table
+																			class="table table-borderless table-vertical-center"
+																			id="scrap_news_datatable"></table>
+																	</div>
+																	<!--end::Tap pane-->
+																</div>
+															</div>
+															<!--end::Body-->
+														</div>
+														<!--end::Advance Table Widget 2-->
+													</div>
+												</div>
+
+												<div id="tweet_tab1" class="innertabcontent">
+													<div class="card-body pt-2 pb-0 mt-n9"
+														style="padding-right: 0%; padding-left: 0%;">
+														<div class="tab-content mt-3" id="myTabTables11">
+															<!--begin::Tap pane-->
+															<div class="tab-pane fade show active" id="kt_tab_pane_25_3"
+																role="tabpanel" aria-labelledby="kt_tab_pane_25_3">
+																<table
+																	class="table table-borderless table-vertical-center"
+																	id="scrap_tweet_datatable"></table>
+															</div>
+															<!--end::Tap pane-->
+														</div>
+													</div>
+												</div>
+											</div>
+											<!--end::Row-->
+											<!--end::Dashboard-->
+										</div>
+										<!--end::Container-->
+									</div>
+									<!--end::Entry-->
+									<!--end::Content-->
+								</div>
+								<!--end::Wrapper-->
+							</div>
+							<!--end::Page-->
+						</div>
+					</div>
+					<div class="tabcontent" id="Tab2"
+						style="background-color: #1C1C1E; padding-right: 0%; padding-left: 0%;">
+						<!-- <div w3-include-html="./html/hrc_tab.html"></div> -->
+						<div>
+							<!--begin::Page-->
+							<div>
+								<!--begin::Wrapper-->
+								<div class="d-flex flex-column flex-row-fluid" id="kt_wrapper">
+									<!--begin::Content-->
+									<!--begin::Entry-->
+									<div class="d-flex flex-column-fluid" style="padding-right: 0%; padding-left: 0%;">
+										<!--begin::Container-->
+										<div class="container"
+											style="background-color: #1C1C1E; padding-right: 0%; padding-left: 0%;">
+											<!--begin::Dashboard-->
+											<!--begin::Row-->
+											<div
+												style="background-color: #1C1C1E; padding-right: 0%; padding-left: 0%;">
+												<!-- chart div -->
+												<div class="col-xxl-8 order-2 order-xxl-1"
+													style="padding-right: 0%; padding-left: 0%;">
+													<!--begin::Advance Table Widget 2-->
+													<div class="card card-custom card-stretch gutter-b">
+														<!--begin::Header-->
+														<div class="card-header border-0 pt-3"
+															style="background-color: #1C1C1E;">
+															<h3 class="card-label font-weight-bolder"
+																style="font-size:medium; color: #868688;">Hot Rolled
+																Coil: Spot & Future
+															</h3>
+															<!-- <i class="far fa-times-circle" onclick="app_end(window.location.pathname)"></i> -->
+															<img onclick="app_end(window.location.pathname)"
+																src="./img/return.png" width="20" height="20">
+														</div>
+														<div class="card-header border-0 pt-0"
+															style="background-color: #1C1C1E;">
+															<!-- <h3 class="card-title align-items-start flex-column"> -->
+															<div>
+																<span id="hrc_val_current"
+																	class="card-label font-weight-bolder"
+																	style="font-size: 25px; color: white;"></span>
+																<span id="hrc_val_data_neg"
+																	style="font-size: medium;font-weight: bold; margin-top: 8px; color: red"></span>
+																<span id="hrc_val_data"
+																	style="font-size: medium;font-weight: bold; margin-top: 8px; color: #9bb556"></span>
+															</div>
+															<div style="width: 70px; padding-top: 4%;">
+																<i class="fa fa-solid fa-eye" style=" font-size: 17px;"
+																	id="WL_HRC"
+																	onclick="add_to_watchlist(this, 'HRC')"></i>
+																<i class="fa fa-solid fa-download"
+																	style=" font-size: 17px; padding-left: 35%;"
+																	onclick="app_func_change('download_page.html', window.location.pathname)"></i>
+															</div>
+															<!-- </h3> -->
+															<div class="card-toolbar">
+																<ul class="nav nav-pills nav-pills-sm nav-dark-75">
+																	<!-- <li class="nav-item">
+																				<a class="nav-link py-2 px-4" data-toggle="tab" href="#kt_tab_pane_12_0">Default</a>
+																			</li> -->
+																	<!-- <li class="nav-item">
+																				<a class="nav-link py-2 px-4" data-toggle="tab" href="#kt_tab_pane_12_1">1D</a>
+																			</li> -->
+																	<li class="nav-item">
+																		<b class="nav-link py-2 px-4 " data-toggle="tab"
+																			href="#kt_tab_pane_12_2"
+																			style="font-weight: 900;">1W</b>
+																	</li>
+																	<li class="nav-item">
+																		<b class="nav-link py-2 px-4" data-toggle="tab"
+																			href="#kt_tab_pane_12_3"
+																			style="font-weight: 900;">1M</b>
+																	</li>
+																	<li class="nav-item">
+																		<b class="nav-link py-2 px-4 active"
+																			data-toggle="tab" href="#kt_tab_pane_12_4"
+																			style="font-weight: 900;">3M</b>
+																	</li>
+																	<li class="nav-item">
+																		<b class="nav-link py-2 px-4" data-toggle="tab"
+																			href="#kt_tab_pane_12_5"
+																			style="font-weight: 900;">6M</b>
+																	</li>
+																	<li class="nav-item">
+																		<b class="nav-link py-2 px-4" data-toggle="tab"
+																			href="#kt_tab_pane_12_6"
+																			style="font-weight: 900;">1Y</b>
+																	</li>
+																	<li class="nav-item">
+																		<b class="nav-link py-2 px-4" data-toggle="tab"
+																			href="#kt_tab_pane_12_7"
+																			style="font-weight: 900;">2Y</b>
+																	</li>
+																</ul>
+															</div>
+														</div>
+														<!--end::Header-->
+														<!--begin::Body-->
+														<div class="card-body pt-2 pb-0 mt-n3"
+															style="background-color: #1C1C1E; padding-right: 0%; padding-left: 0%; ;">
+															<div class="tab-content mt-5" id="myTabTables13">
+																<!--begin::Tap pane-->
+																<div class="tab-pane fade" id="kt_tab_pane_12_2"
+																	role="tabpanel" aria-labelledby="kt_tab_pane_12_2">
+																	<!--begin::Table-->
+																	<div class="table-responsive">
+																		<!-- {% include "./chart2/chart2_2.html" %} -->
+																		<figure
+																			class="highcharts-figure highchart-dist">
+																			<div class="lock-div" id="container2_2">
+																			</div>
+																		</figure>
+																	</div>
+																	<div
+																		style="width: 100%; display: flex; flex-wrap: wrap;">
+																		<span class="up_dt_1">Source: CME Group</span>
+																		<span class="up_dt_2" id="hrc_upt_1"></span>
+																	</div>
+																	<!--end::Table-->
+																</div>
+																<div class="tab-pane fade" id="kt_tab_pane_12_3"
+																	role="tabpanel" aria-labelledby="kt_tab_pane_12_3">
+																	<!--begin::Table-->
+																	<div class="table-responsive">
+																		<!-- {% include "./chart2/chart2_3.html" %} -->
+																		<figure
+																			class="highcharts-figure highchart-dist">
+																			<div class="lock-div" id="container2_3">
+																			</div>
+																		</figure>
+																	</div>
+																	<div
+																		style="width: 100%; display: flex; flex-wrap: wrap;">
+																		<span class="up_dt_1">Source: CME Group</span>
+																		<span class="up_dt_2" id="hrc_upt_2"></span>
+																	</div>
+																	<!--end::Table-->
+																</div>
+																<div class="tab-pane fade show active"
+																	id="kt_tab_pane_12_4" role="tabpanel"
+																	aria-labelledby="kt_tab_pane_12_4">
+																	<!--begin::Table-->
+																	<div class="table-responsive">
+																		<!-- {% include "./chart2/chart2_4.html" %} -->
+																		<figure
+																			class="highcharts-figure highchart-dist">
+																			<div class="lock-div" id="container2_4">
+																			</div>
+																		</figure>
+																	</div>
+																	<div
+																		style="width: 100%; display: flex; flex-wrap: wrap;">
+																		<span class="up_dt_1">Source: CME Group</span>
+																		<span class="up_dt_2" id="hrc_upt_3"></span>
+																	</div>
+																	<!--end::Table-->
+																</div>
+																<div class="tab-pane fade" id="kt_tab_pane_12_5"
+																	role="tabpanel" aria-labelledby="kt_tab_pane_12_5">
+																	<!--begin::Table-->
+																	<div class="table-responsive">
+																		<!-- {% include "./chart2/chart2_5.html" %} -->
+																		<figure
+																			class="highcharts-figure highchart-dist">
+																			<div class="lock-div" id="container2_5">
+																			</div>
+																		</figure>
+																	</div>
+																	<div
+																		style="width: 100%; display: flex; flex-wrap: wrap;">
+																		<span class="up_dt_1">Source: CME Group</span>
+																		<span class="up_dt_2" id="hrc_upt_4"></span>
+																	</div>
+																	<!--end::Table-->
+																</div>
+																<div class="tab-pane fade" id="kt_tab_pane_12_6"
+																	role="tabpanel" aria-labelledby="kt_tab_pane_12_6">
+																	<!--begin::Table-->
+																	<div class="table-responsive">
+																		<!-- {% include "./chart2/chart2_6.html" %} -->
+																		<figure
+																			class="highcharts-figure highchart-dist">
+																			<div class="lock-div" id="container2_6">
+																			</div>
+																		</figure>
+																	</div>
+																	<div
+																		style="width: 100%; display: flex; flex-wrap: wrap;">
+																		<span class="up_dt_1">Source: CME Group</span>
+																		<span class="up_dt_2" id="hrc_upt_5"></span>
+																	</div>
+																	<!--end::Table-->
+																</div>
+																<div class="tab-pane fade" id="kt_tab_pane_12_7"
+																	role="tabpanel" aria-labelledby="kt_tab_pane_12_7">
+																	<!--begin::Table-->
+																	<div class="table-responsive">
+																		<!-- {% include "./chart2/chart2_7.html" %} -->
+																		<figure
+																			class="highcharts-figure highchart-dist">
+																			<div class="lock-div" id="container2_7">
+																			</div>
+																		</figure>
+																	</div>
+																	<div
+																		style="width: 100%; display: flex; flex-wrap: wrap;">
+																		<span class="up_dt_1">Source: CME Group</span>
+																		<span class="up_dt_2" id="hrc_upt_6"></span>
+																	</div>
+																	<!--end::Table-->
+																</div>
+																<!--end::Tap pane-->
+															</div>
+														</div>
+														<!--end::Body-->
+													</div>
+													<!--end::Advance Table Widget 2-->
+												</div>
+												<div class="tab scroll-touch tab-dist wt-100" style="margin-top: 0.5rem;">
+													<button class="tablinks1 wt-50"
+														onclick="openinnerTab(event, 'news_tab2')" id="defaultOpen2"
+														style="font-weight: bold; color: white;">News
+														Articles</button>
+													<button class="tablinks1 wt-50"
+														onclick="openinnerTab(event, 'tweet_tab2')"
+														style="font-weight: bold; color: white;">Tweets</button>
+												</div>
+												<!-- news div -->
+												<div id="news_tab2" class="innertabcontent">
+													<div class="col-xxl-8 order-2 order-xxl-1"
+														style="background-color: #1C1C1E; padding-right: 0%; padding-left: 2%;">
+														<!--begin::Advance Table Widget 2-->
+														<div class="card card-custom card-stretch gutter-b"
+															style="background-color: #1C1C1E;">
+															<!--begin::Header-->
+															<div class="card-header border-0 pt-1"
+																style="padding-left: 0%;">
+																<h3 class="card-title align-items-start flex-column">
+																	<!-- <span class="card-label"
+																		style="font-size: large; padding-left: 0%; color: #70843A;font-weight: 900; font-family: 'Myriad Pro 700', sans-serif;">News
+																		Articles</span> -->
+																	<span
+																		class="text-muted mt-2 font-weight-bold font-size-sm">News
+																		stories
+																		that are relevant to the dashboard</span>
+																</h3>
+															</div>
+															<!--end::Header-->
+															<!--begin::Body-->
+															<div class="card-body pt-2 pb-0 mt-n9"
+																style="padding-right: 0%; padding-left: 0%;">
+																<div class="tab-content mt-3" id="myTabTables11">
+																	<!--begin::Tap pane-->
+																	<div class="tab-pane fade show active"
+																		id="kt_tab_pane_11_3" role="tabpanel"
+																		aria-labelledby="kt_tab_pane_11_3">
+																		<!--begin::Table-->
+																		<div class="table-responsive">
+																			<table
+																				class="table table-borderless table-vertical-center"
+																				id="hrc_rec_news_datatable"></table>
+																			<table
+																				class="table table-borderless table-vertical-center"
+																				id="hrc_news_datatable"></table>
+																		</div>
+																		<!--end::Table-->
+																	</div>
+																	<!--end::Tap pane-->
+																</div>
+															</div>
+															<!--end::Body-->
+														</div>
+														<!--end::Advance Table Widget 2-->
+													</div>
+												</div>
+
+												<div id="tweet_tab2" class="innertabcontent">
+													<div class="card-body pt-2 pb-0 mt-n9"
+														style="padding-right: 0%; padding-left: 0%;">
+														<div class="tab-content mt-3" id="myTabTables11">
+															<!--begin::Tap pane-->
+															<div class="tab-pane fade show active" id="kt_tab_pane_25_3"
+																role="tabpanel" aria-labelledby="kt_tab_pane_25_3">
+																<table
+																	class="table table-borderless table-vertical-center"
+																	id="hrc_tweet_datatable"></table>
+															</div>
+															<!--end::Tap pane-->
+														</div>
+													</div>
+												</div>
+											</div>
+											<!--end::Row-->
+											<!--end::Dashboard-->
+										</div>
+										<!--end::Container-->
+									</div>
+									<!--end::Entry-->
+									<!--end::Content-->
+								</div>
+								<!--end::Wrapper-->
+							</div>
+							<!--end::Page-->
+						</div>
+					</div>
+					<div class="tabcontent" id="Tab3"
+						style="background-color: #1C1C1E; padding-right: 0%; padding-left: 0%;">
+						<!-- <div w3-include-html="./html/hrc_tab.html"></div> -->
+						<div>
+							<!--begin::Page-->
+							<div>
+								<!--begin::Wrapper-->
+								<div class="d-flex flex-column flex-row-fluid" id="kt_wrapper">
+									<!--begin::Content-->
+									<!--begin::Entry-->
+									<div class="d-flex flex-column-fluid" style="padding-right: 0%; padding-left: 0%;">
+										<!--begin::Container-->
+										<div class="container"
+											style="background-color: #1C1C1E; padding-right: 0%; padding-left: 0%;">
+											<!--begin::Dashboard-->
+											<!--begin::Row-->
+											<div
+												style="background-color: #1C1C1E; padding-right: 0%; padding-left: 0%;">
+												<!-- chart div -->
+												<div class="col-xxl-8 order-2 order-xxl-1"
+													style="padding-right: 0%; padding-left: 0%;">
+													<!--begin::Advance Table Widget 2-->
+													<div class="card card-custom card-stretch gutter-b">
+														<!--begin::Header-->
+														<div class="card-header border-0 pt-3"
+															style="background-color: #1C1C1E;">
+															<h3 class="card-label font-weight-bolder"
+																style="font-size:medium; color: #868688;">Coal: Spot &
+																Future
+															</h3>
+															<!-- <i class="far fa-times-circle" onclick="app_end(window.location.pathname)"></i> -->
+															<img onclick="app_end(window.location.pathname)"
+																src="./img/return.png" width="20" height="20">
+														</div>
+														<div class="card-header border-0 pt-0"
+															style="background-color: #1C1C1E;">
+															<!-- <h3 class="card-title align-items-start flex-column"> -->
+															<div>
+																<span id="coal_val_current"
+																	class="card-label font-weight-bolder"
+																	style="font-size: 25px; color: white;"></span>
+																<span id="coal_val_data_neg"
+																	style="font-size: medium;font-weight: bold; margin-top: 8px; color: red"></span>
+																<span id="coal_val_data"
+																	style="font-size: medium;font-weight: bold; margin-top: 8px; color: #9bb556"></span>
+															</div>
+															<div style="width: 70px; padding-top: 4%;">
+																<i class="fa fa-solid fa-eye" style=" font-size: 17px;"
+																	id="WL_COAL"
+																	onclick="add_to_watchlist(this, 'COAL')"></i>
+																<i class="fa fa-solid fa-download"
+																	style=" font-size: 17px; padding-left: 35%;"
+																	onclick="app_func_change('download_page.html', window.location.pathname)"></i>
+															</div>
+															<!-- </h3> -->
+															<div class="card-toolbar">
+																<ul class="nav nav-pills nav-pills-sm nav-dark-75">
+																	<!-- <li class="nav-item">
+																				<a class="nav-link py-2 px-4" data-toggle="tab" href="#kt_tab_pane_13_0">Default</a>
+																			</li> -->
+																	<!-- <li class="nav-item">
+																				<a class="nav-link py-2 px-4" data-toggle="tab" href="#kt_tab_pane_13_1">1D</a>
+																			</li> -->
+																	<li class="nav-item">
+																		<b class="nav-link py-2 px-4 " data-toggle="tab"
+																			href="#kt_tab_pane_13_1"
+																			style="font-weight: 900;">1W</b>
+																	</li>
+																	<li class="nav-item">
+																		<b class="nav-link py-2 px-4" data-toggle="tab"
+																			href="#kt_tab_pane_13_2"
+																			style="font-weight: 900;">1M</b>
+																	</li>
+																	<li class="nav-item">
+																		<b class="nav-link py-2 px-4 active"
+																			data-toggle="tab" href="#kt_tab_pane_13_3"
+																			style="font-weight: 900;">3M</b>
+																	</li>
+																	<li class="nav-item">
+																		<b class="nav-link py-2 px-4" data-toggle="tab"
+																			href="#kt_tab_pane_13_4"
+																			style="font-weight: 900;">6M</b>
+																	</li>
+																	<li class="nav-item">
+																		<b class="nav-link py-2 px-4" data-toggle="tab"
+																			href="#kt_tab_pane_13_5"
+																			style="font-weight: 900;">1Y</b>
+																	</li>
+																	<li class="nav-item">
+																		<b class="nav-link py-2 px-4" data-toggle="tab"
+																			href="#kt_tab_pane_13_6"
+																			style="font-weight: 900;">2Y</b>
+																	</li>
+																</ul>
+															</div>
+														</div>
+														<!--end::Header-->
+														<!--begin::Body-->
+														<div class="card-body pt-2 pb-0 mt-n3"
+															style="background-color: #1C1C1E; padding-right: 0%; padding-left: 0%; ;">
+															<div class="tab-content mt-5" id="myTabTables13">
+																<!--begin::Tap pane-->
+																<div class="tab-pane fade" id="kt_tab_pane_13_1"
+																	role="tabpanel" aria-labelledby="kt_tab_pane_13_1">
+																	<!--begin::Table-->
+																	<div class="table-responsive">
+																		<figure
+																			class="highcharts-figure highchart-dist">
+																			<div class="lock-div" id="container_mff_1">
+																			</div>
+																		</figure>
+																	</div>
+																	<div
+																		style="width: 100%; display: flex; flex-wrap: wrap;">
+																		<span class="up_dt_1">Source: CME Group</span>
+																		<span class="up_dt_2" id="coal_upt_1"></span>
+																	</div>
+																	<!--end::Table-->
+																</div>
+																<!--end::Tap pane-->
+																<!--begin::Tap pane-->
+																<div class="tab-pane fade" id="kt_tab_pane_13_2"
+																	role="tabpanel" aria-labelledby="kt_tab_pane_13_2">
+																	<!--begin::Table-->
+																	<div class="table-responsive">
+																		<!-- {% include "./chart2/chart2_2.html" %} -->
+																		<figure
+																			class="highcharts-figure highchart-dist">
+																			<div class="lock-div" id="container_mff_2">
+																			</div>
+																		</figure>
+																	</div>
+																	<div
+																		style="width: 100%; display: flex; flex-wrap: wrap;">
+																		<span class="up_dt_1">Source: CME Group</span>
+																		<span class="up_dt_2" id="coal_upt_2"></span>
+																	</div>
+																	<!--end::Table-->
+																</div>
+																<div class="tab-pane fade" id="kt_tab_pane_13_3"
+																	role="tabpanel" aria-labelledby="kt_tab_pane_13_3">
+																	<!--begin::Table-->
+																	<div class="table-responsive">
+																		<!-- {% include "./chart2/chart2_3.html" %} -->
+																		<figure
+																			class="highcharts-figure highchart-dist">
+																			<div class="lock-div" id="container_mff_3">
+																			</div>
+																		</figure>
+																	</div>
+																	<div
+																		style="width: 100%; display: flex; flex-wrap: wrap;">
+																		<span class="up_dt_1">Source: CME Group</span>
+																		<span class="up_dt_2" id="coal_upt_3"></span>
+																	</div>
+																	<!--end::Table-->
+																</div>
+																<div class="tab-pane fade show active"
+																	id="kt_tab_pane_13_4" role="tabpanel"
+																	aria-labelledby="kt_tab_pane_13_4">
+																	<!--begin::Table-->
+																	<div class="table-responsive">
+																		<!-- {% include "./chart2/chart2_4.html" %} -->
+																		<figure
+																			class="highcharts-figure highchart-dist">
+																			<div class="lock-div" id="container_mff_4">
+																			</div>
+																		</figure>
+																	</div>
+																	<div
+																		style="width: 100%; display: flex; flex-wrap: wrap;">
+																		<span class="up_dt_1">Source: CME Group</span>
+																		<span class="up_dt_2" id="coal_upt_4"></span>
+																	</div>
+																	<!--end::Table-->
+																</div>
+																<div class="tab-pane fade" id="kt_tab_pane_13_5"
+																	role="tabpanel" aria-labelledby="kt_tab_pane_13_5">
+																	<!--begin::Table-->
+																	<div class="table-responsive">
+																		<!-- {% include "./chart2/chart2_5.html" %} -->
+																		<figure
+																			class="highcharts-figure highchart-dist">
+																			<div class="lock-div" id="container_mff_5">
+																			</div>
+																		</figure>
+																	</div>
+																	<div
+																		style="width: 100%; display: flex; flex-wrap: wrap;">
+																		<span class="up_dt_1">Source: CME Group</span>
+																		<span class="up_dt_2" id="coal_upt_5"></span>
+																	</div>
+																	<!--end::Table-->
+																</div>
+																<div class="tab-pane fade" id="kt_tab_pane_13_6"
+																	role="tabpanel" aria-labelledby="kt_tab_pane_13_6">
+																	<!--begin::Table-->
+																	<div class="table-responsive">
+																		<!-- {% include "./chart2/chart2_6.html" %} -->
+																		<figure
+																			class="highcharts-figure highchart-dist">
+																			<div class="lock-div" id="container_mff_6">
+																			</div>
+																		</figure>
+																	</div>
+																	<div
+																		style="width: 100%; display: flex; flex-wrap: wrap;">
+																		<span class="up_dt_1">Source: CME Group</span>
+																		<span class="up_dt_2" id="coal_upt_6"></span>
+																	</div>
+																	<!--end::Table-->
+																</div>
+																<!--end::Tap pane-->
+															</div>
+														</div>
+														<!--end::Body-->
+													</div>
+													<!--end::Advance Table Widget 2-->
+												</div>
+												<div class="tab scroll-touch tab-dist wt-100" style="margin-top: 0.5rem;">
+													<button class="tablinks1 wt-50"
+														onclick="openinnerTab(event, 'news_tab3')" id="defaultOpen3"
+														style="font-weight: bold; color: white;">News
+														Articles</button>
+													<button class="tablinks1 wt-50"
+														onclick="openinnerTab(event, 'tweet_tab3')"
+														style="font-weight: bold; color: white;">Tweets</button>
+												</div>
+												<!-- news div -->
+												<div id="news_tab3" class="innertabcontent">
+													<div class="col-xxl-8 order-2 order-xxl-1"
+														style="background-color: #1C1C1E; padding-right: 0%; padding-left: 2%;">
+														<!--begin::Advance Table Widget 2-->
+														<div class="card card-custom card-stretch gutter-b"
+															style="background-color: #1C1C1E;">
+															<!--begin::Header-->
+															<div class="card-header border-0 pt-1"
+																style="padding-left: 0%;">
+																<h3 class="card-title align-items-start flex-column">
+																	<!-- <span class="card-label"
+																		style="font-size: large; padding-left: 0%; color: #70843A;font-weight: 900; font-family: 'Myriad Pro 700', sans-serif;">News
+																		Articles</span> -->
+																	<span
+																		class="text-muted mt-2 font-weight-bold font-size-sm">News
+																		stories
+																		that are relevant to the dashboard</span>
+																</h3>
+															</div>
+															<!--end::Header-->
+															<!--begin::Body-->
+															<div class="card-body pt-2 pb-0 mt-n9"
+																style="padding-right: 0%; padding-left: 0%;">
+																<div class="tab-content mt-3" id="myTabTables11">
+																	<!--begin::Tap pane-->
+																	<div class="tab-pane fade show active"
+																		id="kt_tab_pane_11_3" role="tabpanel"
+																		aria-labelledby="kt_tab_pane_11_3">
+																		<!--begin::Table-->
+																		<div class="table-responsive">
+																			<table
+																				class="table table-borderless table-vertical-center"
+																				id="coal_rec_news_datatable"></table>
+																			<table
+																				class="table table-borderless table-vertical-center"
+																				id="coal_news_datatable"></table>
+																		</div>
+																		<!--end::Table-->
+																	</div>
+																	<!--end::Tap pane-->
+																</div>
+															</div>
+															<!--end::Body-->
+														</div>
+														<!--end::Advance Table Widget 2-->
+													</div>
+												</div>
+
+												<div id="tweet_tab3" class="innertabcontent">
+													<div class="card-body pt-2 pb-0 mt-n9"
+														style="padding-right: 0%; padding-left: 0%;">
+														<div class="tab-content mt-3" id="myTabTables11">
+															<!--begin::Tap pane-->
+															<div class="tab-pane fade show active" id="kt_tab_pane_25_3"
+																role="tabpanel" aria-labelledby="kt_tab_pane_25_3">
+																<table
+																	class="table table-borderless table-vertical-center"
+																	id="coal_tweet_datatable"></table>
+															</div>
+															<!--end::Tap pane-->
+														</div>
+													</div>
+												</div>
+											</div>
+											<!--end::Row-->
+											<!--end::Dashboard-->
+										</div>
+										<!--end::Container-->
+									</div>
+									<!--end::Entry-->
+									<!--end::Content-->
+								</div>
+								<!--end::Wrapper-->
+							</div>
+							<!--end::Page-->
+						</div>
+					</div>
+					<div class="tabcontent" id="Tab4"
+						style="background-color: #1C1C1E; padding-right: 0%; padding-left: 0%;">
+						<!-- <div w3-include-html="./html/hrc_tab.html"></div> -->
+						<div>
+							<!--begin::Page-->
+							<div>
+								<!--begin::Wrapper-->
+								<div class="d-flex flex-column flex-row-fluid" id="kt_wrapper">
+									<!--begin::Content-->
+									<!--begin::Entry-->
+									<div class="d-flex flex-column-fluid" style="padding-right: 0%; padding-left: 0%;">
+										<!--begin::Container-->
+										<div class="container"
+											style="background-color: #1C1C1E; padding-right: 0%; padding-left: 0%;">
+											<!--begin::Dashboard-->
+											<!--begin::Row-->
+											<div
+												style="background-color: #1C1C1E; padding-right: 0%; padding-left: 0%;">
+												<!-- chart div -->
+												<div class="col-xxl-8 order-2 order-xxl-1"
+													style="padding-right: 0%; padding-left: 0%;">
+													<!--begin::Advance Table Widget 2-->
+													<div class="card card-custom card-stretch gutter-b">
+														<!--begin::Header-->
+														<div class="card-header border-0 pt-3"
+															style="background-color: #1C1C1E;">
+															<h3 class="card-label font-weight-bolder"
+																style="font-size:medium; color: #868688;">Iron Ore
+																Coil: Spot & Future
+															</h3>
+															<!-- <i class="far fa-times-circle" onclick="app_end(window.location.pathname)"></i> -->
+															<img onclick="app_end(window.location.pathname)"
+																src="./img/return.png" width="20" height="20">
+														</div>
+														<div class="card-header border-0 pt-0"
+															style="background-color: #1C1C1E;">
+															<!-- <h3 class="card-title align-items-start flex-column"> -->
+															<div>
+																<span id="iron_val_current"
+																	class="card-label font-weight-bolder"
+																	style="font-size: 25px; color: white;"></span>
+																<span id="iron_val_data_neg"
+																	style="font-size: medium;font-weight: bold; margin-top: 8px; color: red"></span>
+																<span id="iron_val_data"
+																	style="font-size: medium;font-weight: bold; margin-top: 8px; color: #9bb556"></span>
+															</div>
+															<div style="width: 70px; padding-top: 4%;">
+																<i class="fa fa-solid fa-eye" style=" font-size: 17px;"
+																	id="WL_IRONORE"
+																	onclick="add_to_watchlist(this, 'IRONORE')"></i>
+																<i class="fa fa-solid fa-download"
+																	style=" font-size: 17px; padding-left: 35%;"
+																	onclick="app_func_change('download_page.html', window.location.pathname)"></i>
+															</div>
+															<!-- </h3> -->
+															<div class="card-toolbar">
+																<ul class="nav nav-pills nav-pills-sm nav-dark-75">
+																	<li class="nav-item">
+																		<b class="nav-link py-2 px-4 " data-toggle="tab"
+																			href="#kt_tab_pane_14_2"
+																			style="font-weight: 900;">1W</b>
+																	</li>
+																	<li class="nav-item">
+																		<b class="nav-link py-2 px-4" data-toggle="tab"
+																			href="#kt_tab_pane_14_3"
+																			style="font-weight: 900;">1M</b>
+																	</li>
+																	<li class="nav-item">
+																		<b class="nav-link py-2 px-4 active"
+																			data-toggle="tab" href="#kt_tab_pane_14_4"
+																			style="font-weight: 900;">3M</b>
+																	</li>
+																	<li class="nav-item">
+																		<b class="nav-link py-2 px-4" data-toggle="tab"
+																			href="#kt_tab_pane_14_5"
+																			style="font-weight: 900;">6M</b>
+																	</li>
+																	<li class="nav-item">
+																		<b class="nav-link py-2 px-4" data-toggle="tab"
+																			href="#kt_tab_pane_14_6"
+																			style="font-weight: 900;">1Y</b>
+																	</li>
+																	<li class="nav-item">
+																		<b class="nav-link py-2 px-4" data-toggle="tab"
+																			href="#kt_tab_pane_14_7"
+																			style="font-weight: 900;">2Y</b>
+																	</li>
+																</ul>
+															</div>
+														</div>
+														<!--end::Header-->
+														<!--begin::Body-->
+														<div class="card-body pt-2 pb-0 mt-n3"
+															style="background-color: #1C1C1E; padding-right: 0%; padding-left: 0%; ;">
+															<div class="tab-content mt-5" id="myTabTables13">
+																<!--begin::Tap pane-->
+																<div class="tab-pane fade" id="kt_tab_pane_14_2"
+																	role="tabpanel" aria-labelledby="kt_tab_pane_14_2">
+																	<!--begin::Table-->
+																	<div class="table-responsive">
+																		<!-- {% include "./chart2/chart2_2.html" %} -->
+																		<figure
+																			class="highcharts-figure highchart-dist">
+																			<div class="lock-div" id="container4_2">
+																			</div>
+																		</figure>
+																	</div>
+																	<div
+																		style="width: 100%; display: flex; flex-wrap: wrap;">
+																		<span class="up_dt_1">Source: CME Group</span>
+																		<span class="up_dt_2" id="iron_upt_1"></span>
+																	</div>
+																	<!--end::Table-->
+																</div>
+																<div class="tab-pane fade" id="kt_tab_pane_14_3"
+																	role="tabpanel" aria-labelledby="kt_tab_pane_14_3">
+																	<!--begin::Table-->
+																	<div class="table-responsive">
+																		<!-- {% include "./chart2/chart2_3.html" %} -->
+																		<figure
+																			class="highcharts-figure highchart-dist">
+																			<div class="lock-div" id="container4_3">
+																			</div>
+																		</figure>
+																	</div>
+																	<div
+																		style="width: 100%; display: flex; flex-wrap: wrap;">
+																		<span class="up_dt_1">Source: CME Group</span>
+																		<span class="up_dt_2" id="iron_upt_2"></span>
+																	</div>
+																	<!--end::Table-->
+																</div>
+																<div class="tab-pane fade show active"
+																	id="kt_tab_pane_14_4" role="tabpanel"
+																	aria-labelledby="kt_tab_pane_14_4">
+																	<!--begin::Table-->
+																	<div class="table-responsive">
+																		<!-- {% include "./chart2/chart2_4.html" %} -->
+																		<figure
+																			class="highcharts-figure highchart-dist">
+																			<div class="lock-div" id="container4_4">
+																			</div>
+																		</figure>
+																	</div>
+																	<div
+																		style="width: 100%; display: flex; flex-wrap: wrap;">
+																		<span class="up_dt_1">Source: CME Group</span>
+																		<span class="up_dt_2" id="iron_upt_3"></span>
+																	</div>
+																	<!--end::Table-->
+																</div>
+																<div class="tab-pane fade" id="kt_tab_pane_14_5"
+																	role="tabpanel" aria-labelledby="kt_tab_pane_14_5">
+																	<!--begin::Table-->
+																	<div class="table-responsive">
+																		<!-- {% include "./chart2/chart2_5.html" %} -->
+																		<figure
+																			class="highcharts-figure highchart-dist">
+																			<div class="lock-div" id="container4_5">
+																			</div>
+																		</figure>
+																	</div>
+																	<div
+																		style="width: 100%; display: flex; flex-wrap: wrap;">
+																		<span class="up_dt_1">Source: CME Group</span>
+																		<span class="up_dt_2" id="iron_upt_4"></span>
+																	</div>
+																	<!--end::Table-->
+																</div>
+																<div class="tab-pane fade" id="kt_tab_pane_14_6"
+																	role="tabpanel" aria-labelledby="kt_tab_pane_14_6">
+																	<!--begin::Table-->
+																	<div class="table-responsive">
+																		<!-- {% include "./chart2/chart2_6.html" %} -->
+																		<figure
+																			class="highcharts-figure highchart-dist">
+																			<div class="lock-div" id="container4_6">
+																			</div>
+																		</figure>
+																	</div>
+																	<div
+																		style="width: 100%; display: flex; flex-wrap: wrap;">
+																		<span class="up_dt_1">Source: CME Group</span>
+																		<span class="up_dt_2" id="iron_upt_5"></span>
+																	</div>
+																	<!--end::Table-->
+																</div>
+																<div class="tab-pane fade" id="kt_tab_pane_14_7"
+																	role="tabpanel" aria-labelledby="kt_tab_pane_14_7">
+																	<!--begin::Table-->
+																	<div class="table-responsive">
+																		<!-- {% include "./chart2/chart2_7.html" %} -->
+																		<figure
+																			class="highcharts-figure highchart-dist">
+																			<div class="lock-div" id="container4_7">
+																			</div>
+																		</figure>
+																	</div>
+																	<div
+																		style="width: 100%; display: flex; flex-wrap: wrap;">
+																		<span class="up_dt_1">Source: CME Group</span>
+																		<span class="up_dt_2" id="iron_upt_6"></span>
+																	</div>
+																	<!--end::Table-->
+																</div>
+																<!--end::Tap pane-->
+															</div>
+														</div>
+														<!--end::Body-->
+													</div>
+													<!--end::Advance Table Widget 2-->
+												</div>
+												<div class="tab scroll-touch tab-dist wt-100" style="margin-top: 0.5rem;">
+													<button class="tablinks1 wt-50"
+														onclick="openinnerTab(event, 'news_tab4')" id="defaultOpen4"
+														style="font-weight: bold; color: white;">News
+														Articles</button>
+													<button class="tablinks1 wt-50"
+														onclick="openinnerTab(event, 'tweet_tab4')"
+														style="font-weight: bold; color: white;">Tweets</button>
+												</div>
+												<!-- news div -->
+												<div id="news_tab4" class="innertabcontent">
+													<div class="col-xxl-8 order-2 order-xxl-1"
+														style="background-color: #1C1C1E; padding-right: 0%; padding-left: 2%;">
+														<!--begin::Advance Table Widget 2-->
+														<div class="card card-custom card-stretch gutter-b"
+															style="background-color: #1C1C1E;">
+															<!--begin::Header-->
+															<div class="card-header border-0 pt-1"
+																style="padding-left: 0%;">
+																<h3 class="card-title align-items-start flex-column">
+																	<!-- <span class="card-label"
+																							style="font-size: large; padding-left: 0%; color: #70843A;font-weight: 900; font-family: 'Myriad Pro 700', sans-serif;">News
+																							Articles</span> -->
+																	<span
+																		class="text-muted mt-2 font-weight-bold font-size-sm">News
+																		stories
+																		that are relevant to the dashboard</span>
+																</h3>
+															</div>
+															<!--end::Header-->
+															<!--begin::Body-->
+															<div class="card-body pt-2 pb-0 mt-n9"
+																style="padding-right: 0%; padding-left: 0%;">
+																<div class="tab-content mt-3" id="myTabTables11">
+																	<!--begin::Tap pane-->
+																	<div class="tab-pane fade show active"
+																		id="kt_tab_pane_14_3" role="tabpanel"
+																		aria-labelledby="kt_tab_pane_14_3">
+																		<!--begin::Table-->
+																		<div class="table-responsive">
+																			<table
+																				class="table table-borderless table-vertical-center"
+																				id="iron_rec_news_datatable"></table>
+																			<table
+																				class="table table-borderless table-vertical-center"
+																				id="iron_news_datatable"></table>
+																		</div>
+																		<!--end::Table-->
+																	</div>
+																	<!--end::Tap pane-->
+																</div>
+															</div>
+															<!--end::Body-->
+														</div>
+														<!--end::Advance Table Widget 2-->
+													</div>
+												</div>
+
+												<div id="tweet_tab4" class="innertabcontent">
+													<div class="card-body pt-2 pb-0 mt-n9"
+														style="padding-right: 0%; padding-left: 0%;">
+														<div class="tab-content mt-3" id="myTabTables11">
+															<!--begin::Tap pane-->
+															<div class="tab-pane fade show active" id="kt_tab_pane_14_3"
+																role="tabpanel" aria-labelledby="kt_tab_pane_14_3">
+																<table
+																	class="table table-borderless table-vertical-center"
+																	id="iron_tweet_datatable"></table>
+															</div>
+															<!--end::Tap pane-->
+														</div>
+													</div>
+												</div>
+											</div>
+											<!--end::Row-->
+											<!--end::Dashboard-->
+										</div>
+										<!--end::Container-->
+									</div>
+									<!--end::Entry-->
+									<!--end::Content-->
+								</div>
+								<!--end::Wrapper-->
+							</div>
+							<!--end::Page-->
+						</div>
+					</div>
+					<!--end::Row-->
+					<!--end::Dashboard-->
+				</div>
+				<!--end::Container-->
+			</div>
+			<!--end::Entry-->
+		</div>
+		<!--end::Content-->
+		<!--begin::Footer-->
+		<div class="footer py-4 d-flex flex-lg-column" id="kt_footer" style="background-color: #1C1C1E;">
+			<!--begin::Container-->
+			<div class="container-fluid d-flex flex-column flex-md-row align-items-center justify-content-between"
+				style="background-color: #1C1C1E;">
+				<!--begin::Copyright-->
+				<!-- <div class="text-dark order-2 order-md-1">
+					<span class="text-muted font-weight-bold mr-2">2021©</span>
+					<a href="https://www.texisle.com/" target="_blank"
+						class="text-dark-75 text-hover-primary">Tex-Isle, Inc.</a>
+				</div> -->
+				<!--end::Copyright-->
+				<!--begin::Nav-->
+				<div class="nav_foot nav-dark">
+					<a href="terms.html" class="nav-link pl-0 pr-5">Terms & Conditions</a>
+					<a href="about_v2.html" class="nav-link pl-0 pr-5">About</a>
+					<!-- <a href="https://www.texisle.com/" target="_blank" class="nav-link pl-0 pr-5">Team</a>
+					<a href="https://www.texisle.com/contact-us" target="_blank" class="nav-link pl-0 pr-0">Contact</a> -->
+				</div>
+				<div>
+					<p id="current_version" dir="ltr" style="line-height:1.295;margin-top:0pt;margin-bottom:8pt;"></p>
+				</div>
+				<!--end::Nav-->
+			</div>
+			<!--end::Container-->
+		</div>
+		<!--end::Footer-->
+	</div>
+	<!--end::Wrapper-->
+	</div>
+	<!--end::Page-->
+	</div>
+	<!--end::Main-->
+
+	<!--begin::Scrolltop-->
+	<div id="kt_scrolltop" class="scrolltop">
+		<span class="svg-icon">
+			<!--begin::Svg Icon | path:assets/media/svg/icons/Navigation/Up-2.svg-->
+			<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px"
+				height="24px" viewBox="0 0 24 24" version="1.1">
+				<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+					<polygon points="0 0 24 0 24 24 0 24" />
+					<rect fill="#000000" opacity="0.3" x="11" y="10" width="2" height="10" rx="1" />
+					<path
+						d="M6.70710678,12.7071068 C6.31658249,13.0976311 5.68341751,13.0976311 5.29289322,12.7071068 C4.90236893,12.3165825 4.90236893,11.6834175 5.29289322,11.2928932 L11.2928932,5.29289322 C11.6714722,4.91431428 12.2810586,4.90106866 12.6757246,5.26284586 L18.6757246,10.7628459 C19.0828436,11.1360383 19.1103465,11.7686056 18.7371541,12.1757246 C18.3639617,12.5828436 17.7313944,12.6103465 17.3242754,12.2371541 L12.0300757,7.38413782 L6.70710678,12.7071068 Z"
+						fill="#000000" fill-rule="nonzero" />
+				</g>
+			</svg>
+			<!--end::Svg Icon-->
+		</span>
+	</div>
+	<!--end::Scrolltop-->
+	<!--begin::Global Config(global config for global JS scripts)-->
+	<script>var KTAppSettings = { "breakpoints": { "sm": 576, "md": 768, "lg": 992, "xl": 1200, "xxl": 1400 }, "colors": { "theme": { "base": { "white": "#ffffff", "primary": "#2c2c2c", "secondary": "#E5EAEE", "success": "#1BC5BD", "info": "#8950FC", "warning": "#FFA800", "danger": "#F64E60", "light": "#E4E6EF", "dark": "#181C32" }, "light": { "white": "#ffffff", "primary": "#E1F0FF", "secondary": "#EBEDF3", "success": "#C9F7F5", "info": "#EEE5FF", "warning": "#FFF4DE", "danger": "#FFE2E5", "light": "#F3F6F9", "dark": "#D6D6E0" }, "inverse": { "white": "#ffffff", "primary": "#ffffff", "secondary": "#3F4254", "success": "#ffffff", "info": "#ffffff", "warning": "#ffffff", "danger": "#ffffff", "light": "#464E5F", "dark": "#ffffff" } }, "gray": { "gray-100": "#F3F6F9", "gray-200": "#EBEDF3", "gray-300": "#E4E6EF", "gray-400": "#D1D3E0", "gray-500": "#B5B5C3", "gray-600": "#7E8299", "gray-700": "#5E6278", "gray-800": "#3F4254", "gray-900": "#181C32" } }, "font-family": "Poppins" };</script>
+	<!--end::Global Config-->
+	<!--begin::Global Theme Bundle(used by all pages)-->
+	<script src="plugins/global/plugins.bundle.js"></script>
+	<script src="plugins/custom/prismjs/prismjs.bundle.js"></script>
+	<script src="js/scripts.bundle.js"></script>
+	<script src="js/scripts.bundle.min.js"></script>
+	<!--end::Global Theme Bundle-->
+	<!--begin::Page Vendors(used by this page)-->
+	<script src="plugins/custom/fullcalendar/fullcalendar.bundle.js"></script>
+	<!--end::Page Vendors-->
+	<!--begin::Page Scripts(used by this page)-->
+	<script src="js/pages/widgets.js"></script>
+	<!--end::Page Scripts-->
+	<script>
+		function getCookie(cname) {
+			let name = cname + "=";
+			let decodedCookie = decodeURIComponent(document.cookie);
+			let ca = decodedCookie.split(';');
+			for (let i = 0; i < ca.length; i++) {
+				let c = ca[i];
+				while (c.charAt(0) == ' ') {
+					c = c.substring(1);
+				}
+				if (c.indexOf(name) == 0) {
+					return c.substring(name.length, c.length);
+				}
+			}
+			return "";
+		}
+	</script>
+	<script>
+		function includeHTML() {
+			var z, i, elmnt, file, xhttp;
+			/* Loop through a collection of all HTML elements: */
+			z = document.getElementsByTagName("*");
+			for (i = 0; i < z.length; i++) {
+				elmnt = z[i];
+				/*search for elements with a certain atrribute:*/
+				file = elmnt.getAttribute("w3-include-html");
+				if (file) {
+					/* Make an HTTP request using the attribute value as the file name: */
+					xhttp = new XMLHttpRequest();
+					xhttp.onreadystatechange = function () {
+						if (this.readyState == 4) {
+							if (this.status == 200) { elmnt.innerHTML = this.responseText; }
+							if (this.status == 404) { elmnt.innerHTML = "Page not found."; }
+							/* Remove the attribute, and call this function once more: */
+							elmnt.removeAttribute("w3-include-html");
+							includeHTML();
+						}
+					}
+					xhttp.open("GET", file, true);
+					xhttp.send();
+					/* Exit the function: */
+					return;
+				}
+			}
+		}
+
+		function load_modal(id, modal_content_id, modal_id, i) {
+			// console.log(id);
+			// console.log(modal_content_id)
+			// console.log(modal_id)
+			// Get the modal
+			var modal = document.getElementById(modal_id);
+
+			// Get the image and insert it inside the modal - use its "alt" text as a caption
+			var img = document.getElementById(id);
+			// console.log(img)
+			var modalImg = document.getElementById(modal_content_id);
+			// console.log(modalImg)
+			// var captionText = document.getElementById("caption");
+			img.onclick = function () {
+				modal.style.display = "block";
+				modalImg.src = this.src;
+			}
+
+			// Get the <span> element that closes the modal
+			var span = document.getElementsByClassName("close")[i];
+
+			// When the user clicks on <span> (x), close the modal
+			span.onclick = function () {
+				modal.style.display = "none";
+			}
+		}
+
+		function open_link(link) {
+			var ref = window.open(link, '_system', 'location=no');
+			ref.show();
+
+		}
+	</script>
+	<script>
+		includeHTML();
+		let default_tab = getCookie("tab");
+		if (default_tab != "") {
+			console.log(default_tab);
+			document.getElementById(default_tab).click();
+		}
+		else {
+			window.location.href = "./index.html";
+		}
+	</script>
+	<script>
+		var index_list = ['SCRAP', 'HRC', 'COAL', 'IRONORE', 'RMI_index']
+		check_each_page(index_list);
+	</script>
+
+</body>
+
+<script src="js/initial_data.js"></script>
+<script src="js/reload_page.js"></script>
+
+</html>

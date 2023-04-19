@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pipe Intel</title>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <!-- <meta name="viewport" content="user-scalable=no, initial-scale=1, width=device-width, viewport-fit=cover"> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css"
+        integrity="sha512-10/jx2EXwxxWqCLX/hHth/vu2KY3jCF70dCQB8TSgNjbCVAC/8vai53GfMDrO2Emgwccf2pJqxct9ehpzG+MTw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="js/header.js"></script>
+
+    <script src="cordova.js"></script>
+    <script src="js/index.js"></script>
+    <script src="js/total_clock.js"></script>
+    <script src="js/changeIPAddress.js"></script>
+    <script src="js/offline.js"></script>
+    <script src="js/aboutpopup.js"></script>
+    <link href="css/aboutpopup.css" rel="stylesheet" type="text/css" />
+    <script src="js/feedback.js"></script>
+    <link rel="stylesheet" href="css/feedback.css" type="text/css" />
+    
+    <script src="js/page_count.js"></script>
+
+    <!-- <link href="plugins/global/plugins.bundle.css" rel="stylesheet" type="text/css" />
+    <link href="plugins/custom/prismjs/prismjs.bundle.css" rel="stylesheet" type="text/css" /> -->
+    <link href="css/style.bundle.css" rel="stylesheet" type="text/css" />
+    <script src="js/app_end.js"></script>
+    
+    <script src="js/clock.js"></script>
+    <script src="js/timer.js"></script>
+    
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</head>
+
+<script src="js/navbar.js"></script>
+<link rel="stylesheet" href="css/navbar.css">
+<div id="nav-id"></div>
+
+<body id="kt_body"
+    class="header-fixed header-mobile-fixed subheader-enabled subheader-fixed aside-enabled aside-fixed aside-minimize-hoverable page-loading"
+    style="background-color: #1C1C1E; padding-right: 0%; padding-left: 0%; height: 120%;">
+    <!--begin::Main-->
+    <div>
+        <!--begin::Wrapper-->
+        <div id="kt_header" class="">
+
+            <!-- <div id="header-id"></div> -->
+            <div id="kt_header">
+                <div>
+                   <div class="row" style="width: 100%;">
+                        <div class="float-left" style="width: 50%; padding-left: 3%;">
+                            <a onclick="app_end(window.location.pathname)" class="text-light mt-2 mb-1 mr-5 ml-4" style="color: white; font-weight: bold; font-size: 25px;">Pipe Intel</a>
+                        </div>
+                        <div class="float-left" style="width: 50%; padding-right: 0%;">
+                            <p onclick="window.open()" class="font-weight-bold power" style="text-align: right; color: #9bb556;">Powered by Tex-Isle Inc.</p>
+                        </div>
+                    </div>
+                </div>
+                <hr style="border-top: 2px solid #7a7772; margin-top: 0px; margin-bottom: 0rem;">
+            </div>
+
+            <!--end::Container-->
+        </div>
+        <div style="margin: 0px 12px; color: white; --darkreader-inline-color:#e8e6e3;">
+            <strong><span
+                    style="color: white; font-weight: bold; font-size: 25px; --darkreader-inline-color:#ff1a1a;">Feedback</span></strong><img
+                onclick="window.location='./landing_page.html'" src="./img/return.png" class="return-btn">
+        </div>
+        <hr style="border-top: 2px solid #7a7772; margin-top: 0.5rem; margin-bottom: 0rem; ">
+        <!-- footer -->
+
+
+        <div class="pt-3 pl-5 pr-5">
+            <span style="width: 50%; color: white; font-size: 18px;">Rating*</span><br>
+            <!-- mb-6 mt-6 -->
+            <div class="rating" style="margin-bottom: 1.5rem !important; margin-top: 1.5rem !important;">   
+                <ul>
+                    <li class="list">
+                        <a href="#" onclick="update_rating(1)">
+                            <span class="icon">
+                                <i class="fas fa-angry icon"></i>
+                            </span>
+                            <span class="text">Not Good</span>
+                        </a>
+                    </li>
+                    <li class="list">
+                        <a href="#" onclick="update_rating(2)">
+                            <span class="icon">
+                                <i class="fa-solid fa-face-frown icon"></i>
+                            </span>
+                            <span class="text">Confused</span>
+                        </a>
+                    </li>
+                    <li class="list">
+                        <a href="#" onclick="update_rating(3)">
+                            <span class="icon">
+                                <i class="fa fa-solid fa-face-meh icon"></i>
+                            </span>
+                            <span class="text">Average</span>
+                        </a>
+                    </li>
+                    <li class="list">
+                        <a href="#" onclick="update_rating(4)">
+                            <span class="icon">
+                                <i class="fa fa-solid fa-face-smile icon"></i>
+                            </span>
+                            <span class="text">Good</sub></span>
+                        </a>
+                    </li>
+                    <li class="list">
+                        <a href="#" onclick="update_rating(5)">
+                            <span class="icon">
+                                <i class="fas fa-grin-beam icon"></i>
+                            </span>
+                            <span class="text">Awsome</sub></span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!-- <div class="rating" style="margin-bottom: 1.5rem !important; margin-top: 1.5rem !important;">   
+                <ul>
+                    <li class="list">
+                        <span class="text">Not Good</span>
+                    </li>
+                    <li class="list">
+                        <span class="text">Confused</span>
+                    </li>
+                    <li class="list">
+                        <span class="text">Average</span>
+                    </li>
+                    <li class="list">
+                        <span class="text">Good</sub></span>
+                    </li>
+                    <li class="list">
+                        <span class="text">Awsome</sub></span>
+                    </li>
+                </ul>
+            </div> -->
+            <div class="row" style="width: 100%;">
+                <span class=" pl-5" style="width: 50%; color: white; font-size: 18px;">Name*</span>
+                <input id="name" style="width: 50%; text-align: center; background-color: #3B3B3B; font-size: 15px;color: white;" type="text" placeholder="Name">
+            </div><br>
+            <div class="row" style="width: 100%;">
+                <span class=" pl-5" style="width: 50%; color: white; font-size: 18px;">Email*</span>
+                <input id="email" pattern=".+@globex\.com" style="width: 50%; text-align: center; background-color: #3B3B3B; font-size: 15px;color: white;" type="email" placeholder="Email">
+            </div><br>
+            <div class="row" style="width: 100%;">
+                <span class=" pl-5" style="width: 50%; color: white; font-size: 18px;">Phone Number</span>
+                <input id="PhNo" style="width: 50%; text-align: center; background-color: #3B3B3B; font-size: 15px;color: white;" type="number" maxlength="10"
+                    placeholder="Phone Number">
+            </div><br>
+            <div>
+                <span class="mb-2" style="color: white; font-size: 18px; width: 100%;">Question/Comment*</span><br><br>
+                <textarea id="comment" style="color: white; width: 100%; background-color: #3B3B3B; font-size: 15px; text-align: justify; padding: 2%;" rows="5"
+                    placeholder="Please describe the idea that will make this application more useful to you. It could be expansion of current features or addition of new sections. To learn about the intent of this application, please visit the 'About' section."
+                    id="Message"></textarea>
+            </div>
+            <br>
+
+
+        </div><br>
+        <div style="padding: 0% 0% 6%;">
+            <button id="feedback-btn" class="feedbackSubmit-btn" onclick="submit_feedback()">Submit</button>
+        </div>
+        <div id="error" class="pt-3 pl-5 pr-5" style="color: red; text-align: center; display: none;">
+            <span>Required fields missing.</span><br><br>
+        </div>
+        <div id="success" class="pt-3 pl-5 pr-5" style="color: #9bb556; text-align: center; display: none;">
+            <span>Thank you for the valuable feedback.</span><br><br>
+        </div>
+        <div class="pt-3 pl-5 pr-5" style="color: white; text-align: justify;">
+            <span>* Required</span><br>
+            <span>Note: This email and phone number will only be used to communicate the update on the feedback you
+                provde. It will not be used for any promotional purposes.</span>
+        </div>
+
+
+    </div>
+    <!--end::Page-->
+    <!--end::Main-->
+    <div class="footer py-4 d-flex flex-lg-column" id="kt_footer" style="background-color: #1C1C1E;">
+        <!--begin::Container-->
+        <div class="container-fluid d-flex flex-column flex-md-row align-items-center justify-content-between"
+            style="background-color: #1C1C1E;">
+            <!--begin::Copyright-->
+            <!-- <div class="text-dark order-2 order-md-1">
+                <span class="text-muted font-weight-bold mr-2">2021©</span>
+                <a href="https://www.texisle.com/" target="_blank" class="text-dark-75 text-hover-primary">Tex-Isle, Inc.</a>
+            </div> -->
+            <!--end::Copyright-->
+            <!--begin::Nav-->
+            <div class="nav_foot nav-dark">
+                <a href="terms.html" class="nav-link pl-0 pr-5">Terms & Conditions</a>
+                <a href="about_v2.html" class="nav-link pl-0 pr-5">About</a>
+                <!-- <a href="https://www.texisle.com/" target="_blank" class="nav-link pl-0 pr-5">Team</a>
+                <a href="https://www.texisle.com/contact-us" target="_blank" class="nav-link pl-0 pr-0">Contact</a> -->
+            </div>
+            <!--end::Nav-->
+        </div>
+        <!--end::Container-->
+    </div>
+    <!--begin::Scrolltop-->
+    <div id="kt_scrolltop" class="scrolltop" style="opacity: 0.6;">
+        <span class="svg-icon">
+            <!--begin::Svg Icon | path:assets/media/svg/icons/Navigation/Up-2.svg-->
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px"
+                height="24px" viewBox="0 0 24 24" version="1.1">
+                <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                    <polygon points="0 0 24 0 24 24 0 24" />
+                    <rect fill="#000000" opacity="0.3" x="11" y="10" width="2" height="10" rx="1" />
+                    <path
+                        d="M6.70710678,12.7071068 C6.31658249,13.0976311 5.68341751,13.0976311 5.29289322,12.7071068 C4.90236893,12.3165825 4.90236893,11.6834175 5.29289322,11.2928932 L11.2928932,5.29289322 C11.6714722,4.91431428 12.2810586,4.90106866 12.6757246,5.26284586 L18.6757246,10.7628459 C19.0828436,11.1360383 19.1103465,11.7686056 18.7371541,12.1757246 C18.3639617,12.5828436 17.7313944,12.6103465 17.3242754,12.2371541 L12.0300757,7.38413782 L6.70710678,12.7071068 Z"
+                        fill="#000000" fill-rule="nonzero" />
+                </g>
+            </svg>
+            <!--end::Svg Icon-->
+        </span>
+    </div>
+    <!--end::Scrolltop-->
+    <!--begin::Global Config(global config for global JS scripts)-->
+    <script>var KTAppSettings = { "breakpoints": { "sm": 576, "md": 768, "lg": 992, "xl": 1200, "xxl": 1400 }, "colors": { "theme": { "base": { "white": "#ffffff", "primary": "#2c2c2c", "secondary": "#E5EAEE", "success": "#1BC5BD", "info": "#8950FC", "warning": "#FFA800", "danger": "#F64E60", "light": "#E4E6EF", "dark": "#181C32" }, "light": { "white": "#ffffff", "primary": "#E1F0FF", "secondary": "#EBEDF3", "success": "#C9F7F5", "info": "#EEE5FF", "warning": "#FFF4DE", "danger": "#FFE2E5", "light": "#F3F6F9", "dark": "#D6D6E0" }, "inverse": { "white": "#ffffff", "primary": "#ffffff", "secondary": "#3F4254", "success": "#ffffff", "info": "#ffffff", "warning": "#ffffff", "danger": "#ffffff", "light": "#464E5F", "dark": "#ffffff" } }, "gray": { "gray-100": "#F3F6F9", "gray-200": "#EBEDF3", "gray-300": "#E4E6EF", "gray-400": "#D1D3E0", "gray-500": "#B5B5C3", "gray-600": "#7E8299", "gray-700": "#5E6278", "gray-800": "#3F4254", "gray-900": "#181C32" } }, "font-family": "Poppins" };</script>
+    <!--end::Global Config-->
+    <!--begin::Global Theme Bundle(used by all pages)-->
+    <script src="plugins/global/plugins.bundle.js"></script>
+    <script src="plugins/custom/prismjs/prismjs.bundle.js"></script>
+    <script src="js/scripts.bundle.js"></script>
+    <script src="js/scripts.bundle.min.js"></script>
+    <!--end::Global Theme Bundle-->
+    <!--begin::Page Vendors(used by this page)-->
+    <script src="plugins/custom/fullcalendar/fullcalendar.bundle.js"></script>
+    <!--end::Page Vendors-->
+    <!--begin::Page Scripts(used by this page)-->
+    <script src="js/pages/widgets.js"></script>
+    <!--end::Page Scripts-->
+    
+    <script src="js/download/onload.js"></script>
+    <script src="js/initial_data.js"></script>
+</body>
+<script>
+
+</script>
+
+</html>

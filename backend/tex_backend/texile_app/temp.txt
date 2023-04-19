@@ -1,0 +1,302 @@
+
+marketwatch Data scraping
+
+# def future_data_pull_1(url):
+#     url = 'https://www.marketwatch.com/investing/future/'+url
+#     url_parts = urllib.parse.urlparse(url)
+
+#     reqs = requests.get(url)
+#     soup = BeautifulSoup(reqs.text, 'html.parser')
+#     val = []
+#     date_val = []
+#     final_list = []
+#     temp = soup.find(class_="table__body")
+#     for text in temp.find_all('td',class_='table__cell ignore-color'):
+#         temp1 = text.text.strip()
+#         temp1 = temp1[1:]
+#         val.append(temp1)
+#     for text in temp.find_all('a',class_='link'):
+#         temp1 = text.text.strip()
+#         temp1 = temp1[-8:]
+#         # print(temp1)
+#         datetime_object = datetime.strptime(temp1, '%b %Y')
+#         dt = date.today()
+#         newdatetime = datetime_object.replace(day=dt.day) + timedelta(1)
+#         newdatetime = newdatetime.strftime('%m/%d/%Y')
+#         date_val.append(newdatetime)
+#     # print(url)
+#     # print(val)
+#     # print(date_val)
+#     i = 0
+#     l = len(val)
+#     for i in range(0, l-1):
+#         temp = []
+#         temp = [val[i], date_val[i]]
+#         final_list.append(temp) 
+#         i=i+1
+#     # print(final_list)
+#     return(final_list)
+
+# def future_data_pull_2(url):
+#     url = 'https://www.marketwatch.com/investing/future/'+url
+#     url_parts = urllib.parse.urlparse(url)
+
+#     reqs = requests.get(url)
+#     soup = BeautifulSoup(reqs.text, 'html.parser')
+#     val = []
+#     date_val = []
+#     date_val_temp = []
+#     temp_final_list = []
+#     final_list = []
+#     temp = soup.find(class_="table__body")
+#     for text in temp.find_all('td',class_='table__cell ignore-color'):
+#         temp1 = text.text.strip()
+#         temp1 = temp1[1:]
+#         val.append(temp1)
+#     for text in temp.find_all('a',class_='link'):
+#         temp1 = text.text.strip()
+#         temp1 = temp1[-8:]
+#         # print(temp1)
+#         date_val_temp.append(temp1)
+#     del val[1]
+#     del date_val_temp[1]
+#     for each in date_val_temp:
+#         datetime_object = datetime.strptime(each, '%b %Y')
+#         dt = date.today()
+#         newdatetime = datetime_object.replace(day=dt.day) + timedelta(1)
+#         newdatetime = newdatetime.strftime('%m/%d/%Y')
+#         date_val.append(newdatetime)
+#     # print(each)
+#     # print(val)
+#     # print(date_val)
+#     presentday = datetime.now()
+#     tomorrow = presentday + timedelta(1)
+#     tomorrow = tomorrow.strftime('%m/%d/%Y')
+#     temp_val = val[0]
+#     final_list.append([temp_val, tomorrow])
+#     i = 0
+#     l=len(val)
+#     for i in range(0, l-1):
+#         temp = []
+#         temp = [val[i],date_val[i]]
+#         final_list.append(temp)
+#         i=i+1 
+    
+#     # print(final_list)
+#     return(final_list)
+
+# @api_view(['GET'])
+# def future_data_pull(request):
+#     tickers= [["MFFCJ24","MFFH22.NYM"],["RB00","RB=F"],["HO00","HO=F"]]
+#     for each in tickers:
+#         f_ticker = each[0]
+#         ticker = each[1]
+#         try:
+#             val = future_data_pull_1(f_ticker)
+#             # print("1")
+#             print(val)
+#         except:
+#             val = future_data_pull_2(f_ticker)
+#             # print("2")
+#             print(val)
+#         future_yahoo_data.objects.filter(chart = ticker).delete()
+#         for n in val:
+#             # print(n[1])
+#             future_obj = future_yahoo_data(chart = ticker , data = float(n[0]), date = n[1])
+#             future_obj.save()
+#         print(ticker + " done")
+#     return Response({'status':200})
+===========================================================================================================
+
+
+def fill_data_column():
+    index="RIO"
+    presentday = datetime.now()
+    date = presentday - timedelta(days = 1)
+    dt = date.strftime('%Y-%m-%d')
+    # Create a calendar
+    nyse = mcal.get_calendar('NYSE')
+    early = nyse.schedule(start_date='2020-01-02', end_date=dt)
+    date_list = []
+    list = mcal.date_range(early, frequency='1D')
+    for each in list:
+        dt = each.strftime('%m/%d/%Y')
+        date_list.append(dt)
+    date_df = pd.DataFrame({'date':date_list})
+
+    presentday = datetime.now()
+    dt = presentday.strftime('%Y-%m-%d')
+    list_date= []
+    list_data = []
+    final_data = []
+    hist = yf.download(index, start="2020-01-02", end=dt)
+    data = hist["Close"]
+    # print(index)
+    hist.reset_index(inplace = True)
+    for each in hist["Date"]:
+        date = datetime.strptime(str(each), "%Y-%m-%d %H:%M:%S").strftime('%m/%d/%Y')
+        list_date.append(date)
+    for each in data:
+        data = round(each,2)
+        list_data.append(data)
+    l = len(list_data)
+    for i in range(0,l):
+        temp_list = [list_date[i],list_data[i]]
+        final_data.append(temp_list)
+    for each in temp_list:
+        data_df = pd.DataFrame(np.array(final_data),columns=['date',index])
+    result_df = date_df.join(data_df.set_index('date'), on='date')
+    print(result_df)
+    missing_val = result_df.isnull().sum().sum()
+    print("missing vales: ", missing_val)
+    final_data_df = result_df.drop(['date'],axis=1)
+    
+    final_data_df[[index]] = final_data_df[[index]].apply(pd.to_numeric)
+    print(final_data_df)
+    # missing value check
+    missing_val = final_data_df.isnull().sum().sum()
+    print("missing vales: ", missing_val)
+    df = final_data_df.copy()
+    if missing_val!=0:
+        while True:
+            # print(df.isnull().sum())
+            df= (df.ffill(limit=1)+df.bfill())/2
+            if(df.isnull().sum().sum()) == 0:
+                print("no missing vales")
+                break
+    # print(df)
+    result_df = date_df.join(df)
+    data_list = result_df.values.tolist()
+    # print(data_list)
+    for each in data_list:
+        index_obj = index_iom_data.objects.get(date = each[0])
+        index_obj.RIO = each[1]
+        index_obj.save()
+
+def fill_date_column():
+    presentday = datetime.now()
+    dt = presentday.strftime('%Y-%m-%d')
+    # Create a calendar
+    nyse = mcal.get_calendar('NYSE')
+    early = nyse.schedule(start_date='2020-01-02', end_date=dt)
+    date_list = []
+    list = mcal.date_range(early, frequency='1D')
+    for each in list:
+        dt = each.strftime('%m/%d/%Y')
+        date_list.append(dt)
+    print(date_list)
+    for each in date_list:
+        index_obj = index_iom_data(date = each)
+        index_obj.save()
+    
+def convert_data_jpy():
+    index_obj = index_smf_data.objects.all()
+    df = read_frame(index_obj, fieldnames=['date','NIPPON', 'JFE'])
+    data_list = df.values.tolist()
+    for each in data_list:
+        print(each[0])
+        val1 = float(each[1])
+        val1 = c.convert(val1, 'JPY','USD')
+        val1 = round(val1,2)
+        print(val1)
+        val2 = float(each[2])
+        val2 = c.convert(val2, 'JPY','USD')
+        val2 = round(val2,2)
+        print(val2)
+        a = index_smf_data.objects.get(date=each[0])
+        # print(a)
+        a.NIPPON = val1
+        a.JFE = val2
+        a.save()
+
+def convert_data_eur():
+    index_obj = index_pmf_data.objects.all()
+    df = read_frame(index_obj, fieldnames=['date','VKPA'])
+    data_list = df.values.tolist()
+    for each in data_list:
+        print(each[0])
+        val1 = float(each[1])
+        val1 = c.convert(val1, 'EUR','USD')
+        val1 = round(val1,2)
+        print(val1)
+        # val2 = float(each[2])
+        # val2 = c.convert(val2, 'EUR','USD')
+        # val2 = round(val2,2)
+        # print(val2)
+        a = index_smf_data.objects.get(date=each[0])
+        # print(a)
+        a.VKPA = val1
+        # a.SZGDE = val2
+        a.save()
+
+def index_data_iom():
+    index_list = ['RIO','VALE','SXC','BHP']
+    index_obj = index_iom_data.objects.all()
+    df = read_frame(index_obj, fieldnames=['RIO','VALE','SXC','BHP'])
+    date_df = read_frame(index_obj, fieldnames=['date'])
+    for index in index_list:
+        df[[index]] = df[[index]].apply(pd.to_numeric)
+    df_pipe_normalized = normalize_data(df)
+    df_mean = df_pipe_normalized.mean(axis=1)
+    final_df = pd.concat([date_df, df_mean], axis=1)
+    print(final_df)
+    df_list = final_df.values.tolist()
+    for each in df_list:
+        print(each[0])
+        a = index_iom_data.objects.get(date=each[0])
+        a.IOM_index = each[1]
+        a.save()
+
+def index_data_pmf():
+    index_list = ['TS','VKPA','X','TMST','NWPX']
+    index_obj = index_pmf_data.objects.all()
+    df = read_frame(index_obj, fieldnames=['TS','VKPA','X','TMST','NWPX'])
+    date_df = read_frame(index_obj, fieldnames=['date'])
+    for index in index_list:
+        df[[index]] = df[[index]].apply(pd.to_numeric)
+    df_pipe_normalized = normalize_data(df)
+    df_mean = df_pipe_normalized.mean(axis=1)
+    final_df = pd.concat([date_df, df_mean], axis=1)
+    print(final_df)
+    df_list = final_df.values.tolist()
+    for each in df_list:
+        print(each[0])
+        a = index_pmf_data.objects.get(date=each[0])
+        a.PMF_index = each[1]
+        a.save()
+
+def index_data_f():
+    index_list = ['SCRAP','HRC','COAL','IRONORE']
+    index_obj = index_rmi_data.objects.all()
+    df = read_frame(index_obj, fieldnames=['SCRAP','HRC','COAL','IRONORE'])
+    date_df = read_frame(index_obj, fieldnames=['date'])
+    for index in index_list:
+        df[[index]] = df[[index]].apply(pd.to_numeric)
+    df_pipe_normalized = normalize_data(df)
+    df_mean = df_pipe_normalized.mean(axis=1)
+    final_df = pd.concat([date_df, df_mean], axis=1)
+    print(final_df)
+    df_list = final_df.values.tolist()
+    for each in df_list:
+        print(each[0])
+        a = index_rmi_data.objects.get(date=each[0])
+        a.RMI_index = each[1]
+        a.save()
+
+def index_data_smf():
+    index_list = ["MT","PKX","NUE","STLD","RS","CLF","TX","GGB","X","CMC","TKADE","SZGDE","NIPPON","JFE"]
+    index_obj = index_smf_data.objects.all()
+    df = read_frame(index_obj, fieldnames=["MT","PKX","NUE","STLD","RS","CLF","TX","GGB","X","CMC","TKADE","SZGDE","NIPPON","JFE"])
+    date_df = read_frame(index_obj, fieldnames=['date'])
+    for index in index_list:
+        df[[index]] = df[[index]].apply(pd.to_numeric)
+    df_pipe_normalized = normalize_data(df)
+    df_mean = df_pipe_normalized.mean(axis=1)
+    final_df = pd.concat([date_df, df_mean], axis=1)
+    print(final_df)
+    df_list = final_df.values.tolist()
+    for each in df_list:
+        print(each[0])
+        a = index_smf_data.objects.get(date=each[0])
+        a.SMF_index = each[1]
+        a.save()

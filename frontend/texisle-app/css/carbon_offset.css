@@ -1,0 +1,121 @@
+.main-options {
+    color: white; 
+    width: 55%; 
+    float: left; 
+    padding: 6px;
+    /* text-align: justify; */
+}
+
+.cust-dropdown {
+    width: 158px;
+    text-align: center;
+    padding: 6px 0px;
+    /* margin-left: 1%; */
+}
+
+.calc-btn {
+    margin-left: 23%;
+    font-size: 15px;
+    color: white;
+    background-color: #3B3B3B;
+    padding: 4% 20%;
+    border-radius: 3px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+.calc-btn:active {
+  background-color: #282828;
+  /* transform: translateY(4px); */
+}
+
+
+.output-box {
+    margin-top: 12%;
+    border-radius: 5px;
+    writing-mode: horizontal-tb !important;
+    height: 33px !important;
+    color: white;
+    padding: 2.5%;
+    font-size: 20px;
+    text-rendering: auto;
+    letter-spacing: normal;
+    word-spacing: normal;
+    line-height: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    appearance: auto;
+    -webkit-rtl-ordering: logical;
+    cursor: text;
+    background-color: rgb(59, 59, 59);
+    border-width: 0.8px;
+    /* border-style: inset; */
+    border-color: -internal-light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
+    border-image: initial;
+    content: "Output";
+}
+
+.blink {
+    -webkit-animation: 1s linear infinite condemned_blink_effect; /* for Safari 4.0 - 8.0 */
+    animation: 1s linear infinite condemned_blink_effect;
+  }
+  
+  /* for Safari 4.0 - 8.0 */
+  @-webkit-keyframes condemned_blink_effect {
+    0% {
+      visibility: hidden;
+    }
+    50% {
+      visibility: hidden;
+    }
+    100% {
+      visibility: visible;
+    }
+  }
+  
+  @keyframes condemned_blink_effect {
+    0% {
+      visibility: hidden;
+    }
+    50% {
+      visibility: hidden;
+    }
+    100% {
+      visibility: visible;
+    }
+  }
+  
+
+  /* loading animation  */
+  .lds-dual-ring {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+  }
+  .lds-dual-ring:after {
+    content: " ";
+    display: block;
+    width: 40px;
+    height: 40px;
+    margin: 8px;
+    border-radius: 50%;
+    border: 6px solid #fff;
+    border-color: #fff transparent #fff transparent;
+    animation: lds-dual-ring 1.2s linear infinite;
+  }
+  @keyframes lds-dual-ring {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+ /* end loading animation */
+
+
+ input::-webkit-calendar-picker-indicator {
+  /* opacity: 0; */
+  /* color: blue; */
+  margin-right: 4%;
+}

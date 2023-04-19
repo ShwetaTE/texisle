@@ -1,0 +1,18 @@
+.more-pad {
+    padding: 4%;
+}
+.more-pad:active {
+    background-color: #2c2c2c;
+    border-radius: 10px;
+    /* padding: 4%; */
+}
+.more_text-pad {
+    font-weight: 700;
+    padding-left: 10%;
+}
+
+.more_icon-pad {
+    font-size: 25px;
+    /* color: wheat; */
+    margin-bottom: -2%;
+}

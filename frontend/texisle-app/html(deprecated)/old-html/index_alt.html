@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;"> -->
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+    <meta name="color-scheme" content="light dark">
+    <link rel="stylesheet" href="css/index.css">
+    <title>Texisle Dashboard</title>
+    <meta name="description"
+        content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <link rel="canonical" href="https://keenthemes.com/metronic" />
+    <!--begin::Fonts-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" />
+    <!--end::Fonts-->
+    <!--begin::Page Vendors Styles(used by this page)-->
+    <link href="plugins/custom/fullcalendar/fullcalendar.bundle.css" rel="stylesheet" type="text/css" />
+    <!--end::Page Vendors Styles-->
+    <!--begin::Global Theme Styles(used by all pages)-->
+    <!-- <script src="js/jquery.min.js" type="text/javascript"></script> -->
+    <script src="js/jquery-1.7.1.min.js"></script>
+    <script src="js/highcharts/highcharts.js"></script>
+    <script src="js/highcharts/data.js"></script>
+    <script src="js/highcharts/export-data.js"></script>
+    <script src="js/highcharts/accessibility.js"></script>
+    <link href="plugins/global/plugins.bundle.css" rel="stylesheet" type="text/css" />
+    <link href="plugins/custom/prismjs/prismjs.bundle.css" rel="stylesheet" type="text/css" />
+    <link href="css/style.bundle.css" rel="stylesheet" type="text/css" />
+    <!--end::Global Theme Styles-->
+    <!--begin::Layout Themes(used by all pages)-->
+    <link href="css/themes/layout/header/base/dark.css" rel="stylesheet" type="text/css" />
+    <link href="css/themes/layout/header/menu/dark.css" rel="stylesheet" type="text/css" />
+    <link href="css/themes/layout/brand/dark.css" rel="stylesheet" type="text/css" />
+    <link href="css/themes/layout/aside/dark.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="css/chart_index.css">
+    <!-- chart related js files -->
+    <script src="js/chart/chart_scrap.js"></script>
+    <script src="js/chart/chart_hrc.js"></script>
+    <script src="js/index.js"></script>
+    <script src="js/news_default.js"></script>
+    <script src="js/open_chart.js"></script>
+    <script src="js/chart/steel_market_index.js"></script>
+    <script src="js/chart/pipe_material_index.js"></script>
+    <script src="js/chart/pipe_manufacturing_index.js"></script>
+    <script src="js/chart/iron_ore_mining_index.js"></script>
+    <script src="js/chart/steel_manufacturing_index.js"></script>
+    <script src="js/chart/transportation_index.js"></script>
+    <!--end::Layout Themes-->
+    <link href="http://fonts.cdnfonts.com/css/myriad-pro" rel="stylesheet">
+</head>
+
+<body id="kt_body"
+    class="header-fixed header-mobile-fixed subheader-enabled subheader-fixed aside-enabled aside-fixed aside-minimize-hoverable page-loading"
+    style="background-color: #1C1C1E; padding-right: 0%; padding-left: 0%;">
+    <!--begin::Main-->
+    <!--begin::Header Mobile-->
+    <div id="kt_header_mobile" class="header-mobile align-items-center header-mobile-fixed">
+        <!--begin::Logo-->
+        <a href="landing_page.html">
+            <img alt="Logo" style="height: 42px; width: 140px;" src="img/texisle.png" />
+        </a>
+        <!--end::Logo-->
+
+    </div>
+    <!--end::Header Mobile-->
+    <div>
+        <!--begin::Page-->
+        <div>
+            <!--begin::Aside-->
+            <div>
+                <!--begin::Brand-->
+                <div>
+                </div>
+                <!--end::Brand-->
+            </div>
+            <!--end::Aside-->
+            <!--begin::Wrapper-->
+            <div class="d-flex flex-column flex-row-fluid wrapper" id="kt_wrapper">
+                <!--begin::Header-->
+                <div id="kt_header" class="header header-fixed">
+                    <!--begin::Container-->
+                    <div class="container-fluid d-flex align-items-stretch justify-content-between">
+                        <!--begin::Header Menu Wrapper-->
+                        <div class="header-menu-wrapper header-menu-wrapper-left" id="kt_header_menu_wrapper">
+                            <!--begin::Header Menu-->
+                            <a class="brand-logo">
+                                <img alt="Logo" style="height: 42px; width: 140px;padding-top: 1%;"
+                                    src="img/texisle.png" />
+                            </a>
+                            <!--end::Header Menu-->
+                        </div>
+                        <!--end::Header Menu Wrapper-->
+
+                    </div>
+                    <div class="subheader py-0 py-lg-4 subheader-solid" id="kt_subheader"
+                        style="background-color: #1C1C1E;">
+                        <div class="container-fluid d-flex align-items-center justify-content-between flex-wrap flex-sm-nowrap"
+                            style="padding-right: 0%;">
+                            <!--begin::Info-->
+                            <div class="row" style="width: 100%;">
+                                <div class="col-md-6 col-xs-4 col-sm-6 col-lg-6 float-left" style="width: 55%;">
+                                    <!--begin::Page Title-->
+                                    <h5 class="text-light mt-2 mb-2 mr-5"
+                                        style="color: white; font-weight: bold; font-size: 25px; font-family: 'Myriad Pro 700', sans-serif;">
+                                        Pipe Intel</h5>
+                                    <!--end::Page Title-->
+
+                                </div>
+                                <div class="col-md-6 col-xs-8 col-sm-6 col-lg-6 float-left"
+                                    style="width: 45%; padding-right: 0%;">
+                                    <p onclick="window.location='https://thirdeyedata.io/';"
+                                        class="font-weight-bold power"
+                                        style="text-align: right; color: #9bb556; font-family: 'Myriad Pro 700', sans-serif;">
+                                        Powered by ThirdEye Data</p>
+                                </div>
+                            </div>
+                            <!--end::Info-->
+
+                        </div>
+                    </div>
+                    <hr style="border-top: 0.5px solid #3F3D3A; margin-top: 0px; margin-bottom: 0rem;">
+                    <!--end::Container-->
+                </div>
+                <!--end::Header-->
+
+                <div class="content d-flex flex-column flex-column-fluid" id="kt_content"
+                    style="background-color: #1C1C1E;">
+                    <!--begin::Entry-->
+                    <div class="d-flex flex-column-fluid" style="padding-right: 0%; padding-left: 0%;">
+                        <div class="col-xxl-8 order-2 order-xxl-1"
+                            style="background-color: #1C1C1E; padding-right: 0%; padding-left: 2%;">
+                            <!--begin::Advance Table Widget 2-->
+
+                            <!--begin::Tap pane-->
+                            <div class="card-body pt-0">
+                                <div onclick="dropdown('tab1')" class="d-flex align-items-center flex-row-fluid flex-wrap" style="width: 100%;">
+                                    <div class="text-white text-hover-primary font-weight-bolder" style="width: 35%;">
+                                        <a class="text-white text-hover-primary font-weight-bolder"
+                                            style="font-size: medium;">Steel Market</a>
+                                        <!-- <span class="text-muted font-weight-bold">Scrap: Spot & Future</span> -->
+                                    </div>
+                                    <span style="width: 30%;">
+                                        <figure class="highcharts-figure">
+                                            <div id="container_steel_market_index"></div>
+                                        </figure>
+                                    </span>
+                                    <span class="pl-7 py-2" style="width: 30%;">
+                                        <span class="spot_val">4343.00</span><br>
+                                        <div class="boxed_red">
+                                            <span class="spot_diff">-0.02%</span>
+                                        </div>
+                                        <div class="boxed_green">
+                                            <span class="spot_diff"></span>
+                                        </div>
+                                    </span>
+                                    <!-- <a class="text-white text-hover-primary font-weight-bolder" style="font-size: medium;">Steel Market</a> -->
+                                    <i class="fas fa-angle-down" style="float: right; padding-right: 3%; width: 5%;"></i>
+                                </div>
+                                <hr style="border-top: 0.5px solid #3F3D3A; margin-bottom: 0rem; margin-top: 0rem;">
+
+                                <div id="tab1" style="display: none;" class="child-dropdown">
+                                    <div onclick="window.location='./scrap_default.html';"
+                                        class="d-flex align-items-center flex-row-fluid flex-wrap" style="width: 100%;">
+                                        <div class="flex-grow-0 me-2" style="width: 40%;">
+                                            <a class="text-white text-hover-primary font-weight-bolder"
+                                                style="font-size: medium;">SCRAP</a><br>
+                                            <span class="text-muted font-weight-bold">Scrap: Spot & Future</span>
+                                        </div>
+                                        <span style="width: 30%;">
+                                            <figure class="highcharts-figure">
+                                                <div id="container1"></div>
+                                            </figure>
+                                        </span>
+                                        <span class="pl-7 py-2" style="width: 30%;">
+                                            <span id="scrap_val_current" class="spot_val"></span><br>
+                                            <div class="boxed_red">
+                                                <span id="scrap_val_data_neg" class="spot_diff"></span>
+                                            </div>
+                                            <div class="boxed_green">
+                                                <span id="scrap_val_data" class="spot_diff"></span>
+                                            </div>
+                                        </span>
+                                    </div>
+                                    <!--end::Section-->
+                                    <hr style="border-top: 0.5px solid #3F3D3A; margin-bottom: 0rem; margin-top: 0rem;">
+                                    <!--begin::Section-->
+                                    <div onclick="window.location='./hrc_default.html';"
+                                        class="d-flex align-items-center flex-row-fluid flex-wrap" style="width: 100%;">
+                                        <div class="flex-grow-0 me-2" style="width: 40%;">
+                                            <a class="text-white text-hover-primary font-weight-bolder"
+                                                style="font-size: medium;">HRC</a><br>
+                                            <span class="text-muted font-weight-bold">Hot Rolled Coil: Spot &
+                                                Future</span>
+                                        </div>
+                                        <span style="width: 30%;">
+                                            <figure class="highcharts-figure">
+                                                <div id="container2"></div>
+                                            </figure>
+                                        </span>
+                                        <span class="pl-7 py-2" style="width: 30%;">
+                                            <span id="hrc_val_current" class="spot_val"></span><br>
+                                            <div class="boxed_red">
+                                                <span id="hrc_val_data_neg" class="spot_diff"></span>
+                                            </div>
+                                            <div class="boxed_green">
+                                                <span id="hrc_val_data" class="spot_diff"></span>
+                                            </div>
+                                        </span>
+                                    </div>
+                                    <!--end::Section-->
+                                    <hr style="border-top: 0.5px solid #3F3D3A; margin-bottom: 1rem; margin-top: 0rem;">
+                                </div>
+
+                                <div onclick="dropdown('tab2')" class="d-flex align-items-center flex-row-fluid flex-wrap" style="margin-top: 0rem;">
+                                    <div class="text-white text-hover-primary font-weight-bolder" style="width: 35%;">
+                                        <a class="text-white text-hover-primary font-weight-bolder"
+                                            style="font-size: medium;">Pipe Material</a>
+                                        <!-- <span class="text-muted font-weight-bold">Scrap: Spot & Future</span> -->
+                                    </div>
+                                    <span style="width: 30%;">
+                                        <figure class="highcharts-figure">
+                                            <div id="container_pipe_material_index"></div>
+                                        </figure>
+                                    </span>
+                                    <span class="pl-7 py-2" style="width: 30%;">
+                                        <span class="spot_val">4343.00</span><br>
+                                        <div class="boxed_red">
+                                            <span class="spot_diff"></span>
+                                        </div>
+                                        <div class="boxed_green">
+                                            <span class="spot_diff">0.04%</span>
+                                        </div>
+                                    </span>
+                                    <!-- <a class="text-white text-hover-primary font-weight-bolder" style="font-size: medium;">Steel Market</a> -->
+                                    <i class="fas fa-angle-down" style="float: right; padding-right: 3%; width: 5%;"></i>
+                                </div>
+                                <hr style="border-top: 0.5px solid #3F3D3A; margin-bottom: 0rem; margin-top: 0rem;">
+
+                                <div id="tab2" style="display: none;">
+                                    <span>hi1</span>
+                                    <hr style="border-top: 0.5px solid #3F3D3A; margin-bottom: 0rem; margin-top: 1rem;">
+                                </div>
+
+                                <div onclick="dropdown('tab3')" class="d-flex align-items-center flex-row-fluid flex-wrap" style="margin-top: 0rem;">
+                                    <div class="text-white text-hover-primary font-weight-bolder" style="width: 35%;">
+                                        <a class="text-white text-hover-primary font-weight-bolder"
+                                            style="font-size: medium;">Pipe Manufacturing</a>
+                                        <!-- <span class="text-muted font-weight-bold">Scrap: Spot & Future</span> -->
+                                    </div>
+                                    <span style="width: 30%;">
+                                        <figure class="highcharts-figure">
+                                            <div id="container_pipe_manufacturing_index"></div>
+                                        </figure>
+                                    </span>
+                                    <span class="pl-7 py-2" style="width: 30%;">
+                                        <span class="spot_val">4343.00</span><br>
+                                        <div class="boxed_red">
+                                            <span class="spot_diff"></span>
+                                        </div>
+                                        <div class="boxed_green">
+                                            <span class="spot_diff">0.04%</span>
+                                        </div>
+                                    </span>
+                                    <!-- <a class="text-white text-hover-primary font-weight-bolder" style="font-size: medium;">Steel Market</a> -->
+                                    <i class="fas fa-angle-down" style="float: right; padding-right: 3%; width: 5%;"></i>
+                                </div>
+                                <hr style="border-top: 0.5px solid #3F3D3A; margin-bottom: 0rem; margin-top: 0rem;">
+                                
+                                <div id="tab3" style="display: none;">
+                                    <span>hi2</span>
+                                    <hr style="border-top: 0.5px solid #3F3D3A; margin-bottom: 0rem; margin-top: 1rem;">
+                                </div>
+                                
+                                <div onclick="dropdown('tab4')" class="d-flex align-items-center flex-row-fluid flex-wrap" style="margin-top: 0rem;">
+                                    <div class="text-white text-hover-primary font-weight-bolder" style="width: 35%;">
+                                        <a class="text-white text-hover-primary font-weight-bolder"
+                                            style="font-size: medium;">Steel Manufacturing</a>
+                                        <!-- <span class="text-muted font-weight-bold">Scrap: Spot & Future</span> -->
+                                    </div>
+                                    <span style="width: 30%;">
+                                        <figure class="highcharts-figure">
+                                            <div id="container_steel_manufacturing_index"></div>
+                                        </figure>
+                                    </span>
+                                    <span class="pl-7 py-2" style="width: 30%;">
+                                        <span class="spot_val">433.00</span><br>
+                                        <div class="boxed_red">
+                                            <span class="spot_diff">-0.02%</span>
+                                        </div>
+                                        <div class="boxed_green">
+                                            <span class="spot_diff"></span>
+                                        </div>
+                                    </span>
+                                    <!-- <a class="text-white text-hover-primary font-weight-bolder" style="font-size: medium;">Steel Market</a> -->
+                                    <i class="fas fa-angle-down" style="float: right; padding-right: 3%; width: 5%;"></i>
+                                </div>
+                                <hr style="border-top: 0.5px solid #3F3D3A; margin-bottom: 0rem; margin-top: 0rem;">
+                                
+                                <div id="tab4" style="display: none;">
+                                    <span>hi1</span>
+                                    <hr style="border-top: 0.5px solid #3F3D3A; margin-bottom: 0rem; margin-top: 1rem;">
+                                </div>
+                                
+                                <div onclick="dropdown('tab5')" class="d-flex align-items-center flex-row-fluid flex-wrap" style="margin-top: 0rem;">
+                                    <div class="text-white text-hover-primary font-weight-bolder" style="width: 35%;">
+                                        <a class="text-white text-hover-primary font-weight-bolder"
+                                            style="font-size: medium;">Iron Ore Mining</a>
+                                        <!-- <span class="text-muted font-weight-bold">Scrap: Spot & Future</span> -->
+                                    </div>
+                                    <span style="width: 30%;">
+                                        <figure class="highcharts-figure">
+                                            <div id="container_iron_ore_mining_index"></div>
+                                        </figure>
+                                    </span>
+                                    <span class="pl-7 py-2" style="width: 30%;">
+                                        <span class="spot_val">4343.00</span><br>
+                                        <div class="boxed_red">
+                                            <span class="spot_diff"></span>
+                                        </div>
+                                        <div class="boxed_green">
+                                            <span class="spot_diff">+0.05%</span>
+                                        </div>
+                                    </span>
+                                    <!-- <a class="text-white text-hover-primary font-weight-bolder" style="font-size: medium;">Steel Market</a> -->
+                                    <i class="fas fa-angle-down" style="float: right; padding-right: 3%; width: 5%;"></i>
+                                </div>
+                                <hr style="border-top: 0.5px solid #3F3D3A; margin-bottom: 0rem; margin-top: 0rem;">
+                                
+                                <div id="tab5" style="display: none;">
+                                    <span>hi1</span>
+                                    <hr style="border-top: 0.5px solid #3F3D3A; margin-bottom: 0rem; margin-top: 1rem;">
+                                </div>
+                                
+                                <div onclick="dropdown('tab6')" style="margin-top: 1rem;">
+                                    <a class="text-white text-hover-primary font-weight-bolder" style="font-size: medium;">Transportation</a>
+                                    <i class="fas fa-angle-down" style="float: right; padding-right: 3%;"></i>
+                                </div>
+                                <hr style="border-top: 0.5px solid #3F3D3A; margin-bottom: 0rem; margin-top: 1rem;">
+                                
+                                <div id="tab6" style="display: none;">
+                                    <span>hi1</span>
+                                    <hr style="border-top: 0.5px solid #3F3D3A; margin-bottom: 0rem; margin-top: 1rem;">
+                                </div>
+                                
+                                <div onclick="window.location='./html/new_ui.html';" style="margin-top: 1rem;">
+                                    <a class="text-white text-hover-primary font-weight-bolder" style="font-size: medium;">Diesel</a>
+                                    <i class="fas fa-angle-down" style="float: right; padding-right: 3%;"></i>
+                                </div>
+                                <hr style="border-top: 0.5px solid #3F3D3A; margin-bottom: 0rem; margin-top: 1rem;">
+                                
+                                <div id="tab7" style="display: none;" onclick="window.location='./html/new_ui.html';">
+                                    <span>hi1</span>
+                                    <hr style="border-top: 0.5px solid #3F3D3A; margin-bottom: 0rem; margin-top: 1rem;">
+                                </div>
+                                
+                                <!--begin::Section-->
+                            </div>
+
+                            <!--end::Tap pane-->
+
+
+                            <!-- news -->
+                            <div class="card card-custom card-stretch gutter-b"
+                                style="background-color: #1C1C1E; padding-right: 3%;">
+                                <!--begin::Header-->
+                                <div class="card-header border-0 pt-1" style="padding-left: 0%;">
+                                    <h3 class="card-title align-items-start flex-column">
+                                        <span class="card-label"
+                                            style="font-size: large; padding-left: 0%; color: #70843A; font-weight: 900; font-family: 'Myriad Pro 700', sans-serif;">News
+                                            Articles</span>
+                                        <span class="text-muted mt-2 font-weight-bold font-size-sm">News stories
+                                            that are relevant to the dashboard</span>
+                                    </h3>
+                                </div>
+                                <!--end::Header-->
+                                <!--begin::Body-->
+                                <div class="card-body pt-2 pb-0 mt-n9" style="padding-right: 0%; padding-left: 0%;">
+                                    <div class="tab-content mt-3" id="myTabTables11">
+                                        <!--begin::Tap pane-->
+                                        <div class="tab-pane fade show active" id="kt_tab_pane_11_3" role="tabpanel"
+                                            aria-labelledby="kt_tab_pane_11_3">
+                                            <table class="table table-borderless table-vertical-center"
+                                                id="news_datatable"></table>
+                                        </div>
+                                        <!--end::Tap pane-->
+                                    </div>
+                                </div>
+                                <!--end::Body-->
+                            </div>
+                            <!--end::news-->
+                        </div>
+                    </div>
+                </div>
+
+                <!--begin::Footer-->
+                <div class="footer py-4 d-flex flex-lg-column" id="kt_footer" style="background-color: #1C1C1E;">
+                    <!--begin::Container-->
+                    <div class="container-fluid d-flex flex-column flex-md-row align-items-center justify-content-between"
+                        style="background-color: #1C1C1E;">
+                        <!--begin::Copyright-->
+                        <div class="text-dark order-2 order-md-1">
+                            <span class="text-muted font-weight-bold mr-2">2021©</span>
+                            <a href="https://www.texisle.com/" target="_blank"
+                                class="text-dark-75 text-hover-primary">Tex-Isle, Inc.</a>
+                        </div>
+                        <!--end::Copyright-->
+                        <!--begin::Nav-->
+                        <div class="nav_foot nav-dark">
+                            <a href="https://www.texisle.com/about" target="_blank" class="nav-link pl-0 pr-5">About</a>
+                            <a href="https://www.texisle.com/" target="_blank" class="nav-link pl-0 pr-5">Team</a>
+                            <a href="https://www.texisle.com/contact-us" target="_blank"
+                                class="nav-link pl-0 pr-0">Contact</a>
+                        </div>
+                        <!--end::Nav-->
+                    </div>
+                    <!--end::Container-->
+                </div>
+                <!--end::Footer-->
+            </div>
+            <!--end::Wrapper-->
+        </div>
+        <!--end::Page-->
+    </div>
+    <!--end::Main-->
+
+    <!--begin::Scrolltop-->
+    <div id="kt_scrolltop" class="scrolltop">
+        <span class="svg-icon">
+            <!--begin::Svg Icon | path:assets/media/svg/icons/Navigation/Up-2.svg-->
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px"
+                height="24px" viewBox="0 0 24 24" version="1.1">
+                <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                    <polygon points="0 0 24 0 24 24 0 24" />
+                    <rect fill="#000000" opacity="0.3" x="11" y="10" width="2" height="10" rx="1" />
+                    <path
+                        d="M6.70710678,12.7071068 C6.31658249,13.0976311 5.68341751,13.0976311 5.29289322,12.7071068 C4.90236893,12.3165825 4.90236893,11.6834175 5.29289322,11.2928932 L11.2928932,5.29289322 C11.6714722,4.91431428 12.2810586,4.90106866 12.6757246,5.26284586 L18.6757246,10.7628459 C19.0828436,11.1360383 19.1103465,11.7686056 18.7371541,12.1757246 C18.3639617,12.5828436 17.7313944,12.6103465 17.3242754,12.2371541 L12.0300757,7.38413782 L6.70710678,12.7071068 Z"
+                        fill="#000000" fill-rule="nonzero" />
+                </g>
+            </svg>
+            <!--end::Svg Icon-->
+        </span>
+    </div>
+    <!--end::Scrolltop-->
+    <!--begin::Global Config(global config for global JS scripts)-->
+    <script>var KTAppSettings = { "breakpoints": { "sm": 576, "md": 768, "lg": 992, "xl": 1200, "xxl": 1400 }, "colors": { "theme": { "base": { "white": "#ffffff", "primary": "#2c2c2c", "secondary": "#E5EAEE", "success": "#1BC5BD", "info": "#8950FC", "warning": "#FFA800", "danger": "#F64E60", "light": "#E4E6EF", "dark": "#181C32" }, "light": { "white": "#ffffff", "primary": "#E1F0FF", "secondary": "#EBEDF3", "success": "#C9F7F5", "info": "#EEE5FF", "warning": "#FFF4DE", "danger": "#FFE2E5", "light": "#F3F6F9", "dark": "#D6D6E0" }, "inverse": { "white": "#ffffff", "primary": "#ffffff", "secondary": "#3F4254", "success": "#ffffff", "info": "#ffffff", "warning": "#ffffff", "danger": "#ffffff", "light": "#464E5F", "dark": "#ffffff" } }, "gray": { "gray-100": "#F3F6F9", "gray-200": "#EBEDF3", "gray-300": "#E4E6EF", "gray-400": "#D1D3E0", "gray-500": "#B5B5C3", "gray-600": "#7E8299", "gray-700": "#5E6278", "gray-800": "#3F4254", "gray-900": "#181C32" } }, "font-family": "Poppins" };</script>
+    <!--end::Global Config-->
+    <!--begin::Global Theme Bundle(used by all pages)-->
+    <script src="plugins/global/plugins.bundle.js"></script>
+    <script src="plugins/custom/prismjs/prismjs.bundle.js"></script>
+    <script src="js/scripts.bundle.js"></script>
+    <script src="js/scripts.bundle.min.js"></script>
+    <!--end::Global Theme Bundle-->
+    <!--begin::Page Vendors(used by this page)-->
+    <script src="plugins/custom/fullcalendar/fullcalendar.bundle.js"></script>
+    <!--end::Page Vendors-->
+    <!--begin::Page Scripts(used by this page)-->
+    <script src="js/pages/widgets.js"></script>
+    <!--end::Page Scripts-->
+    <script>
+        var settings = {
+            "url": urlresource + "/stock_data/",
+            "method": "GET",
+            "timeout": 0,
+        };
+
+        $.ajax(settings).done(function (response) {
+            console.log(response.stock_data.scrap_data.current);
+            document.getElementById("scrap_val_current").innerHTML = (response.stock_data.scrap_data.current).toFixed(2).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");;
+            if (response.stock_data.scrap_data.data >= 0)
+                document.getElementById("scrap_val_data").innerHTML = "+" + (response.stock_data.scrap_data.data).toFixed(2) + " %";
+            else
+                document.getElementById("scrap_val_data_neg").innerHTML = (response.stock_data.scrap_data.data).toFixed(2) + " %";
+
+            document.getElementById("hrc_val_current").innerHTML = (response.stock_data.hrc_data.current).toFixed(2).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");;
+            if (response.stock_data.hrc_data.data >= 0)
+                document.getElementById("hrc_val_data").innerHTML = "+" + (response.stock_data.hrc_data.data).toFixed(2) + " %";
+            else
+                document.getElementById("hrc_val_data_neg").innerHTML = (response.stock_data.hrc_data.data).toFixed(2) + " %";
+        });
+    </script>
+    <script>
+        function dropdown(param) {
+            var x = document.getElementById(param);
+            if (x.style.display === "none") {
+                x.style.display = "block";
+                close_dd(param);
+            } else {
+                x.style.display = "none";
+            }
+        }
+
+        function close_dd(param) {
+            var list_id = ["tab1", "tab2", "tab3", "tab4", "tab5", "tab6", "tab7"];
+            // console.log(list_id);
+            list_id = list_id.filter(e => e !== param);
+            // console.log(list_id);
+            for(var i=0; i<list_id.length; i++) {
+                // console.log(list_id[i]);
+                var x = document.getElementById(list_id[i]);
+                x.style.display = "none";
+            }
+        }
+    </script>
+</body>
+
+</html>

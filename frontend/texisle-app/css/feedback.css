@@ -1,0 +1,113 @@
+.feedbackSubmit-btn {
+    margin-left: 23%;
+    font-size: 15px;
+    color: white;
+    background-color: #3B3B3B;
+    padding: 3% 20%;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+/* .calc-btn:active {
+    background-color: #282828;
+    /* transform: translateY(4px); */
+} */
+
+
+
+:root{
+    /* --clr: #222327; */
+    --clr: white;
+}
+
+/* .main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: var(--clr);
+} */
+
+.rating {
+    /* position: absolute; */
+    /* bottom: 0; */
+    width: 100%;
+    height: 50px;
+    /* background: white; */
+    /* background: #2c2c2c; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.rating ul {
+    display: flex;
+    /* width: 350px; */
+    width: 95%;
+}
+
+.rating ul li{
+    position: relative;
+    list-style: none;
+    /* width: 70px; */
+    width: 25%;
+    height: 70px;
+    z-index: 1;
+}
+
+.rating ul li a {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    font-weight: 500;
+}
+.rating ul li a .icon {
+    position: relative;
+    display: block;
+    line-height: 75px;
+    font-size: 30px;
+    text-align: center;
+    transition: 0.5s;
+    color: var(--clr);
+}
+
+.rating ul li.active a .icon {
+    transform: translateY(-10px);
+    color: #9bb556;
+}
+
+.rating ul li a .text {
+    position: absolute;
+    color: var(--clr);
+    font-weight: 400;
+    font-size: 1em;
+    letter-spacing: 0.05em;
+    transition: 0.5s;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.rating ul li.active a .text {
+    opacity: 1;
+    transform: translateY(10px);
+    color: #9bb556;
+}
+
+
+/* .rating ul li:nth-child(1).active ~ .indicator {
+    transform: translateX(calc(70px * 0));
+}
+.rating ul li:nth-child(2).active ~ .indicator {
+    transform: translateX(calc(70px * 1));
+}
+.rating ul li:nth-child(3).active ~ .indicator {
+    transform: translateX(calc(70px * 2));
+}
+.rating ul li:nth-child(4).active ~ .indicator {
+    transform: translateX(calc(70px * 3));
+} */

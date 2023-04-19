@@ -1,0 +1,72 @@
+.copy-card {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    color: white;
+    align-items: center;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 700;
+    border: solid #3F4254 1px;
+    padding: 3%;
+    margin-right: 10.5px;
+    margin-left: 10.5px;
+    border-radius: 5px;
+
+}
+
+.email-btn {
+    background-color: #3B3B3B;
+    padding: 5% 11%;
+    border-radius: 3px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.d_foot {
+    position: fixed;
+      height: 60px;
+      z-index: 97;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      text-align: center;
+  }
+
+ .tooltip {
+    position: relative;
+    display: inline-block;
+  }
+
+  .tooltip .tooltiptext{
+    /* visibility: hidden; */
+    width: 140px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px;
+    position: sticky;
+    z-index: 1;
+    bottom: 150%;
+    left: 50%;
+    margin-left: 255px;
+    /* opacity: 0; */
+    transition: opacity 0.3s;
+}
+
+.tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+  }
+  
+  .tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+  }

@@ -1,0 +1,68 @@
+{% extends "./index.html" %}
+{% load static %}
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" />
+<!--end::Fonts-->
+<!--begin::Page Vendors Styles(used by this page)-->
+<link href="{% static 'dashboard/assets/plugins/custom/fullcalendar/fullcalendar.bundle.css' %}" rel="stylesheet" type="text/css" />
+<link href="{% static 'dashboard/assets/plugins/global/plugins.bundle.css' %}" rel="stylesheet" type="text/css" />
+<link href="{% static 'dashboard/assets/plugins/custom/prismjs/prismjs.bundle.css' %}" rel="stylesheet" type="text/css" />
+<link href="{% static 'dashboard/assets/css/style.bundle.css' %}" rel="stylesheet" type="text/css" />
+<!--end::Global Theme Styles-->
+<!--begin::Layout Themes(used by all pages)-->
+<link href="{% static 'dashboard/assets/css/themes/layout/header/base/dark.css' %}" rel="stylesheet" type="text/css" />
+<link href="{% static 'dashboard/assets/css/themes/layout/header/menu/dark.css' %}" rel="stylesheet" type="text/css" />
+<link href="{% static 'dashboard/assets/css/themes/layout/brand/dark.css' %}" rel="stylesheet" type="text/css" />
+<link href="{% static 'dashboard/assets/css/themes/layout/aside/dark.css' %}" rel="stylesheet" type="text/css" />
+<!--end::Layout Themes-->
+<link rel="shortcut icon" href="{% static 'dashboard/assets/media/logos/favicon.ico' %}" />
+<!-- <link href="{% static 'dashboard/font/HirukoBlackAlternate.ttf' %}" -->
+
+{% block content1 %}
+    <table class="table table-borderless table-vertical-center">
+        {% for o in data.data_1 %}
+        <!-- <div class="row"> -->
+            <tr>
+                <td class="pl-0" >
+                    <a class="text-light font-weight-bold title_css">{{o.website}}</a><br>
+                    <a href={{o.link}} class="text-light font-weight-bolder text-hover-primary mb-1 title_css" target="_blank" style="font-size: large;">{{o.title}}</a>
+                    <div>
+                        <span class="font-weight-bolder title_css">{{o.date}} ago</span>
+                    </div>
+                </td>
+                <td class="pl-0 py-4">
+                    <div>
+                        <span>
+                            <img src={{o.image}} class="h-50 align-self-center image_css" alt=""/>
+                        </span>
+                    </div>
+                </td>
+            </tr>
+        {% endfor %}
+    </table>
+{% endblock %}
+
+{% block content2 %}
+    <table class="table table-borderless table-vertical-center">
+        {% for o in data.data_2 %}
+        <tr>
+            <td class="pl-0" >
+                <a class="text-light font-weight-bold title_css">{{o.website}}</a><br>
+                <a href={{o.link}} class="text-light font-weight-bolder text-hover-primary mb-1 title_css" target="_blank" style="font-size: large;">{{o.title}}</a>
+                <div>
+                    <span class="font-weight-bolder title_css">{{o.date}} ago</span>
+                </div>
+            </td>
+            <td class="pl-0 py-4">
+                <div>
+                    <span>
+                        <img src={{o.image}} class="h-50 align-self-center image_css" alt=""/>
+                    </span>
+                </div>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+{% endblock %}
+
+

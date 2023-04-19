@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;"> -->
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, width=device-width, viewport-fit=cover">
+    <meta name="color-scheme" content="light dark">
+    <link rel="stylesheet" href="css/index.css">
+    <title>Texisle Dashboard</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" /> -->
+    <link rel="canonical" href="https://keenthemes.com/metronic" />
+    <!--begin::Fonts-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" />
+    <!--end::Fonts-->
+    <!--begin::Page Vendors Styles(used by this page)-->
+    <link href="plugins/custom/fullcalendar/fullcalendar.bundle.css" rel="stylesheet" type="text/css" />
+    <!--end::Page Vendors Styles-->
+    <!--begin::Global Theme Styles(used by all pages)-->
+    <!-- <script src="js/jquery.min.js" type="text/javascript"></script> -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script> -->
+
+    <link href="css/download/daterangepicker.css" rel="stylesheet" type="text/css" />
+    <script src="js/header.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css"
+        integrity="sha512-10/jx2EXwxxWqCLX/hHth/vu2KY3jCF70dCQB8TSgNjbCVAC/8vai53GfMDrO2Emgwccf2pJqxct9ehpzG+MTw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <script src="js/total_clock.js"></script>
+    <script src="cordova.js"></script>
+    <script src="js/index.js"></script>
+    <script src="js/changeIPAddress.js"></script>
+    <script src="js/offline.js"></script>
+    <script src="js/open_page_chart.js"></script>
+    <script src="js/check_s_id.js"></script>
+
+    <script src="js/page_count.js"></script>
+
+    <!-- <script src="js/clock.js"></script>
+    <script src="js/timer.js"></script> -->
+    <!-- <link href="css/download.css" rel="stylesheet" type="text/css" />
+    <script src="js/download.js"></script> -->
+
+    <script src="js/download/config_load.js"></script>
+    <script src="js/download/daterange.js"></script>
+    <script src="js/download/download.js"></script>
+    <script src="js/download/submit.js"></script>
+    <link href="css/download/download.css" rel="stylesheet" type="text/css" />
+
+    <!-- <link href="plugins/global/plugins.bundle.css" rel="stylesheet" type="text/css" /> -->
+    <link href="plugins/custom/prismjs/prismjs.bundle.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css"
+        integrity="sha512-10/jx2EXwxxWqCLX/hHth/vu2KY3jCF70dCQB8TSgNjbCVAC/8vai53GfMDrO2Emgwccf2pJqxct9ehpzG+MTw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- <link href="css/style.bundle.css" rel="stylesheet" type="text/css" /> -->
+    <!--end::Global Theme Styles-->
+    <!--begin::Layout Themes(used by all pages)-->
+    <link href="css/themes/layout/header/base/dark.css" rel="stylesheet" type="text/css" />
+    <link href="css/themes/layout/header/menu/dark.css" rel="stylesheet" type="text/css" />
+    <link href="css/themes/layout/brand/dark.css" rel="stylesheet" type="text/css" />
+    <link href="css/themes/layout/aside/dark.css" rel="stylesheet" type="text/css" />
+
+    <script src="js/index.js"></script>
+    <script src="js/open_chart.js"></script>
+
+    <script src="js/app_end.js"></script>
+
+    <!--end::Layout Themes-->
+    <link href="http://fonts.cdnfonts.com/css/myriad-pro" rel="stylesheet">
+</head>
+
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+<link href="css/download/style.bundle.css" rel="stylesheet" type="text/css" />
+<script src="js/navbar.js"></script>
+<link rel="stylesheet" href="css/navbar.css">
+<div id="nav-id"></div>
+
+<body id="kt_body"
+    class="header-fixed header-mobile-fixed subheader-enabled subheader-fixed aside-enabled aside-fixed aside-minimize-hoverable page-loading"
+    style="background-color: #1C1C1E; padding-right: 0%; padding-left: 0%; height: 120%;">
+    <!--begin::Main-->
+    <div>
+        <!--begin::Wrapper-->
+        <div id="kt_header" class="">
+
+            <!-- <div id="header-id"></div> -->
+            <div id="kt_header">
+                <div>
+                    <div class="row" style="width: 100%;">
+                        <div class="float-left" style="width: 50%; padding-left: 3%;">
+                            <a onclick="app_end(window.location.pathname)" class="text-light mt-2 mb-1 mr-5 ml-4"
+                                style="color: white; font-weight: bold; font-size: 25px;">Pipe Intel</a>
+                        </div>
+                        <div class="float-left" style="width: 50%; padding-right: 0%;">
+                            <p onclick="window.open()" class="font-weight-bold power"
+                                style="text-align: right; color: #9bb556;">Powered by Tex-Isle Inc.</p>
+                        </div>
+                    </div>
+                </div>
+                <hr style="border-top: 2px solid #7a7772; margin-top: 0px; margin-bottom: 0rem;">
+            </div>
+
+            <!--end::Container-->
+        </div>
+        <div style="margin: 0px 12px; color: white; --darkreader-inline-color:#e8e6e3;">
+            <strong><span data-darkreader-inline-color=""
+                    style="color: white; font-weight: bold; font-size: 25px; --darkreader-inline-color:#ff1a1a;">Download
+                    Data</span></strong><img onclick="app_end(window.location.pathname)" src="./img/return.png"
+                class="return-btn">
+        </div>
+        <hr style="border-top: 2px solid #7a7772; margin-top: 0px; margin-bottom: 0rem;">
+
+        <div class="container">
+            <div class="row" style="width: 100%; margin: 10px;">
+                <div class="col-8" style="margin: 8px 0px;">
+                    <span style="color: white;">Email in use: </span>
+                    <span id="email-id" style="color: #9bb556;"></span>
+                </div>
+                <div class="col-4 float-right">
+                    <button class="uncheck-btn" onclick="remove_checks()">Uncheck&nbsp;all</button>
+                </div>
+            </div>
+        </div>
+        <div class="container" style="padding: 0px 45px;">
+            <div class="row">
+                <span class="col-sm-6 col-xs-6 col-sm-6 col-lg-6 float-left">
+                    <span style="color: white;">Want to use a different email-id?</span><br>
+                    <input type="email" id="email" placeholder="* Enter your email" pattern=".+@globex\.com" name="email" style="margin-bottom: 6%;text-align: center; background: #5E5C5C !important; color: white;">
+                    <span class="email-btn" onclick="reload_config()">Save</span>
+                    <div id="error-email" style="padding: 1% 2%; text-align: left; display: none; color: #ff1a1a;">
+                        <span style="font-size: 15px;">*Invalid Email ID...</span>
+                    </div>
+                </span>
+            </div>
+        </div>
+
+        <div class="container">
+            <!-- cards start -->
+            <div id="cards-section" class="card-section container-fluid">
+                <div class="column" id="card1">
+                    <div class="card" onclick="dropdown('tab1', this)" id="inner_card_1">
+                        <span>Raw Material Index</span>
+                    </div>
+                </div>
+                <div class="column" id="card2">
+                    <div class="card" onclick="dropdown('tab2', this)" id="inner_card_2">
+                        <span>Mining Companies</span>
+                    </div>
+                </div>
+                <div class="column" id="card4">
+                    <div class="card" onclick="dropdown('tab3', this)" id="inner_card_3">
+                        <span>Transportation</span>
+                    </div>
+                </div>
+                <div class="column" id="card3">
+                    <div class="card" onclick="dropdown('tab4', this)" id="inner_card_4">
+                        <span>Pipe Manufacturing</span>
+                    </div>
+                </div>
+                <div class="column" id="card5">
+                    <div class="card" onclick="dropdown('tab5', this)" id="inner_card_5">
+                        <span>Steel Manufacturing</span>
+                    </div>
+                </div>
+                <div class="column" id="card6">
+                    <div class="card" onclick="dropdown('tab6', this)" id="inner_card_6">
+                        <span>Rig Count</span>
+                    </div>
+                </div>
+                <div class="column" id="card7">
+                    <div class="card" onclick="dropdown('tab7', this)" id="inner_card_7">
+                        <span>Well Count</span>
+                    </div>
+                </div>
+            </div><br>
+            <!-- cards end -->
+            <form class="info-cards container" name="tickers" style="display: block;">
+                <div id="tab1" class="form-list row" style="display: none;">
+                    <!-- col-2 col-md-2 col-sm-3 col-xs-6 -->
+                    <div class="col-xs-6">
+                        <input class="checkmark" type="checkbox" id="rmi_index" name="ticker" value="RMI_index">
+                        <label for="rmi_index">RMI Index</label>
+                    </div>
+                    <div class="col-xs-6">
+                        <input class="checkmark" type="checkbox" id="scrap" name="ticker" value="SCRAP">
+                        <label for="scrap">Scrap</label>
+                    </div>
+                    <div class="col-xs-6">
+                        <input class="checkmark" type="checkbox" id="hrc" name="ticker" value="HRC">
+                        <label for="hrc">HRC</label>
+                    </div>
+                    <div class="col-xs-6">
+                        <input class="checkmark" type="checkbox" id="coal" name="ticker" value="COAL">
+                        <label for="coal">Coal</label>
+                    </div>
+                    <div class="col-xs-6">
+                        <input class="checkmark" type="checkbox" id="ironore" name="ticker" value="IRONORE">
+                        <label for="ironore">IronOre</label>
+                    </div>
+                </div>
+                <div id="tab2" class="form-list row" style="display: none;">
+                    <div class="col-xs-6">
+                        <input type="checkbox" id="iom_index" name="ticker" value="IOM_index">
+                        <label for="iom_index">IOM Index</label>
+                    </div>
+                    <div class="col-xs-6">
+                        <input type="checkbox" id="rio" name="ticker" value="RIO">
+                        <label for="rio">RIO</label>
+                    </div>
+                    <div class="col-xs-6">
+                        <input type="checkbox" id="vale" name="ticker" value="VALE">
+                        <label for="vale">VALE</label>
+                    </div>
+                    <div class="col-xs-6">
+                        <input type="checkbox" id="sxc" name="ticker" value="SXC">
+                        <label for="sxc">SXC</label>
+                    </div>
+                    <div class="col-xs-6">
+                        <input type="checkbox" id="bhp" name="ticker" value="BHP">
+                        <label for="bhp">BHP</label>
+                    </div>
+                </div>
+                <div id="tab3" class="form-list row" style="display: none;">
+                    <div class="col-xs-6">
+                        <input type="checkbox" id="t_index" name="ticker" value="T_index">
+                        <label for="t_index">T Index</label>
+                    </div>
+                    <div class="col-xs-6">
+                        <input type="checkbox" id="badi" name="ticker" value="Baltic">
+                        <label for="badi">BADI</label>
+                    </div>
+                    <div class="col-xs-6">
+                        <input type="checkbox" id="ulsd" name="ticker" value="ULSD">
+                        <label for="ULSD">ULSD</label>
+                    </div>
+                    <div class="col-xs-6">
+                        <input type="checkbox" id="truck" name="ticker" value="Truck">
+                        <label for="truck">Truck</label>
+                    </div>
+                    <div class="col-xs-6">
+                        <input type="checkbox" id="CassFreight" name="ticker" value="CassFreight">
+                        <label for="CassFreight">CassFreight</label>
+                    </div>
+                    <div class="col-xs-6">
+                        <input type="checkbox" id="AllGrade" name="ticker" value="All-Grade">
+                        <label for="AllGrade">AllGrade</label>
+                    </div>
+                </div>
+                <div id="tab4" class="form-list row" style="display: none;">
+                    <div class="col-xs-6">
+                        <input type="checkbox" id="pmf_index" name="ticker" value="PMF_index">
+                        <label for="pmf_index">PMF Index</label>
+                    </div>
+                    <div class="col-xs-6">
+                        <input type="checkbox" id="ts" name="ticker" value="TS">
+                        <label for="ts">TS</label>
+                    </div>
+                    <div class="col-xs-6">
+                        <input type="checkbox" id="vkpa" name="ticker" value="VKPA">
+                        <label for="vkpa">VK.PA</label>
+                    </div>
+                    <div class="col-xs-6">
+                        <input type="checkbox" id="x" name="ticker" value="X">
+                        <label for="x">X</label>
+                    </div>
+                    <div class="col-xs-6">
+                        <input type="checkbox" id="tmst" name="ticker" value="TMST">
+                        <label for="tmst">TMST</label>
+                    </div>
+                    <div class="col-xs-6">
+                        <input type="checkbox" id="nwpx" name="ticker" value="NWPX">
+                        <label for="nwpx">NWPX</label>
+                    </div>
+                </div>
+                <div id="tab5" class="form-list row" style="display: none;">
+                    <div class="col-xs-6">
+                        <input type="checkbox" id="smf_index" name="ticker" value="SMF_index">
+                        <label for="smf_index">SMF Index</label>
+                    </div>
+                    <div class="col-xs-6">
+                        <input type="checkbox" id="mt" name="ticker" value="MT">
+                        <label for="mt">MT</label>
+                    </div>
+                    <div class="col-xs-6">
+                        <input type="checkbox" id="pkx" name="ticker" value="PKX">
+                        <label for="pkx">PKX</label>
+                    </div>
+                    <div class="col-xs-6">
+                        <input type="checkbox" id="nue" name="ticker" value="NUE">
+                        <label for="nue">NUE</label>
+                    </div>
+                    <div class="col-xs-6">
+                        <input type="checkbox" id="stld" name="ticker" value="STLD">
+                        <label for="stld">STLD</label>
+                    </div>
+                    <div class="col-xs-6">
+                        <input type="checkbox" id="rs" name="ticker" value="RS">
+                        <label for="rs">RS</label>
+                    </div>
+                    <div class="col-xs-6">
+                        <input type="checkbox" id="clf" name="ticker" value="CLF">
+                        <label for="CLF">CLF</label>
+                    </div>
+                    <div class="col-xs-6">
+                        <input type="checkbox" id="tx" name="ticker" value="TX">
+                        <label for="tx">TX</label>
+                    </div>
+                    <div class="col-xs-6">
+                        <input type="checkbox" id="ggb" name="ticker" value="GGB">
+                        <label for="ggb">GGB</label>
+                    </div>
+                    <div class="col-xs-6">
+                        <input type="checkbox" id="cmc" name="ticker" value="CMC">
+                        <label for="CMC">CMC</label>
+                    </div>
+                    <div class="col-xs-6">
+                        <input type="checkbox" id="tkade" name="ticker" value="TKADE">
+                        <label for="tkade">TKA.DE</label>
+                    </div>
+                    <div class="col-xs-6">
+                        <input type="checkbox" id="szgde" name="ticker" value="SZGDE">
+                        <label for="szgde">SZG.DE</label>
+                    </div>
+                    <div class="col-xs-6">
+                        <input type="checkbox" id="nippon" name="ticker" value="NIPPON">
+                        <label for="nippon">Nippon</label>
+                    </div>
+                    <div class="col-xs-6">
+                        <input type="checkbox" id="jfe" name="ticker" value="JFE">
+                        <label for="jfe">JFE</label>
+                    </div>
+                </div>
+                <div id="tab6" class="form-list row" style="display: none;">
+                    <div class="col-xs-6">
+                        <input type="checkbox" id="rc_index" name="ticker" value="RC_index">
+                        <label for="rc_index">US&nbspTotal</label>
+                    </div>
+                    <div class="col-xs-6">
+                        <input type="checkbox" id="ardmore" name="ticker" value="Ardmore">
+                        <label for="ardmore">Ardmore&nbspWoodford</label>
+                    </div>
+                    <div class="col-xs-6">
+                        <input type="checkbox" id="arkoma" name="ticker" value="Arkoma">
+                        <label for="arkoma">Arkoma&nbspWoodford</label>
+                    </div>
+                    <div class="col-xs-6">
+                        <input type="checkbox" id="barnett" name="ticker" value="Barnett">
+                        <label for="barnett">Barnett</label>
+                    </div>
+                    <div class="col-xs-6">
+                        <input type="checkbox" id="cana" name="ticker" value="Cana">
+                        <label for="cana">Cana&nbspWoodford</label>
+                    </div>
+                    <div class="col-xs-6">
+                        <input type="checkbox" id="niobrara" name="ticker" value="Niobrara">
+                        <label for="niobrara">DJ&nbspNiobrara</label>
+                    </div>
+                    <div class="col-xs-6">
+                        <input type="checkbox" id="ford" name="ticker" value="Ford">
+                        <label for="ford">Eagle&nbspFord</label>
+                    </div>
+                    <div class="col-xs-6">
+                        <input type="checkbox" id="granite" name="ticker" value="Granite">
+                        <label for="granite">Granite&nbspWash</label>
+                    </div>
+                    <div class="col-xs-6">
+                        <input type="checkbox" id="haynesville" name="ticker" value="Haynesville">
+                        <label for="haynesville">Haynesville</label>
+                    </div>
+                    <div class="col-xs-6">
+                        <input type="checkbox" id="marcellus" name="ticker" value="Marcellus">
+                        <label for="marcellus">Marcellus</label>
+                    </div>
+                    <div class="col-xs-6">
+                        <input type="checkbox" id="mississippian" name="ticker" value="Mississippian">
+                        <label for="mississippian">Mississippian</label>
+                    </div>
+                    <div class="col-xs-6">
+                        <input type="checkbox" id="permian" name="ticker" value="Permian">
+                        <label for="permian">Permian</label>
+                    </div>
+                    <div class="col-xs-6">
+                        <input type="checkbox" id="utica" name="ticker" value="Utica">
+                        <label for="utica">Utica</label>
+                    </div>
+                    <div class="col-xs-6">
+                        <input type="checkbox" id="williston" name="ticker" value="Williston">
+                        <label for="williston">Williston</label>
+                    </div>
+                </div>
+                <div id="tab7" class="form-list row" style="display: none;">
+                    <div class="col-xs-6">
+                        <input type="checkbox" id="DPR_DUC" name="ticker" value="DPR_DUC">
+                        <label for="DPR_DUC">DPR&nbspRegions</label>
+                    </div>
+                    <div class="col-xs-6">
+                        <input type="checkbox" id="Appalachia_DUC" name="ticker" value="Appalachia_DUC">
+                        <label for="Appalachia_DUC">Appalachia</label>
+                    </div>
+                    <div class="col-xs-6">
+                        <input type="checkbox" id="Bakken_DUC" name="ticker" value="Bakken_DUC">
+                        <label for="Bakken_DUC">Bakken</label>
+                    </div>
+                    <div class="col-xs-6">
+                        <input type="checkbox" id="Eagle_DUC" name="ticker" value="Eagle_DUC">
+                        <label for="Eagle_DUC">Eagle&nbspFord</label>
+                    </div>
+                    <div class="col-xs-6">
+                        <input type="checkbox" id="Haynesville_DUC" name="ticker" value="Haynesville_DUC">
+                        <label for="Haynesville_DUC">Haynesville</label>
+                    </div>
+                    <div class="col-xs-6">
+                        <input type="checkbox" id="Niobrara_DUC" name="ticker" value="Niobrara_DUC">
+                        <label for="Niobrara_DUC">Niobrara</label>
+                    </div>
+                    <div class="col-xs-6">
+                        <input type="checkbox" id="Permian_DUC" name="ticker" value="Permian_DUC">
+                        <label for="Permian_DUC">Permian</label>
+                    </div>
+                </div>
+            </form>
+            <!-- info cards starts -->
+            <div class="submit-div">
+                <!-- <div id="reportrange" class="date-range container">
+                    <i class="fa fa-calendar"></i>&nbsp;
+                    <span id="dates"></span> <i class="fa fa-caret-down"></i>
+                </div><br> -->
+                <div class="container" style="padding-right: 9%;">
+                    <div class="row">
+                        <div class="col-sm-4 col-lg-4 col-xl-4">
+                            <label for="date">Choose a range </label>
+                            <select class="dateInput_dropdown" name="date" id="date"
+                                onchange="change_date(moment().subtract(this.value, 'days'), moment().subtract(1, 'days'));">
+                                <option selected="">Custom</option>
+                                <option value="7">Last 7 Days</option>
+                                <option value="30">Last 30 Days</option>
+                                <option value="92">Last 3 Months</option>
+                                <option value="184">Last 6 Months</option>
+                                <option value="365">Last 1 Year</option>
+                            </select>
+                        </div>
+                        <div class="col-sm-4 col-lg-4 col-xl-4">
+                            <span>Start Date </span>
+                            <input id="startDate" type="text" class="dateInput" name="start" />
+                        </div>
+                        <div class="col-sm-4 col-lg-4 col-xl-4">
+                            <span>End Date </span>
+                            <input id="endDate" type="text" class="dateInput" name="end" style="margin-left: 13%;" />
+                        </div>
+                    </div>
+                </div>
+                <br>
+
+                <div class="container">
+                    <div class="container btn-space" style="margin-bottom: 20px;">
+                        <!-- <span class="submit-btn sb-fl" onclick="submit()">Download</span> -->
+                        <span class="submit-btn" onclick="send_data_mail()">Send&nbsp;data&nbsp;via&nbsp;e-mail</span>
+                    </div>
+                    <form name="selection-form">
+                        <input type="checkbox" id="upd_selection" name="selection" value="upd_selection" checked="true">
+                        <label for="upd_selection">Update selections</label>
+                    </form>
+                    <div id="loader" class="lds-dual-ring container" style="display: none;"></div>
+                    <div id="error1" class="container" style="display: none;">Failed, try again...</div>
+                    <div id="error2" class="container" style="display: none;">No tickers are selcted...</div>
+                    <div id="error3" class="container" style="display: none;">No email provided</div>
+                </div>
+            </div>
+            <!-- info cards end -->
+        </div>
+        
+        <!-- Modal -->
+        <div class="modal fade" id="modal-email" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <span class="modal-title">Enter&nbsp;email&nbsp;ID</span>
+                    </div>
+                    <div class="modal-body">
+                        <input type="email" class="modal-email-input" id="modal-email-input"
+                            placeholder="* Enter your email" pattern=".+@globex\.com" name="email"><br>
+                        <div id="modal-error-email"
+                            style="padding: 1% 2%; text-align: left; display: none; color: #ff1a1a;">
+                            <span style="font-size: 15px;">*Invalid Email ID...</span>
+                        </div>
+                        <div style="margin-top: 4%;">
+                            <span style="color: white; text-align: justify;">*Only needed if you want to download the data and save selections for future use. Email will not be used for marketing or promotional purposes.</span>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" onclick="reload_config_alt()">Submit</button>
+                        <button type="button" class="btn btn-primary" onclick="close_modal()">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="email-confirmed">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <!-- <button type="button" class="close" onclick="close_modal()" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button> -->
+                        <span class="modal-title"></span>
+                    </div>
+                    <div class="modal-body">
+                        <span style="color: #ffff; font-size: medium;">Your selections have been saved. Please click
+                            "Send data via email" to receive email with data attachmented.</span>
+                    </div>
+                    <div class="modal-footer">
+                        <!-- <button type="button" class="btn btn-primary" onclick="reload_config_alt()">Submit</button> -->
+                        <button type="button" class="btn btn-primary" onclick="close_div('email-confirmed')">OK</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <br><br>
+        <div class="container" style="color: white;">
+            <span>*Only needed if you want to download the data and save selections for future use.</span><br>
+            <span> Email will not be used for marketing or promotional purposes.</span>
+        </div><br>
+        <div class="container" style="color: white;">
+            <span style="font-size: medium; font-weight: 600; text-align: center;">How to Download data available on
+                this app?</span>
+            <br><br>
+            <div class="row">
+                <div class="col-lg-6 float-left">
+                    <p>You can export, download, and use the following data for your own analysis:</p>
+                    <ul class="container">
+                        <li>
+                            <p>Historical Spot Prices</p>
+                        </li>
+                        <li>
+                            <p>Historical Ticker Prices</p>
+                        </li>
+                        <li>
+                            <p>Historical Index Prices</p>
+                        </li>
+                    </ul>
+                    <br>
+                </div>
+                <div class="col-lg-6 float-left">
+                    <p>Step 1: Make Selection</p>
+                    <p>Select the tickers or index you want to download.
+                    </p>
+                    <p>Step 2: Select Date Range</p>
+                    <p>Select one of the relative date options, or select custom and choose desired date range and click
+                        Apply.</p>
+                    <p>Step 3: Get Data</p>
+                    <p>Enter email address (if prompted) and click "Send data via email". You should get one csv file
+                        according to your selections.</p>
+                </div>
+            </div>
+            <p><br></p>
+            <p><br></p>
+        </div>
+
+    </div>
+    <!--end::Wrapper-->
+    <br>
+    <!--begin::Footer-->
+    <div class="footer py-4 d-flex flex-lg-column d_foot" id="kt_footer" style="background-color: #1C1C1E;">
+        <!--begin::Container-->
+        <div class="container-fluid d-flex flex-column flex-md-row align-items-center justify-content-between"
+            style="background-color: #1C1C1E;">
+            <!--begin::Copyright-->
+            <!-- <div class="text-dark order-2 order-md-1">
+                <span class="text-muted font-weight-bold mr-2">2021©</span>
+                <a href="https://www.texisle.com/" target="_blank" class="text-dark-75 text-hover-primary">Tex-Isle, Inc.</a>
+            </div> -->
+            <!--end::Copyright-->
+            <!--begin::Nav-->
+            <div class="nav_foot nav-dark">
+                <a href="terms.html" class="nav-link pl-0 pr-5">Terms & Conditions</a>
+                <a href="about_v2.html" class="nav-link pl-0 pr-5">About</a>
+                <!-- <a href="https://www.texisle.com/" target="_blank" class="nav-link pl-0 pr-5">Team</a>
+                <a href="https://www.texisle.com/contact-us" target="_blank" class="nav-link pl-0 pr-0">Contact</a> -->
+            </div>
+            <!--end::Nav-->
+        </div>
+        <!--end::Container-->
+    </div>
+    <!--end::Footer-->
+    </div>
+    <!--end::Page-->
+    <!--end::Main-->
+
+    <!--begin::Scrolltop-->
+    <div id="kt_scrolltop" class="scrolltop">
+        <span class="svg-icon">
+            <!--begin::Svg Icon | path:assets/media/svg/icons/Navigation/Up-2.svg-->
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px"
+                height="24px" viewBox="0 0 24 24" version="1.1">
+                <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                    <polygon points="0 0 24 0 24 24 0 24" />
+                    <rect fill="#000000" opacity="0.3" x="11" y="10" width="2" height="10" rx="1" />
+                    <path
+                        d="M6.70710678,12.7071068 C6.31658249,13.0976311 5.68341751,13.0976311 5.29289322,12.7071068 C4.90236893,12.3165825 4.90236893,11.6834175 5.29289322,11.2928932 L11.2928932,5.29289322 C11.6714722,4.91431428 12.2810586,4.90106866 12.6757246,5.26284586 L18.6757246,10.7628459 C19.0828436,11.1360383 19.1103465,11.7686056 18.7371541,12.1757246 C18.3639617,12.5828436 17.7313944,12.6103465 17.3242754,12.2371541 L12.0300757,7.38413782 L6.70710678,12.7071068 Z"
+                        fill="#000000" fill-rule="nonzero" />
+                </g>
+            </svg>
+            <!--end::Svg Icon-->
+        </span>
+    </div>
+    <!--end::Scrolltop-->
+    <!--begin::Global Config(global config for global JS scripts)-->
+    <script>var KTAppSettings = { "breakpoints": { "sm": 576, "md": 768, "lg": 992, "xl": 1200, "xxl": 1400 }, "colors": { "theme": { "base": { "white": "#ffffff", "primary": "#2c2c2c", "secondary": "#E5EAEE", "success": "#1BC5BD", "info": "#8950FC", "warning": "#FFA800", "danger": "#F64E60", "light": "#E4E6EF", "dark": "#181C32" }, "light": { "white": "#ffffff", "primary": "#E1F0FF", "secondary": "#EBEDF3", "success": "#C9F7F5", "info": "#EEE5FF", "warning": "#FFF4DE", "danger": "#FFE2E5", "light": "#F3F6F9", "dark": "#D6D6E0" }, "inverse": { "white": "#ffffff", "primary": "#ffffff", "secondary": "#3F4254", "success": "#ffffff", "info": "#ffffff", "warning": "#ffffff", "danger": "#ffffff", "light": "#464E5F", "dark": "#ffffff" } }, "gray": { "gray-100": "#F3F6F9", "gray-200": "#EBEDF3", "gray-300": "#E4E6EF", "gray-400": "#D1D3E0", "gray-500": "#B5B5C3", "gray-600": "#7E8299", "gray-700": "#5E6278", "gray-800": "#3F4254", "gray-900": "#181C32" } }, "font-family": "Poppins" };</script>
+    <!--end::Global Config-->
+    <!--begin::Global Theme Bundle(used by all pages)-->
+    <script src="plugins/global/plugins.bundle.js"></script>
+    <script src="plugins/custom/prismjs/prismjs.bundle.js"></script>
+    <!-- <script src="js/scripts.bundle.js"></script> -->
+    <script src="js/scripts.bundle.min.js"></script>
+    <!--end::Global Theme Bundle-->
+    <!--begin::Page Vendors(used by this page)-->
+    <script src="plugins/custom/fullcalendar/fullcalendar.bundle.js"></script>
+    <!--end::Page Vendors-->
+    <!--begin::Page Scripts(used by this page)-->
+    <script src="js/pages/widgets.js"></script>
+    <!--end::Page Scripts-->
+
+    <script src="js/initial_data.js"></script>
+</body>
+<script>
+    function change_date(start, end) {
+        st_date = start;
+        end_date = end;
+        $('#startDate').html(st_date.format('MM/DD/YYYY'));
+        document.getElementById("startDate").value = start.format('MM/DD/YYYY');
+        $('#endDate').html(end.format('MM/DD/YYYY'));
+        document.getElementById("endDate").value = end_date.format('MM/DD/YYYY');
+    }
+</script>
+<script src="js/feedback_popup.js"></script>
+
+</html>
